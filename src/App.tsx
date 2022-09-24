@@ -4,13 +4,11 @@ import routes from './routes/index';
 
 import Layout from './components/Layout/Layout';
 
-const App = () => {
+const App: React.FunctionComponent = () => {
 	return (
 		<Router>
 			<Routes>
-				<Route
-					path='/'
-					element={<Layout />}>
+				<Route path='/' element={<Layout />}>
 					{routes.map(({ path, component: Component }) => {
 						return (
 							<Route
