@@ -11,5 +11,5 @@ module.exports = {
 	bracketSameLine: true,
 	arrowParens: 'always',
 	endOfLine: 'crlf',
-	singleAttributePerLine: true,
+	singleAttributePerLine: false,
 };
