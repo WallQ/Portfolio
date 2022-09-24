@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from '../components/Header/Header';
 
 const Homepage: React.FunctionComponent = () => {
 	return (
 		<React.Fragment>
-			<h1 className='text-base font-normal text-gray-900'>Homepage!</h1>
+			<main className='mx-auto max-w-7xl px-8 py-4'>
+				<Header />
+			</main>
 		</React.Fragment>
 	);
 };
