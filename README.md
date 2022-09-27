@@ -3,6 +3,10 @@
 This is a [Vite App](https://vitejs.dev/) project bootstrapped with [`npm create vite@latest portfolio -- --template react-ts`](https://vitejs.dev/guide/).
 
 ## Technologies
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="64" height="64" />](https://www.typescriptlang.org/)
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="64" height="64" />](https://reactjs.org/)
+[<img src="https://vitejs.dev/logo.svg" alt="Vite.js" width="64" height="64" />](https://vitejs.dev/)
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt="Tailwind CSS" width="64" height="64" />](https://tailwindcss.com/)
 
 ## Getting Started
 
