@@ -16,7 +16,7 @@
 		},
 		"homepage": {
 			"header": {
-				"title": "Hi! I'm Sérgio Félix,",
+				"title": "Hi! I'm <span>Sérgio Félix</span>,",
 				"subtitle": "Full-Stack Web Developer.",
 				"paragraph": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, eius vero doloremque inventore iste excepturi, porro velit adipisci reiciendis blanditiis fugit temporibus, eum quaerat voluptas voluptate! Similique minima quam sunt!"
 			}
