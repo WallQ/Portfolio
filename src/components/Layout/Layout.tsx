@@ -7,15 +7,9 @@ import Footer from '../../components/Footer/Footer';
 const Layout: React.FunctionComponent = () => {
 	return (
 		<React.Fragment>
-			<header>
-				<Navbar />
-			</header>
-			<main>
-				<Outlet />
-			</main>
-			<footer>
-				<Footer />
-			</footer>
+			<Navbar />
+			<Outlet />
+			<Footer />
 		</React.Fragment>
 	);
 };

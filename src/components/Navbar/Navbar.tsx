@@ -1,9 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Menu, Transition } from '@headlessui/react';
 import {
-	Bars3Icon,
-	XMarkIcon,
 	CheckIcon,
 	ChevronDownIcon,
 	ChevronUpIcon,
@@ -11,8 +9,15 @@ import {
 import GB from '../../assets/icons/gb.svg';
 import PT from '../../assets/icons/pt.svg';
 
-const Navbar = () => {
-	const { t, i18n } = useTranslation();
+const Navbar: React.FunctionComponent = () => {
+	const { i18n } = useTranslation();
+
+	const flagBaseOnLanguage =
+		i18n.language === 'en' ? (
+			<img src={GB} alt='Great Britain Flag' className='h-4 w-4' />
+		) : (
+			<img src={PT} alt='Portuguese Flag' className='h-4 w-4' />
+		);
 
 	const handleChangeLanguage = (language: string) => {
 		i18n.changeLanguage(language);
@@ -29,21 +34,6 @@ const Navbar = () => {
 						Sérgio Félix
 					</a>
 					<div className='flex flex-row flex-wrap items-center justify-between gap-x-4'>
-						<a
-							href='/Portfolio/projects'
-							className='text-base font-medium capitalize text-gray-900'>
-							{t('navbar.navbaritems.item1')}
-						</a>
-						<a
-							href='/Portfolio/about-me'
-							className='text-base font-medium capitalize text-gray-900'>
-							{t('navbar.navbaritems.item2')}
-						</a>
-						<a
-							href='/Portfolio/contact'
-							className='text-base font-medium capitalize text-gray-900'>
-							{t('navbar.navbaritems.item3')}
-						</a>
 						<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:pr-0'>
 							<Menu as='div' className='relative'>
 								{({ open }) => (
@@ -52,23 +42,11 @@ const Navbar = () => {
 											<span className='sr-only'>
 												Open language menu
 											</span>
-											{i18n.language === 'en' ? (
-												<img
-													src={GB}
-													alt='Great Britain Flag'
-													className='h-4 w-4'
-												/>
-											) : (
-												<img
-													src={PT}
-													alt='Portuguese Flag'
-													className='h-4 w-4'
-												/>
-											)}
-											<span className='text-base font-medium capitalize text-gray-900'>
+											{flagBaseOnLanguage}
+											<span className='text-base font-normal capitalize text-gray-900'>
 												{i18n.language === 'en'
-													? 'English'
-													: 'Português'}
+													? 'EN'
+													: 'PT'}
 											</span>
 											{open ? (
 												<ChevronDownIcon
@@ -103,7 +81,7 @@ const Navbar = () => {
 																active
 																	? 'bg-gray-100'
 																	: ''
-															} inline-flex w-full items-center justify-center gap-x-1 px-4 py-2 text-sm font-normal text-gray-900`}>
+															} flex w-full flex-row items-center justify-center gap-x-1 px-4 py-2 text-sm font-normal text-gray-900`}>
 															{i18n.language ===
 															'en' ? (
 																<CheckIcon
@@ -127,7 +105,7 @@ const Navbar = () => {
 																active
 																	? 'bg-gray-100'
 																	: ''
-															} inline-flex w-full items-center justify-center gap-x-1 px-4 py-2 text-sm font-normal text-gray-900`}>
+															} flex w-full flex-row items-center justify-center gap-x-1 px-4 py-2 text-sm font-normal text-gray-900`}>
 															{i18n.language ===
 															'pt' ? (
 																<CheckIcon
