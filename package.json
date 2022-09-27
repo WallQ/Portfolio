@@ -1,18 +1,21 @@
 {
 	"name": "portfolio",
+	"version": "1.0.0",
 	"private": true,
-	"version": "0.0.0",
+	"description": "The personal website of Sérgio Félix",
+	"author": "Sérgio Félix",
 	"type": "module",
 	"scripts": {
-		"dev": "vite",
 		"build": "tsc && vite build",
-		"preview": "vite preview",
+		"dev": "vite",
 		"lint": "eslint .",
-		"lint:fix": "eslint --fix ."
+		"lint:fix": "eslint --fix .",
+		"preview": "vite preview"
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.2",
 		"@heroicons/react": "^2.0.11",
+		"@tanstack/react-query": "^4.6.1",
 		"i18next": "^21.9.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
