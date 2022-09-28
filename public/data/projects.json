@@ -4,7 +4,7 @@
 		"url": "https://github.com/WallQ/Basicamente",
 		"image": {
 			"alt": "Preview Basicamente Project",
-			"url": "./assets/images/projects/Basicamente_preview.png"
+			"url": "./images/projects/Basicamente_preview.webp"
 		}
 	},
 	{
@@ -12,7 +12,7 @@
 		"url": "https://github.com/WallQ/Birthday-Countdown",
 		"image": {
 			"alt": "Preview Birthday Countdown Project",
-			"url": "./assets/images/projects/Birthday-Countdown_preview.png"
+			"url": "./images/projects/Birthday-Countdown_preview.webp"
 		}
 	},
 	{
@@ -20,7 +20,7 @@
 		"url": "https://github.com/WallQ/League-Searcher",
 		"image": {
 			"alt": "Preview League Searcher Project",
-			"url": "./assets/images/projects/League-Searcher_preview.png"
+			"url": "./images/projects/League-Searcher_preview.webp"
 		}
 	},
 	{
@@ -28,7 +28,7 @@
 		"url": "https://github.com/WallQ/Weather",
 		"image": {
 			"alt": "Preview Weather Project",
-			"url": "./assets/images/projects/Weather_preview.png"
+			"url": "./images/projects/Weather_preview.webp"
 		}
 	},
 	{
@@ -36,7 +36,7 @@
 		"url": "https://github.com/WallQ/PWA",
 		"image": {
 			"alt": "Preview PWA Booking Project",
-			"url": "./assets/images/projects/PWA-Booking_preview.png"
+			"url": "./images/projects/PWA-Booking_preview.webp"
 		}
 	}
 ]
