@@ -1,17 +1,10 @@
 {
 	"translation": {
-		"navbar": {
-			"navbaritems": {
-				"item1": "Projects",
-				"item2": "About Me",
-				"item3": "Contact"
-			}
-		},
 		"footer": {
 			"footeritems": {
-				"item1": "Privacy Policy",
-				"item2": "Terms & Conditions",
-				"item3": "Cookies Policy"
+				"url1": "Privacy Policy",
+				"url2": "Terms & Conditions",
+				"url3": "Cookies Policy"
 			}
 		},
 		"homepage": {
@@ -20,6 +13,12 @@
 				"subtitle": "Full-Stack Web Developer.",
 				"paragraph": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, eius vero doloremque inventore iste excepturi, porro velit adipisci reiciendis blanditiis fugit temporibus, eum quaerat voluptas voluptate! Similique minima quam sunt!"
 			}
+		},
+		"notfound": {
+			"title": "Sorry, this page wasn't found!",
+			"paragraph1": "The page you are looking for wasn't found on ",
+			"paragraph2": "If you think this is a link that should be fixed, please let the highly trained specialist monkey know via email at: ",
+			"url_text": "Go back to the home page"
 		}
 	}
 }

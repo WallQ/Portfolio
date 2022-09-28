@@ -1,17 +1,10 @@
 {
 	"translation": {
-		"navbar": {
-			"navbaritems": {
-				"item1": "Projetos",
-				"item2": "Sobre Mim",
-				"item3": "Contacto"
-			}
-		},
 		"footer": {
 			"footeritems": {
-				"item1": "Política de Privacidade",
-				"item2": "Termos e Condições",
-				"item3": "Política de Cookies"
+				"url1": "Política de Privacidade",
+				"url2": "Termos e Condições",
+				"url3": "Política de Cookies"
 			}
 		},
 		"homepage": {
@@ -20,6 +13,12 @@
 				"subtitle": "Desenvolvedor Web Full-Stack.",
 				"paragraph": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, eius vero doloremque inventore iste excepturi, porro velit adipisci reiciendis blanditiis fugit temporibus, eum quaerat voluptas voluptate! Similique minima quam sunt!"
 			}
+		},
+		"notfound": {
+			"title": "Desculpe, esta página não foi encontrada!",
+			"paragraph1": "A página que você está procurando não foi encontrada em ",
+			"paragraph2": "Se você acha que este é um link que deve ser corrigido, informe o macaco especialista altamente treinado por e-mail em: ",
+			"url_text": "Voltar para a página inicial"
 		}
 	}
 }
