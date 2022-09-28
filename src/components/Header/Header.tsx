@@ -2,10 +2,7 @@ import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import { ArrowDownTrayIcon } from '@heroicons/react/24/solid';
 
-import ProfilePicture from '../../assets/profile_picture.png';
-import LinkedIn from '../../assets/icons/linkedin.svg';
-import GitHub from '../../assets/icons/github.svg';
-import Email from '../../assets/icons/email.svg';
+import ProfilePicture from '../../assets/images/profile/profile_picture.webp';
 
 const Header: React.FunctionComponent = () => {
 	const { t } = useTranslation();
@@ -29,36 +26,11 @@ const Header: React.FunctionComponent = () => {
 					<p className='text-lg font-normal text-gray-600'>
 						{t('homepage.header.paragraph')}
 					</p>
-					<div className='flex flex-row items-center justify-center gap-x-2'>
-						<a
-							href='https://www.linkedin.com/in/sergiofelixdev/'
-							target='_blank'
-							rel='noreferrer'>
-							<img
-								src={LinkedIn}
-								alt='Linkedin Logo'
-								className='h-6 w-6'
-							/>
-						</a>
-						<a
-							href='https://github.com/WallQ'
-							target='_blank'
-							rel='noreferrer'>
-							<img
-								src={GitHub}
-								alt='GitHub Logo'
-								className='h-6 w-6'
-							/>
-						</a>
-						<a href='mailto:sergiofelixdev@gmail.com'>
-							<img
-								src={Email}
-								alt='GitHub Logo'
-								className='h-6 w-6'
-							/>
-						</a>
-					</div>
-					<a className='flex flex-row items-center justify-center gap-x-2 bg-primary px-4 py-2 font-medium text-white'>
+					<a
+						href='./docs/cv.pdf'
+						target='_blank'
+						rel='noreferrer'
+						className='flex flex-row items-center justify-center gap-x-2 bg-primary px-4 py-2 font-medium text-white'>
 						Download CV
 						<ArrowDownTrayIcon
 							className='h-4 w-4'
@@ -68,7 +40,7 @@ const Header: React.FunctionComponent = () => {
 				</div>
 				<div className='hidden flex-1 items-center justify-center md:flex'>
 					<div
-						className='h-64 w-64 rounded-full bg-cover bg-top bg-no-repeat'
+						className='h-64 w-64 rounded-full bg-transparent bg-cover bg-top bg-no-repeat'
 						style={{
 							backgroundImage: `url(${ProfilePicture})`,
 						}}
