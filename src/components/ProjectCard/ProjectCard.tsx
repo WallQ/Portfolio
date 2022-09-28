@@ -18,9 +18,12 @@ const ProjectCard: React.FunctionComponent<Props> = ({
 				target='_blank'
 				rel='noreferrer'
 				className='shadow-sm transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:shadow-lg'>
-				<figure>
-					<img src={image_url} alt={image_alt} />
-				</figure>
+				<img
+					src={image_url}
+					alt={image_alt}
+					width={1280}
+					height={800}
+				/>
 			</a>
 		</React.Fragment>
 	);
