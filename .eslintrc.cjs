@@ -35,5 +35,6 @@ module.exports = {
 		quotes: ['error', 'single'],
 		semi: ['error', 'always'],
 		'react/react-in-jsx-scope': 2,
+		'@typescript-eslint/no-var-requires': 0,
 	},
 };
