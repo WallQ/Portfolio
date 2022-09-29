@@ -1,0 +1,42 @@
+[
+	{
+		"title": "Basicamente",
+		"url": "https://github.com/WallQ/Basicamente",
+		"image": {
+			"alt": "Preview Basicamente Project",
+			"url": "./images/projects/Basicamente_preview.webp"
+		}
+	},
+	{
+		"title": "Birthday Countdown",
+		"url": "https://github.com/WallQ/Birthday-Countdown",
+		"image": {
+			"alt": "Preview Birthday Countdown Project",
+			"url": "./images/projects/Birthday-Countdown_preview.webp"
+		}
+	},
+	{
+		"title": "League Searcher",
+		"url": "https://github.com/WallQ/League-Searcher",
+		"image": {
+			"alt": "Preview League Searcher Project",
+			"url": "./images/projects/League-Searcher_preview.webp"
+		}
+	},
+	{
+		"title": "Weather",
+		"url": "https://github.com/WallQ/Weather",
+		"image": {
+			"alt": "Preview Weather Project",
+			"url": "./images/projects/Weather_preview.webp"
+		}
+	},
+	{
+		"title": "PWA Booking",
+		"url": "https://github.com/WallQ/PWA",
+		"image": {
+			"alt": "Preview PWA Booking Project",
+			"url": "./images/projects/PWA-Booking_preview.webp"
+		}
+	}
+]
