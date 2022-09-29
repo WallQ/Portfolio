@@ -10,22 +10,22 @@ export default defineConfig({
 	plugins: [
 		react(),
 		VitePWA({
-			// registerType: 'autoUpdate',
+			registerType: 'autoUpdate',
 			// injectRegister: 'auto',
 			// strategies: 'injectManifest',
 			// includeAssets: ['favicon.svg', 'robots.txt'],
-			// workbox: {
-			// 	globPatterns: [
-			// 		'**/*.{svg,js,css,webp,json,pdf,woff,woff2,png,jpg,html,txt}',
-			// 	],
-			// },
+			workbox: {
+				globPatterns: [
+					'**/*.{svg,js,css,webp,json,pdf,woff,woff2,png,jpg,html,txt,webmanifest}',
+				],
+			},
 			manifest: {
 				name: 'Sérgio Félix - Personal Website',
 				short_name: 'Portfolio',
 				description: 'The personal website of Sérgio Félix',
-				// id: '/Portfolio/',
-				// scope: '/Portfolio/',
-				// start_url: '/Portfolio/',
+				id: '/Portfolio/',
+				scope: '/Portfolio/',
+				start_url: '/Portfolio/',
 				theme_color: '#2564eb',
 				background_color: '#ffffff',
 				orientation: 'portrait',
