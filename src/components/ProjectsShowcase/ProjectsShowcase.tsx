@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery, UseQueryResult } from '@tanstack/react-query';
 import { fetchProjects } from '../../services/projects';
-import { IProject } from '../../interfaces/projects';
+import type { IProject } from '../../interfaces/projects';
 
 import ProjectCard from '../ProjectCard/ProjectCard';
 
