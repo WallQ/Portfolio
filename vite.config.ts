@@ -10,10 +10,17 @@ export default defineConfig({
 	plugins: [
 		react(),
 		VitePWA({
-			registerType: 'autoUpdate',
-			// injectRegister: 'auto',
-			// strategies: 'injectManifest',
-			// includeAssets: ['favicon.svg', 'robots.txt'],
+			base: '/Portfolio/',
+			filename: 'sw.js',
+			srcDir: 'public',
+			outDir: 'dist',
+			minify: true,
+			scope: '/Portfolio/',
+			manifestFilename: 'manifest.webmanifest',
+			registerType: 'prompt',
+			injectRegister: 'auto',
+			strategies: 'generateSW',
+			includeAssets: ['favicon.svg', 'robots.txt'],
 			workbox: {
 				globPatterns: [
 					'**/*.{svg,js,css,webp,json,pdf,woff,woff2,png,jpg,html,txt,webmanifest}',
@@ -56,6 +63,9 @@ export default defineConfig({
 						purpose: 'maskable',
 					},
 				],
+			},
+			devOptions: {
+				enabled: false,
 			},
 		}),
 	],
