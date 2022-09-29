@@ -10,16 +10,7 @@ export default defineConfig({
 	plugins: [
 		react(),
 		VitePWA({
-			base: '/Portfolio/',
-			filename: 'sw.js',
-			srcDir: 'public',
-			outDir: 'dist',
-			minify: true,
-			scope: '/Portfolio/',
-			manifestFilename: 'manifest.webmanifest',
-			registerType: 'prompt',
-			injectRegister: 'auto',
-			strategies: 'generateSW',
+			registerType: 'autoUpdate',
 			includeAssets: ['favicon.svg', 'robots.txt'],
 			workbox: {
 				globPatterns: [
@@ -29,14 +20,15 @@ export default defineConfig({
 			manifest: {
 				name: 'Sérgio Félix - Personal Website',
 				short_name: 'Portfolio',
+				start_url: '/Portfolio/',
+				display: 'fullscreen',
+				background_color: '#ffffff',
+				lang: 'en',
+				scope: '/Portfolio/',
 				description: 'The personal website of Sérgio Félix',
 				id: '/Portfolio/',
-				scope: '/Portfolio/',
-				start_url: '/Portfolio/',
 				theme_color: '#2564eb',
-				background_color: '#ffffff',
 				orientation: 'portrait',
-				display: 'fullscreen',
 				icons: [
 					{
 						src: 'icons/manifest-icon-192.maskable.png',
@@ -63,9 +55,6 @@ export default defineConfig({
 						purpose: 'maskable',
 					},
 				],
-			},
-			devOptions: {
-				enabled: false,
 			},
 		}),
 	],

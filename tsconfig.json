@@ -4,10 +4,9 @@
 		"useDefineForClassFields": true,
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
 		"allowJs": false,
-		"skipLibCheck": false,
+		"skipLibCheck": true,
 		"esModuleInterop": false,
 		"allowSyntheticDefaultImports": true,
-		"importsNotUsedAsValues": "error",
 		"strict": true,
 		"forceConsistentCasingInFileNames": true,
 		"module": "ESNext",
@@ -17,7 +16,7 @@
 		"noEmit": true,
 		"jsx": "react-jsx"
 	},
-	"include": ["./src"],
-	"exclude": ["./dist", "./node_modules", "./test"],
+	"include": ["src"],
+	"exclude": ["dist", "node_modules"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }
