@@ -5,7 +5,12 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
 	base: '/Portfolio/',
 	server: {
-		port: 3000,
+		host: '192.168.1.157',
+		port: 80,
+	},
+	preview: {
+		host: '192.168.1.157',
+		port: 80,
 	},
 	plugins: [
 		react(),
@@ -21,7 +26,7 @@ export default defineConfig({
 				name: 'Sérgio Félix - Personal Website',
 				short_name: 'Portfolio',
 				start_url: '/Portfolio/',
-				display: 'fullscreen',
+				display: 'standalone',
 				background_color: '#ffffff',
 				lang: 'en',
 				scope: '/Portfolio/',
@@ -31,25 +36,25 @@ export default defineConfig({
 				orientation: 'portrait',
 				icons: [
 					{
-						src: 'icons/manifest-icon-192.maskable.png',
+						src: 'icons/android-chrome-192x192.png',
 						sizes: '192x192',
 						type: 'image/png',
 						purpose: 'any',
 					},
 					{
-						src: 'icons/manifest-icon-192.maskable.png',
+						src: 'icons/android-chrome-192x192.png',
 						sizes: '192x192',
 						type: 'image/png',
 						purpose: 'maskable',
 					},
 					{
-						src: 'icons/manifest-icon-512.maskable.png',
+						src: 'icons/android-chrome-512x512.png',
 						sizes: '512x512',
 						type: 'image/png',
 						purpose: 'any',
 					},
 					{
-						src: 'icons/manifest-icon-512.maskable.png',
+						src: 'icons/android-chrome-512x512.png',
 						sizes: '512x512',
 						type: 'image/png',
 						purpose: 'maskable',
