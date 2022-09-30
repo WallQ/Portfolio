@@ -23,6 +23,7 @@ const ProjectCard: React.FunctionComponent<Props> = ({
 					alt={image_alt}
 					width={1280}
 					height={800}
+					loading='lazy'
 				/>
 			</a>
 		</React.Fragment>

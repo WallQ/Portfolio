@@ -1,10 +1,10 @@
-export interface IProjectImage {
+export type IProjectImage = {
 	alt: string;
 	url: string;
-}
+};
 
-export interface IProject {
+export type IProject = {
 	title: string;
 	url: string;
 	image: IProjectImage;
-}
+};

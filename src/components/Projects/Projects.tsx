@@ -1,11 +1,11 @@
 import React from 'react';
 import { useQuery, UseQueryResult } from '@tanstack/react-query';
 import { fetchProjects } from '../../services/projects';
-import type { IProject } from '../../interfaces/projects';
+import type { IProject } from './Types';
 
-import ProjectCard from '../ProjectCard/ProjectCard';
+import ProjectCard from './ProjectCard/ProjectCard';
 
-const ProjectsShowcase: React.FunctionComponent = () => {
+const Projects: React.FunctionComponent = () => {
 	const { isLoading, error, data }: UseQueryResult<IProject[], Error> =
 		useQuery<IProject[], Error>(['projects'], fetchProjects);
 
@@ -15,7 +15,7 @@ const ProjectsShowcase: React.FunctionComponent = () => {
 	return (
 		<React.Fragment>
 			<div className='flex flex-col gap-y-8'>
-				<h2 className='text-3xl font-bold tracking-tight text-gray-900'>
+				<h2 className='text-3xl font-bold capitalize tracking-tight text-gray-900'>
 					Latest Projects
 				</h2>
 				<div className='grid grid-cols-1 content-center justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-3'>
@@ -33,4 +33,4 @@ const ProjectsShowcase: React.FunctionComponent = () => {
 	);
 };
 
-export default ProjectsShowcase;
+export default Projects;
