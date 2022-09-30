@@ -5,11 +5,10 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
 	base: '/Portfolio/',
 	server: {
-		host: '192.168.1.157',
-		port: 80,
+		port: 3000,
 	},
 	preview: {
-		host: '192.168.1.157',
+		host: process.env.IP,
 		port: 80,
 	},
 	plugins: [
