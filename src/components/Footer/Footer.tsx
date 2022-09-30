@@ -6,8 +6,8 @@ import RouteCookiesPolicy from '../../routes/CookiesPolicy';
 import RoutePrivacyPolicy from '../../routes/PrivacyPolicy';
 import RouteTermsConditions from '../../routes/TermsConditions';
 
-import LinkedIn from '../../assets/icons/linkedin.svg';
-import GitHub from '../../assets/icons/github.svg';
+import LinkedIn from '../../assets/icons/socials/linkedin.svg';
+import GitHub from '../../assets/icons/socials/github.svg';
 
 const Footer: React.FunctionComponent = () => {
 	const { t } = useTranslation();

@@ -6,8 +6,8 @@ import {
 	ChevronDownIcon,
 	ChevronUpIcon,
 } from '@heroicons/react/24/outline';
-import GB from '../../assets/icons/gb.svg';
-import PT from '../../assets/icons/pt.svg';
+import GB from '../../assets/icons/flags/gb.svg';
+import PT from '../../assets/icons/flags/pt.svg';
 
 const Navbar: React.FunctionComponent = () => {
 	const { i18n } = useTranslation();

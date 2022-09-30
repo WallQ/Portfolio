@@ -8,7 +8,7 @@ const Header: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	return (
 		<React.Fragment>
-			<header className='flex flex-row items-center justify-between py-24'>
+			<header className='flex flex-row items-center justify-between'>
 				<div className='flex w-full flex-col items-start justify-center gap-y-4 sm:w-3/5 lg:w-1/2'>
 					<div className='flex flex-col items-start justify-center'>
 						<h1 className='text-4xl font-bold tracking-tight text-gray-900'>
