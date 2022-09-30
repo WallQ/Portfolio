@@ -6,7 +6,7 @@ const NotFound: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	return (
 		<React.Fragment>
-			<main className='mx-auto flex h-screen w-full flex-col items-center justify-center px-8 sm:w-3/5 lg:w-1/2'>
+			<main className='mx-auto flex w-full flex-col items-center justify-center px-8 sm:w-3/5 lg:w-1/2'>
 				<div className='flex flex-col items-start justify-items-center gap-y-4'>
 					<h1 className='text-4xl font-bold text-gray-900'>
 						{t('notfound.title')}
