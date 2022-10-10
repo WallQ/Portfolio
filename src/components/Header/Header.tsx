@@ -9,7 +9,7 @@ const Header: React.FunctionComponent = () => {
 	return (
 		<React.Fragment>
 			<header className='flex flex-row items-center justify-between'>
-				<div className='flex w-full flex-col items-start justify-center gap-y-4 sm:w-3/5 lg:w-1/2'>
+				<div className='flex w-full flex-col items-start justify-center gap-y-4 sm:w-3/5 lg:w-7/12'>
 					<div className='flex flex-col items-start justify-center'>
 						<h1 className='text-4xl font-bold tracking-tight text-gray-900'>
 							<Trans
@@ -30,22 +30,20 @@ const Header: React.FunctionComponent = () => {
 						href='./docs/cv.pdf'
 						target='_blank'
 						rel='noreferrer'
-						className='flex flex-row items-center justify-center gap-x-2 bg-primary px-4 py-2 font-medium text-white'>
+						className='flex flex-row items-center justify-center gap-x-2 rounded-sm bg-primary px-6 py-4 text-lg font-medium text-white hover:opacity-75'>
 						Download CV
 						<ArrowDownTrayIcon
-							className='h-4 w-4'
+							className='h-5 w-5'
 							aria-hidden='true'
 						/>
 					</a>
 				</div>
-				<div className='hidden flex-1 items-center justify-center md:flex'>
-					<div
-						className='h-64 w-64 rounded-full bg-transparent bg-cover bg-top bg-no-repeat'
-						style={{
-							backgroundImage: `url(${ProfilePicture})`,
-						}}
-					/>
-				</div>
+				<div
+					className='hidden h-64 w-64 rounded-full bg-transparent bg-cover bg-top bg-no-repeat md:block'
+					style={{
+						backgroundImage: `url(${ProfilePicture})`,
+					}}
+				/>
 			</header>
 		</React.Fragment>
 	);

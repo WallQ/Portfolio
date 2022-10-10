@@ -13,8 +13,7 @@ const Footer: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	return (
 		<React.Fragment>
-			<footer className='mx-auto max-w-7xl px-8 py-4'>
-				<hr className='pb-4 text-gray-300' />
+			<footer className='mx-auto max-w-7xl p-8'>
 				<div className='flex flex-col items-center justify-center gap-y-4'>
 					<div className='flex flex-row items-center justify-center gap-x-4'>
 						<a
