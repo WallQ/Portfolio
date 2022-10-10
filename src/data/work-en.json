@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Junior Software Engineer",
+		"company_name": "Basicamente Digital",
+		"company_url": "https://basicamente.pt/pt/",
+		"employment_type": "Internship",
+		"start_date": "Mar 2022",
+		"end_date": "Aug 2022",
+		"location": "Amarante, Porto, Portugal",
+		"description": "I was assigned to design and develop the front-end of the corporate website."
+	},
+	{
+		"title": "Junior Software Engineer",
+		"company_name": "RISEMA",
+		"company_url": "https://risema.pt/",
+		"employment_type": "Internship",
+		"start_date": "Feb 2019",
+		"end_date": "Apr 2019",
+		"location": "Felgueiras, Porto, Portugal",
+		"description": "I was responsible for providing help in the maintenance of the network architecture of affiliated companies.<br> I also developed a ransomware and did a case study for my professional aptitude test."
+	},
+	{
+		"title": "Computer Technician",
+		"company_name": "RISEMA",
+		"company_url": "https://risema.pt/",
+		"employment_type": "Internship",
+		"start_date": "Feb 2018",
+		"end_date": "Apr 2018",
+		"location": "Felgueiras, Porto, Portugal",
+		"description": "I was responsible for the maintenance of old computers and, if required, building new ones for customers and affiliated companies."
+	}
+]

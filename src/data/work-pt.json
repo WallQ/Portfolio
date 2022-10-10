@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Engenheiro de Software Júnior",
+		"company_name": "Basicamente Digital",
+		"company_url": "https://basicamente.pt/pt/",
+		"employment_type": "Estágio",
+		"start_date": "Mar 2022",
+		"end_date": "Ago 2022",
+		"location": "Amarante, Porto, Portugal",
+		"description": "Fui destacado para desenhar e desenvolver o front-end do website corporativo."
+	},
+	{
+		"title": "Engenheiro de Software Júnior",
+		"company_name": "RISEMA",
+		"company_url": "https://risema.pt/",
+		"employment_type": "Estágio",
+		"start_date": "Feb 2019",
+		"end_date": "Abr 2019",
+		"location": "Felgueiras, Porto, Portugal",
+		"description": "Fui responsável por auxiliar na manutenção da arquitetura de rede das empresas afiliadas.<br> Também desenvolvi um ransomware e fiz um caso de estudo para a minha prova de aptidão profissional."
+	},
+	{
+		"title": "Técnico de Informática",
+		"company_name": "RISEMA",
+		"company_url": "https://risema.pt/",
+		"employment_type": "Estágio",
+		"start_date": "Feb 2018",
+		"end_date": "Abr 2018",
+		"location": "Felgueiras, Porto, Portugal",
+		"description": "Fui responsável pela manutenção de computadores antigos e, se necessário, construção de novos para clientes e empresas afiliadas."
+	}
+]
