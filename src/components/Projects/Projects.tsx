@@ -1,25 +1,20 @@
 import React from 'react';
-import { useQuery, UseQueryResult } from '@tanstack/react-query';
-import { fetchProjects } from '../../services/projects';
-import type { IProject } from './Types';
+import { useTranslation } from 'react-i18next';
+import ProjectsData from '../../data/projects.json';
+import type { ProjectType } from './Types';
 
 import ProjectCard from './ProjectCard/ProjectCard';
 
 const Projects: React.FunctionComponent = () => {
-	const { isLoading, error, data }: UseQueryResult<IProject[], Error> =
-		useQuery<IProject[], Error>(['projects'], fetchProjects);
-
-	if (isLoading) return <p>Loading...</p>;
-	if (error) return <p>Error...{error.message}</p>;
-
+	const { t } = useTranslation();
 	return (
 		<React.Fragment>
-			<div className='flex flex-col gap-y-8'>
+			<div className='flex flex-col gap-y-10'>
 				<h2 className='text-3xl font-bold capitalize tracking-tight text-gray-900'>
-					Latest Projects
+					{t('homepage.projects.title')}
 				</h2>
 				<div className='grid grid-cols-1 content-center justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-3'>
-					{data.map((project, index: number) => (
+					{ProjectsData.map((project: ProjectType, index: number) => (
 						<ProjectCard
 							key={`Project-${index}`}
 							external_url={project.url}

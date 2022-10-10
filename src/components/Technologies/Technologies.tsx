@@ -1,15 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Logos from './TechnologiesLogos';
 
 const Technologies: React.FunctionComponent = () => {
+	const { t } = useTranslation();
 	return (
 		<React.Fragment>
-			<div className='flex flex-col gap-y-8'>
+			<div className='flex flex-col gap-y-10'>
 				<h2 className='text-3xl font-bold capitalize tracking-tight text-gray-900'>
-					Technologies
+					{t('homepage.technologies.title')}
 				</h2>
-				<div className='grid grid-cols-2 content-center justify-items-center gap-x-4 gap-y-8 md:grid-cols-4 lg:grid-cols-4'>
+				<div className='grid grid-cols-2 content-center justify-items-center gap-8 md:grid-cols-4 lg:grid-cols-4'>
 					{Logos.map((Icon: string, index: number) => {
 						return (
 							<img

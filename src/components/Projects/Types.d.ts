@@ -1,9 +1,9 @@
-export type IProjectImage = {
+export type ProjectImageType = {
 	alt: string;
 	url: string;
 };
 
-export type IProject = {
+export type ProjectType = {
 	title: string;
 	url: string;
 	image: IProjectImage;
