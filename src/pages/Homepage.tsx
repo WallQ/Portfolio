@@ -10,7 +10,7 @@ const Homepage: React.FunctionComponent = () => {
 	return (
 		<React.Fragment>
 			<main>
-				<div className='mx-auto flex max-w-7xl flex-col gap-y-16 px-8 py-16'>
+				<div className='mx-auto flex max-w-7xl flex-col gap-y-32 px-8 py-16'>
 					<Header />
 					<Experiences />
 					<Technologies />
