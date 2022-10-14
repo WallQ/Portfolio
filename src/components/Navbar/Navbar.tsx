@@ -26,7 +26,7 @@ const Navbar: React.FunctionComponent = () => {
 
 	return (
 		<React.Fragment>
-			<nav className='mx-auto max-w-7xl px-8 py-4'>
+			<nav className='mx-auto max-w-7xl p-8'>
 				<div className='flex flex-row flex-wrap items-center justify-between'>
 					<a
 						href='/Portfolio/'
