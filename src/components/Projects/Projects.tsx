@@ -9,7 +9,7 @@ const Projects: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	return (
 		<React.Fragment>
-			<div className='flex flex-col gap-y-10'>
+			<div className='flex flex-col gap-y-16'>
 				<h2 className='text-3xl font-bold capitalize tracking-tight text-gray-900'>
 					{t('homepage.projects.title')}
 				</h2>
