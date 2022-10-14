@@ -11,14 +11,14 @@
 			"header": {
 				"title": "Olá! Sou o <span>Sérgio Félix</span>,",
 				"subtitle": "Desenvolvedor Web Full-Stack.",
-				"paragraph": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, eius vero doloremque inventore iste excepturi, porro velit adipisci reiciendis blanditiis fugit temporibus, eum quaerat voluptas voluptate! Similique minima quam sunt!"
+				"paragraph": "Sou um engenheiro de software apaixonado, especializado em construir e projetar coisas para a web. Atualmente, estou focado em terminar minha licenciatura em Ciência da Computação e Engenharia."
 			},
 			"experiences": { "title": "Experiência de Trabalho" },
 			"technologies": { "title": "Tecnologias" },
 			"projects": { "title": "Últimos Projetos" },
 			"contact": {
-				"title": "Contacto",
-				"paragraph": "Embora eu não esteja atulamente procurando novas oportunidades, minha caixa de entrada está sempre aberta. Se você tem alguma pergunta ou apenas quer dizer olá, vou tentar o meu melhor para lhe responder!",
+				"title": "Hey! Vamos conversar!",
+				"paragraph": "Embora eu não esteja atulamente procurando novas oportunidades, minha caixa de entrada está sempre aberta. Se você tem alguma pergunta, propostas ou quer trabalhar junto, sinta-se à vontade para entrar em contato.",
 				"button_text": "Entrar Em Contato"
 			}
 		},

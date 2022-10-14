@@ -11,14 +11,14 @@
 			"header": {
 				"title": "Hi! I'm <span>Sérgio Félix</span>,",
 				"subtitle": "Full-Stack Web Developer.",
-				"paragraph": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, eius vero doloremque inventore iste excepturi, porro velit adipisci reiciendis blanditiis fugit temporibus, eum quaerat voluptas voluptate! Similique minima quam sunt!"
+				"paragraph": "I'm a passionate software engineer specializing in building and designing things for the web. Currently, I'm focused on finishing my degree in Computer Science and Engineering."
 			},
 			"experiences": { "title": "Work Experience" },
 			"technologies": { "title": "Technologies" },
 			"projects": { "title": "Latest Projects" },
 			"contact": {
-				"title": "Contact",
-				"paragraph": "Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+				"title": "Hey! Let's talk!",
+				"paragraph": "Although I'm not currently looking for new opportunities, my inbox is always open. If you have any questions, proposals or want to work together, feel free to reach out.",
 				"button_text": "Get In Touch"
 			}
 		},
