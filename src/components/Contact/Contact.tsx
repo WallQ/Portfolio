@@ -6,9 +6,9 @@ const Contact: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	return (
 		<React.Fragment>
-			<div className='w-full bg-primary px-8 py-16'>
+			<div className='mt-16 w-full bg-primary px-8 py-16'>
 				<div className='flex flex-col items-center justify-center gap-y-8'>
-					<h3 className='text-center text-3xl font-bold capitalize tracking-tight text-white'>
+					<h3 className='text-center text-4xl font-bold capitalize tracking-tight text-white'>
 						{t('homepage.contact.title')}
 					</h3>
 					<p className='w-4/5 text-center text-lg font-normal text-gray-100 sm:w-3/5 lg:w-2/5'>
