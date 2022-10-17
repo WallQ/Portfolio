@@ -10,8 +10,13 @@ This is a [Vite App](https://vitejs.dev/) project bootstrapped with [`npm create
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
 
+```bash
+npm install
+```
+
+Then run the development server:
 ```bash
 npm run start
 ```
