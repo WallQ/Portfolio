@@ -41,32 +41,39 @@ const ProjectCard: React.FunctionComponent<Props> = ({
 						/>
 					</span>
 					<div className='flex flex-1 flex-col items-start justify-between gap-y-4'>
-						<div className='flex flex-col'>
-							<p className='text-base text-gray-600'>
-								{title},&nbsp;
-								<span className='font-medium text-gray-900'>
-									{employment_type}
-								</span>
-							</p>
-							<p className='text-sm text-gray-600'>
-								<a
-									href={company_url}
-									target='_blank'
-									rel='noreferrer'
-									className='font-medium text-primary hover:opacity-75'>
-									{company_name}
-								</a>
-								&nbsp;&sdot; {location}
-							</p>
+						<div className='flex w-full flex-col'>
+							<div className='flex flex-col justify-between md:flex-row'>
+								<p className='text-base text-gray-600'>
+									{title},&nbsp;
+									<span className='font-medium text-gray-900'>
+										{employment_type}
+									</span>
+								</p>
+								<div className='hidden text-sm text-gray-600 md:block'>
+									{start_date} - {end_date}
+								</div>
+							</div>
+							<div className='flex flex-col justify-between md:flex-row'>
+								<p className='text-sm text-gray-600'>
+									<a
+										href={company_url}
+										target='_blank'
+										rel='noreferrer'
+										className='font-medium text-primary hover:opacity-75'>
+										{company_name}
+									</a>
+									&nbsp;&sdot; {location}
+								</p>
+								<div className='block text-sm text-gray-600 md:hidden'>
+									{start_date} - {end_date}
+								</div>
+							</div>
 						</div>
 						<p
 							className='text-base text-gray-900'
 							dangerouslySetInnerHTML={{
 								__html: description,
 							}}></p>
-					</div>
-					<div className='text-sm text-gray-600'>
-						{start_date} - {end_date}
 					</div>
 				</div>
 			</li>
