@@ -6,17 +6,24 @@ import {
 	ChevronDownIcon,
 	ChevronUpIcon,
 } from '@heroicons/react/24/outline';
+
 import GB from '../../assets/icons/flags/gb.svg';
+import ES from '../../assets/icons/flags/es.svg';
 import PT from '../../assets/icons/flags/pt.svg';
+
+import LinkedIn from '../../assets/icons/socials/linkedin.svg';
+import GitHub from '../../assets/icons/socials/github.svg';
 
 const Navbar: React.FunctionComponent = () => {
 	const { i18n } = useTranslation();
 
 	const flagBaseOnLanguage =
 		i18n.language === 'en' ? (
-			<img src={GB} alt='Great Britain Flag' className='h-4 w-4' />
+			<img src={GB} alt='Great Britain Flag' className='h-5 w-5' />
+		) : i18n.language === 'es' ? (
+			<img src={ES} alt='Spanish Flag' className='h-5 w-5' />
 		) : (
-			<img src={PT} alt='Portuguese Flag' className='h-4 w-4' />
+			<img src={PT} alt='Portuguese Flag' className='h-5 w-5' />
 		);
 
 	const handleChangeLanguage = (language: string) => {
@@ -27,35 +34,61 @@ const Navbar: React.FunctionComponent = () => {
 	return (
 		<React.Fragment>
 			<nav className='mx-auto max-w-7xl p-8'>
-				<div className='flex flex-row flex-wrap items-center justify-between'>
+				<div className='flex flex-row items-center justify-between'>
 					<a
 						href='/Portfolio/'
 						className='text-base font-bold capitalize text-gray-900'>
 						Sérgio Félix
 					</a>
-					<div className='flex flex-row flex-wrap items-center justify-between gap-x-4'>
-						<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:pr-0'>
+					<div className='flex flex-row items-center justify-between gap-x-4'>
+						<div className='flex flex-row items-center justify-center gap-x-4'>
+							<a
+								href='https://www.linkedin.com/in/sergiofelixdev/'
+								target='_blank'
+								rel='noreferrer'>
+								<img
+									src={LinkedIn}
+									alt='Linkedin Logo'
+									className='h-5 w-5'
+								/>
+							</a>
+							<a
+								href='https://github.com/WallQ'
+								target='_blank'
+								rel='noreferrer'>
+								<img
+									src={GitHub}
+									alt='GitHub Logo'
+									className='h-5 w-5'
+								/>
+							</a>
+						</div>
+						<div className='static inset-auto flex items-center'>
 							<Menu as='div' className='relative'>
 								{({ open }) => (
 									<React.Fragment>
-										<Menu.Button className='flex flex-row items-center justify-between gap-x-1'>
-											<span className='sr-only'>
-												Open language menu
-											</span>
-											{flagBaseOnLanguage}
-											<span className='text-base font-normal capitalize text-gray-900'>
-												{i18n.language === 'en'
-													? 'EN'
-													: 'PT'}
-											</span>
+										<Menu.Button className='flex flex-row items-center justify-between'>
+											<div className='flex flex-row items-center justify-between gap-x-2'>
+												<span className='sr-only'>
+													Open language menu
+												</span>
+												{flagBaseOnLanguage}
+												<span className='text-sm font-normal capitalize text-gray-900'>
+													{i18n.language === 'en'
+														? 'EN'
+														: i18n.language === 'es'
+														? 'ES'
+														: 'PT'}
+												</span>
+											</div>
 											{open ? (
-												<ChevronDownIcon
-													className='h-4 w-4'
+												<ChevronUpIcon
+													className='h-5 w-5'
 													aria-hidden='true'
 												/>
 											) : (
-												<ChevronUpIcon
-													className='h-4 w-4'
+												<ChevronDownIcon
+													className='h-5 w-5'
 													aria-hidden='true'
 												/>
 											)}
@@ -81,7 +114,8 @@ const Navbar: React.FunctionComponent = () => {
 																active
 																	? 'bg-gray-100'
 																	: ''
-															} flex w-full flex-row items-center justify-center gap-x-1 px-4 py-2 text-sm font-normal text-gray-900`}>
+															} flex w-full flex-row items-center justify-start gap-x-1 px-4 py-2 text-sm font-normal text-gray-900`}>
+															English
 															{i18n.language ===
 															'en' ? (
 																<CheckIcon
@@ -89,7 +123,30 @@ const Navbar: React.FunctionComponent = () => {
 																	aria-hidden='true'
 																/>
 															) : null}
-															English
+														</button>
+													)}
+												</Menu.Item>
+												<Menu.Item>
+													{({ active }) => (
+														<button
+															onClick={() =>
+																handleChangeLanguage(
+																	'es',
+																)
+															}
+															className={`${
+																active
+																	? 'bg-gray-100'
+																	: ''
+															} flex w-full flex-row items-center justify-start gap-x-1 px-4 py-2 text-sm font-normal text-gray-900`}>
+															Español
+															{i18n.language ===
+															'es' ? (
+																<CheckIcon
+																	className='h-4 w-4 text-primary'
+																	aria-hidden='true'
+																/>
+															) : null}
 														</button>
 													)}
 												</Menu.Item>
@@ -105,7 +162,8 @@ const Navbar: React.FunctionComponent = () => {
 																active
 																	? 'bg-gray-100'
 																	: ''
-															} flex w-full flex-row items-center justify-center gap-x-1 px-4 py-2 text-sm font-normal text-gray-900`}>
+															} flex w-full flex-row items-center justify-start gap-x-1 px-4 py-2 text-sm font-normal text-gray-900`}>
+															Português
 															{i18n.language ===
 															'pt' ? (
 																<CheckIcon
@@ -113,7 +171,6 @@ const Navbar: React.FunctionComponent = () => {
 																	aria-hidden='true'
 																/>
 															) : null}
-															Português
 														</button>
 													)}
 												</Menu.Item>
