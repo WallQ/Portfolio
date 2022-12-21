@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ExperiencesDataEN from '../../data/work-en.json';
+import ExperiencesDataES from '../../data/work-es.json';
 import ExperiencesDataPT from '../../data/work-pt.json';
 import type { ExperienceType } from './Types';
 
@@ -9,7 +10,11 @@ import ExperienceCard from './ExperienceCard/ExperienceCard';
 const Experiences: React.FunctionComponent = () => {
 	const { t, i18n } = useTranslation();
 	const Experiences =
-		i18n.language === 'en' ? ExperiencesDataEN : ExperiencesDataPT;
+		i18n.language === 'en'
+			? ExperiencesDataEN
+			: i18n.language === 'es'
+			? ExperiencesDataES
+			: ExperiencesDataPT;
 
 	return (
 		<React.Fragment>
