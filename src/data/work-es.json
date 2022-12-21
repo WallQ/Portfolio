@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Ingeniero de Software Junior",
+		"company_name": "Basicamente Digital",
+		"company_url": "https://basicamente.pt/pt/",
+		"employment_type": "Internado",
+		"start_date": "Mar 2022",
+		"end_date": "Ago 2022",
+		"location": "Amarante, Porto, Portugal",
+		"description": "Fui asignado a diseñar y desarrollar el front-end del sitio web corporativo."
+	},
+	{
+		"title": "Ingeniero de Software Junior",
+		"company_name": "RISEMA",
+		"company_url": "https://risema.pt/",
+		"employment_type": "Internado",
+		"start_date": "Feb 2019",
+		"end_date": "Abr 2019",
+		"location": "Felgueiras, Porto, Portugal",
+		"description": "Fui responsable de brindar ayuda en el mantenimiento de la arquitectura de red de las empresas afiliadas.<br> También realicé un estudio de caso desarrollando un ransomware para mi prueba de aptitud profesional."
+	},
+	{
+		"title": "Tecnico Informatico",
+		"company_name": "RISEMA",
+		"company_url": "https://risema.pt/",
+		"employment_type": "Internado",
+		"start_date": "Feb 2018",
+		"end_date": "Abr 2018",
+		"location": "Felgueiras, Porto, Portugal",
+		"description": "Fui responsable del mantenimiento de las computadoras antiguas y, en caso de ser necesario, de la construcción de nuevas para los clientes y empresas afiliadas."
+	}
+]

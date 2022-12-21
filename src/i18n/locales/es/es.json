@@ -1,0 +1,32 @@
+{
+	"translation": {
+		"footer": {
+			"footeritems": {
+				"url1": "Política de privacidad",
+				"url2": "Términos y Condiciones",
+				"url3": "Política de Cookies"
+			}
+		},
+		"homepage": {
+			"header": {
+				"title": "¡Hola! Soy <span>Sérgio Félix</span>,",
+				"subtitle": "Desarrollador Web Full-Stack.",
+				"paragraph": "Soy un ingeniero de software apasionado, especializado en construir y diseñar cosas para la web. En este momento, estoy centrado en terminar mi licenciatura en Ciencias de la Computación e Ingeniería."
+			},
+			"experiences": { "title": "Experiencia de Trabajo" },
+			"technologies": { "title": "Tecnologías" },
+			"projects": { "title": "Últimos Proyectos" },
+			"contact": {
+				"title": "¡Oye! ¡Hablemos!",
+				"paragraph": "Aunque actualmente no estoy buscando nuevas oportunidades, mi bandeja de entrada siempre está abierta. Si tienes alguna pregunta, propuesta o quieren trabajar juntos, no dude en ponerse en contacto.",
+				"button_text": "Entrar en contacto"
+			}
+		},
+		"notfound": {
+			"title": "Lo siento, esta página no fue encontrada!",
+			"paragraph1": "La página que busca no se encuentra en ",
+			"paragraph2": "Si cree que este es un enlace que debe corregirse, informe al mono experto altamente capacitado por correo electrónico a: ",
+			"url_text": "Volver a la página de inicio"
+		}
+	}
+}
