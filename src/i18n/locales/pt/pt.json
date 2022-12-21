@@ -17,9 +17,9 @@
 			"technologies": { "title": "Tecnologias" },
 			"projects": { "title": "Últimos Projetos" },
 			"contact": {
-				"title": "Hey! Vamos conversar!",
-				"paragraph": "Embora eu não esteja atulamente procurando novas oportunidades, minha caixa de entrada está sempre aberta. Se você tem alguma pergunta, propostas ou quer trabalhar junto, sinta-se à vontade para entrar em contato.",
-				"button_text": "Entrar Em Contato"
+				"title": "Ei! Vamos conversar!",
+				"paragraph": "Embora eu não esteja atualmente procurando novas oportunidades, minha caixa de entrada está sempre aberta. Se você tem alguma pergunta, proposta ou quer trabalhar junto, sinta-se à vontade para entrar em contato.",
+				"button_text": "Entrar em contato"
 			}
 		},
 		"notfound": {
