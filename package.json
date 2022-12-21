@@ -16,9 +16,9 @@
 	"scripts": {
 		"build": "tsc && vite build",
 		"dev": "vite",
+		"preview": "vite preview",
 		"lint": "eslint .",
-		"lint:fix": "eslint --fix .",
-		"preview": "vite preview"
+		"lint:fix": "eslint --fix ."
 	},
 	"dependencies": {
 		"@fvilers/disable-react-devtools": "^1.3.0",
