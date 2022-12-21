@@ -18,8 +18,8 @@
 			"projects": { "title": "Latest Projects" },
 			"contact": {
 				"title": "Hey! Let's talk!",
-				"paragraph": "Although I'm not currently looking for new opportunities, my inbox is always open. If you have any questions, proposals or want to work together, feel free to reach out.",
-				"button_text": "Get In Touch"
+				"paragraph": "Although I'm not currently looking for new opportunities, my inbox is always open. If you have any question, proposal or want to work together, feel free to reach out.",
+				"button_text": "Get in touch"
 			}
 		},
 		"notfound": {
