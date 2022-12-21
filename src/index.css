@@ -84,11 +84,9 @@
 			url('/fonts/Inter-Black.woff') format('woff');
 	}
 
-	html {
-		font-family: 'Inter', system-ui, sans-serif;
-	}
-
+	html,
 	body {
+		font-family: 'Inter', system-ui, sans-serif;
 		@apply bg-white;
 	}
 }
