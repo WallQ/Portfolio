@@ -1,5 +1,15 @@
 [
 	{
+		"title": "Food Server",
+		"company_name": "Glicínia Wedding House",
+		"company_url": "http://gliciniaweddinghouse.com/site/",
+		"employment_type": "Part-time",
+		"start_date": "Aug 2022",
+		"end_date": "Sep 2022",
+		"location": "Freamunde, Porto, Portugal",
+		"description": "I excelled in meeting and exceeding customer needs and requirements."
+	},
+	{
 		"title": "Junior Software Engineer",
 		"company_name": "Basicamente Digital",
 		"company_url": "https://basicamente.pt/pt/",
@@ -7,7 +17,27 @@
 		"start_date": "Mar 2022",
 		"end_date": "Aug 2022",
 		"location": "Amarante, Porto, Portugal",
-		"description": "I was assigned to design and develop the front-end of the corporate website."
+		"description": "I designed and built the visually appealing and user-friendly front-end of the company's corporate website."
+	},
+	{
+		"title": "Food Server",
+		"company_name": "Quinta da Torre",
+		"company_url": "https://www.restaurantequintadatorre.com/pt/",
+		"employment_type": "Part-time",
+		"start_date": "Jul 2021",
+		"end_date": "Aug 2021",
+		"location": "Guimarães, Porto, Portugal",
+		"description": "I ensured exceptional customer service and efficiently managed a designated room."
+	},
+	{
+		"title": "Food Server",
+		"company_name": "A Tasquinha",
+		"company_url": "#",
+		"employment_type": "Part-time",
+		"start_date": "Aug 2020",
+		"end_date": "Sep 2020",
+		"location": "Lixa, Porto, Portugal",
+		"description": "I provided comprehensive customer service, oversaw room operations and maintenance."
 	},
 	{
 		"title": "Junior Software Engineer",
@@ -17,7 +47,7 @@
 		"start_date": "Feb 2019",
 		"end_date": "Apr 2019",
 		"location": "Felgueiras, Porto, Portugal",
-		"description": "I was responsible for providing help in the maintenance of the network architecture of affiliated companies.<br> I also did a case study developing a ransomware for my professional aptitude test."
+		"description": "I assisted in the upkeep and optimization of network infrastructure for both customers and affiliated companies.<br> I demonstrated my technical prowess by creating a ransomware simulation and presenting a comprehensive case study for my professional aptitude exam."
 	},
 	{
 		"title": "Computer Technician",
@@ -27,6 +57,6 @@
 		"start_date": "Feb 2018",
 		"end_date": "Apr 2018",
 		"location": "Felgueiras, Porto, Portugal",
-		"description": "I was responsible for the maintenance of old computers and, if required, building new ones for customers and affiliated companies."
+		"description": "I effectively maintained and upgraded both old and new computers for customers and affiliated companies, ensuring seamless performance and functionality."
 	}
 ]

@@ -29,12 +29,12 @@ const ProjectCard: React.FunctionComponent<Props> = ({
 			<li className='relative pb-8'>
 				{spacer ? (
 					<span
-						className='absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200'
+						className='absolute top-4 left-4 -ml-px hidden h-full w-0.5 bg-gray-200 sm:block'
 						aria-hidden='true'
 					/>
 				) : null}
 				<div className='relative flex flex-row items-start justify-between gap-x-4'>
-					<span className='flex h-8 w-8 flex-row items-center justify-center rounded-full bg-primary ring-8 ring-white'>
+					<span className='hidden h-8 w-8 flex-row items-center justify-center rounded-full bg-primary ring-8 ring-white sm:flex'>
 						<BriefcaseIcon
 							className='h-5 w-5 text-white'
 							aria-hidden='true'

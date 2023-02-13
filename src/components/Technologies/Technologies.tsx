@@ -11,7 +11,7 @@ const Technologies: React.FunctionComponent = () => {
 				<h2 className='text-3xl font-bold capitalize tracking-tight text-gray-900'>
 					{t('homepage.technologies.title')}
 				</h2>
-				<div className='grid grid-cols-2 content-center justify-items-center gap-8 md:grid-cols-4 lg:grid-cols-4'>
+				<div className='grid grid-cols-2 content-center justify-items-center gap-8 md:grid-cols-3 lg:grid-cols-5'>
 					{Logos.map((Icon: string, index: number) => {
 						return (
 							<img

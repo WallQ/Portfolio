@@ -1,32 +1,62 @@
 [
 	{
-		"title": "Ingeniero de Software Junior",
+		"title": "Camarero",
+		"company_name": "Glicínia Wedding House",
+		"company_url": "http://gliciniaweddinghouse.com/site/",
+		"employment_type": "Tiempo parcial",
+		"start_date": "Ago 2022",
+		"end_date": "Sep 2022",
+		"location": "Freamunde, Porto, Portugal",
+		"description": "Destaqué en cumplir y superar las necesidades y requisitos de los clientes."
+	},
+	{
+		"title": "Ingeniero de Software Júnior",
 		"company_name": "Basicamente Digital",
 		"company_url": "https://basicamente.pt/pt/",
 		"employment_type": "Internado",
 		"start_date": "Mar 2022",
 		"end_date": "Ago 2022",
 		"location": "Amarante, Porto, Portugal",
-		"description": "Fui asignado a diseñar y desarrollar el front-end del sitio web corporativo."
+		"description": "Diseñé y construí la interfaz de usuario y la parte frontal atractiva y amigable del sitio web corporativo de la empresa."
 	},
 	{
-		"title": "Ingeniero de Software Junior",
+		"title": "Camarero",
+		"company_name": "Quinta da Torre",
+		"company_url": "https://www.restaurantequintadatorre.com/pt/",
+		"employment_type": "Tiempo parcial",
+		"start_date": "Jul 2021",
+		"end_date": "Ago 2021",
+		"location": "Guimarães, Porto, Portugal",
+		"description": "Garanticé un servicio al cliente excepcional y manejé eficientemente una sala designada."
+	},
+	{
+		"title": "Camarero",
+		"company_name": "A Tasquinha",
+		"company_url": "#",
+		"employment_type": "Tiempo parcial",
+		"start_date": "Ago 2020",
+		"end_date": "Sep 2020",
+		"location": "Lixa, Porto, Portugal",
+		"description": "Proporcioné un servicio al cliente exhaustivo, supervisé las operaciones y el mantenimiento de la sala."
+	},
+	{
+		"title": "Ingeniero de Software Júnior",
 		"company_name": "RISEMA",
 		"company_url": "https://risema.pt/",
 		"employment_type": "Internado",
 		"start_date": "Feb 2019",
 		"end_date": "Abr 2019",
 		"location": "Felgueiras, Porto, Portugal",
-		"description": "Fui responsable de brindar ayuda en el mantenimiento de la arquitectura de red de las empresas afiliadas.<br> También realicé un estudio de caso desarrollando un ransomware para mi prueba de aptitud profesional."
+		"description": "Ayudé en el mantenimiento y la optimización de la infraestructura de la red tanto para los clientes como para las empresas afiliadas.<br> Demostré mi habilidad técnica creando una simulación de ransomware y presentando un estudio de caso exhaustivo para mi examen de aptitud profesional."
 	},
 	{
-		"title": "Tecnico Informatico",
+		"title": "Técnico Informático",
 		"company_name": "RISEMA",
 		"company_url": "https://risema.pt/",
 		"employment_type": "Internado",
 		"start_date": "Feb 2018",
 		"end_date": "Abr 2018",
 		"location": "Felgueiras, Porto, Portugal",
-		"description": "Fui responsable del mantenimiento de las computadoras antiguas y, en caso de ser necesario, de la construcción de nuevas para los clientes y empresas afiliadas."
+		"description": "Mantuve y actualicé eficazmente tanto los antiguos como los nuevos computadoras para los clientes y las empresas afiliadas, garantizando un rendimiento y una funcionalidad sin interrupciones."
 	}
 ]

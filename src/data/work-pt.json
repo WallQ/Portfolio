@@ -1,5 +1,15 @@
 [
 	{
+		"title": "Empregado de Mesa",
+		"company_name": "Glicínia Wedding House",
+		"company_url": "http://gliciniaweddinghouse.com/site/",
+		"employment_type": "Tempo parcial",
+		"start_date": "Ago 2022",
+		"end_date": "Set 2022",
+		"location": "Freamunde, Porto, Portugal",
+		"description": "Destaquei-me ao atender e exceder as necessidades e requisitos dos clientes."
+	},
+	{
 		"title": "Engenheiro de Software Júnior",
 		"company_name": "Basicamente Digital",
 		"company_url": "https://basicamente.pt/pt/",
@@ -7,7 +17,27 @@
 		"start_date": "Mar 2022",
 		"end_date": "Ago 2022",
 		"location": "Amarante, Porto, Portugal",
-		"description": "Fui destacado para desenhar e desenvolver o front-end do website corporativo."
+		"description": "Desenhei e construí o front-end visualmente atraente e amigável do website corporativo da empresa."
+	},
+	{
+		"title": "Empregado de Mesa",
+		"company_name": "Quinta da Torre",
+		"company_url": "https://www.restaurantequintadatorre.com/pt/",
+		"employment_type": "Tempo parcial",
+		"start_date": "Jul 2021",
+		"end_date": "Ago 2021",
+		"location": "Guimarães, Porto, Portugal",
+		"description": "Garanti um serviço excepcional ao cliente e gerenciei eficientemente uma sala designada."
+	},
+	{
+		"title": "Empregado de Mesa",
+		"company_name": "A Tasquinha",
+		"company_url": "#",
+		"employment_type": "Tempo parcial",
+		"start_date": "Ago 2020",
+		"end_date": "Set 2020",
+		"location": "Lixa, Porto, Portugal",
+		"description": "Forneci um serviço abrangente ao cliente, supervisionei as operações e a manutenção da sala."
 	},
 	{
 		"title": "Engenheiro de Software Júnior",
@@ -17,7 +47,7 @@
 		"start_date": "Feb 2019",
 		"end_date": "Abr 2019",
 		"location": "Felgueiras, Porto, Portugal",
-		"description": "Fui responsável por auxiliar na manutenção da arquitetura de rede das empresas afiliadas.<br> Também fiz um caso de estudo desenvolvendo um ransomware para a minha prova de aptidão profissional."
+		"description": "Ajudei na manutenção e otimização da infraestrutura de rede tanto para os clientes quanto para as empresas afiliadas.<br> Demonstrei minha habilidade técnica criando uma simulação de um ransomware e apresentando um caso de estudo abrangente para a minha prova de aptidão profissional."
 	},
 	{
 		"title": "Técnico de Informática",
@@ -27,6 +57,6 @@
 		"start_date": "Feb 2018",
 		"end_date": "Abr 2018",
 		"location": "Felgueiras, Porto, Portugal",
-		"description": "Fui responsável pela manutenção de computadores antigos e, se necessário, construção de novos para clientes e empresas afiliadas."
+		"description": "Mantive e atualizei eficazmente tanto os computadores antigos quanto os novos para os clientes e as empresas afiliadas, garantindo um desempenho e funcionalidade sem interrupções."
 	}
 ]
