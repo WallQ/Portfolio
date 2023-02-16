@@ -18,7 +18,7 @@ export default defineConfig({
 			includeAssets: ['favicon.svg', 'robots.txt'],
 			workbox: {
 				globPatterns: [
-					'**/*.{svg,js,css,webp,json,pdf,woff,woff2,png,jpg,html,txt,webmanifest}',
+					'**/*.{svg,js,css,webp,json,woff,woff2,png,jpg,html,txt,webmanifest}',
 				],
 			},
 			manifest: {
