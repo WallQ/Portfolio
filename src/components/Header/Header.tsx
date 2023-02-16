@@ -27,7 +27,7 @@ const Header: React.FunctionComponent = () => {
 						{t('homepage.header.paragraph')}
 					</p>
 					<a
-						href='./docs/CV.pdf'
+						href='https://docs.google.com/viewer?url=https://wallq.github.io/Portfolio/docs/CV.pdf'
 						target='_blank'
 						rel='noreferrer'
 						className='flex flex-row items-center justify-center gap-x-2 rounded-sm bg-primary px-6 py-4 text-lg font-medium text-white hover:opacity-75'>
