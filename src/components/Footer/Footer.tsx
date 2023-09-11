@@ -1,10 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
-import RouteCookiesPolicy from '../../routes/CookiesPolicy';
-import RoutePrivacyPolicy from '../../routes/PrivacyPolicy';
-import RouteTermsConditions from '../../routes/TermsConditions';
 
 import LinkedIn from '../../assets/icons/socials/linkedin.svg';
 import GitHub from '../../assets/icons/socials/github.svg';
@@ -37,25 +32,9 @@ const Footer: React.FunctionComponent = () => {
 							/>
 						</a>
 					</div>
-					<div className='flex flex-row items-center justify-center gap-x-4 text-center'>
-						<Link
-							to={RoutePrivacyPolicy.path}
-							className='text-base font-normal text-gray-900'>
-							{t('footer.footeritems.url1')}
-						</Link>
-						<Link
-							to={RouteTermsConditions.path}
-							className='text-base font-normal text-gray-900'>
-							{t('footer.footeritems.url2')}
-						</Link>
-						<Link
-							to={RouteCookiesPolicy.path}
-							className='text-base font-normal text-gray-900'>
-							{t('footer.footeritems.url3')}
-						</Link>
-					</div>
 					<small className='text-base font-normal text-gray-900'>
-						&copy; {new Date().getFullYear()} Sérgio Félix
+						&copy; {new Date().getFullYear()} Sérgio Félix.{' '}
+						{t('footer.text')}
 					</small>
 				</div>
 			</footer>

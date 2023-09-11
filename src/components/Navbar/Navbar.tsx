@@ -37,8 +37,14 @@ const Navbar: React.FunctionComponent = () => {
 				<div className='flex flex-row items-center justify-between'>
 					<a
 						href='/Portfolio/'
-						className='text-base font-bold capitalize text-gray-900'>
-						Sérgio Félix
+						className='inline-flex items-center justify-center text-base font-bold capitalize text-primary'>
+						<span className='font-extrabold text-gray-900'>
+							&#123;
+						</span>
+						&nbsp;Sérgio Félix&nbsp;
+						<span className='font-extrabold text-gray-900'>
+							&#125;
+						</span>
 					</a>
 					<div className='flex flex-row items-center justify-between gap-x-4'>
 						<div className='flex flex-row items-center justify-center gap-x-4'>

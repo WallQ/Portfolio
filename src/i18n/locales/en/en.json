@@ -1,11 +1,7 @@
 {
 	"translation": {
 		"footer": {
-			"footeritems": {
-				"url1": "Privacy Policy",
-				"url2": "Terms & Conditions",
-				"url3": "Cookies Policy"
-			}
+			"text": "All rights reserved."
 		},
 		"homepage": {
 			"header": {

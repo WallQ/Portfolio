@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header/Header';
 
+import Header from '../components/Header/Header';
 import About from '../components/About/About';
 import Experiences from '../components/Experiences/Experiences';
 import Technologies from '../components/Technologies/Technologies';

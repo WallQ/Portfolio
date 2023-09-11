@@ -18,7 +18,7 @@ const Experiences: React.FunctionComponent = () => {
 
 	return (
 		<React.Fragment>
-			<div className='flex flex-col gap-y-16'>
+			<section className='flex flex-col gap-y-16'>
 				<h2 className='text-3xl font-bold capitalize tracking-tight text-gray-900'>
 					{t('homepage.experiences.title')}
 				</h2>
@@ -42,7 +42,7 @@ const Experiences: React.FunctionComponent = () => {
 						)}
 					</ul>
 				</div>
-			</div>
+			</section>
 		</React.Fragment>
 	);
 };

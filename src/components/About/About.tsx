@@ -5,7 +5,7 @@ const About: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	return (
 		<React.Fragment>
-			<div className='flex flex-col gap-y-16'>
+			<section className='flex flex-col gap-y-16'>
 				<h2 className='text-3xl font-bold capitalize tracking-tight text-gray-900'>
 					{t('homepage.about.title')}
 				</h2>
@@ -23,7 +23,7 @@ const About: React.FunctionComponent = () => {
 						{t('homepage.about.paragraph4')}
 					</p>
 				</div>
-			</div>
+			</section>
 		</React.Fragment>
 	);
 };

@@ -6,7 +6,7 @@ const Contact: React.FunctionComponent = () => {
 	const { t } = useTranslation();
 	return (
 		<React.Fragment>
-			<div className='mt-16 w-full bg-primary px-8 py-16'>
+			<section className='mt-16 w-full bg-primary px-8 py-16'>
 				<div className='flex flex-col items-center justify-center gap-y-8'>
 					<h3 className='text-center text-4xl font-bold capitalize tracking-tight text-white'>
 						{t('homepage.contact.title')}
@@ -26,7 +26,7 @@ const Contact: React.FunctionComponent = () => {
 						/>
 					</a>
 				</div>
-			</div>
+			</section>
 		</React.Fragment>
 	);
 };
