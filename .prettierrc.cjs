@@ -1,3 +1,4 @@
+/** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').options} */
 module.exports = {
 	printWidth: 80,
 	tabWidth: 4,
@@ -10,6 +11,7 @@ module.exports = {
 	bracketSpacing: true,
 	bracketSameLine: true,
 	arrowParens: 'always',
-	endOfLine: 'crlf',
+	endOfLine: 'lf',
 	singleAttributePerLine: false,
+	plugins: ['prettier-plugin-tailwindcss'],
 };

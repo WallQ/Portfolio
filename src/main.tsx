@@ -1,19 +1,27 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import { disableReactDevTools } from '@fvilers/disable-react-devtools';
-import App from './App';
-import './index.css';
-import './i18n';
-import { registerSW } from 'virtual:pwa-register';
+import { RouterProvider, createRouter } from '@tanstack/react-router';
+import '@/styles/globals.css';
 
-if (process.env.NODE_ENV === 'production') {
-	disableReactDevTools();
+import { routeTree } from './routeTree.gen';
+import { ThemeProvider } from './components/theme-provider';
+
+const router = createRouter({ routeTree, defaultPreload: 'intent' });
+
+declare module '@tanstack/react-router' {
+	interface Register {
+		router: typeof router;
+	}
 }
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
-);
-
-registerSW();
+const rootElement = document.getElementById('app')!;
+if (!rootElement.innerHTML) {
+	const root = ReactDOM.createRoot(rootElement);
+	root.render(
+		<StrictMode>
+			<ThemeProvider>
+				<RouterProvider router={router} />
+			</ThemeProvider>
+		</StrictMode>,
+	);
+}
