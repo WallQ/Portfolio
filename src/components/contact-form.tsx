@@ -19,12 +19,14 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { useTranslation } from 'react-i18next';
 
 type ContactFormProps = {};
 
 const ContactForm: React.FunctionComponent<
 	ContactFormProps
 > = ({}): React.ReactNode => {
+	const { t } = useTranslation();
 	const { toast } = useToast();
 
 	const form = useForm<Contact>({
@@ -77,7 +79,9 @@ const ContactForm: React.FunctionComponent<
 						disabled={form.formState.isSubmitting}
 						render={({ field }) => (
 							<FormItem className='w-full'>
-								<FormLabel>First Name</FormLabel>
+								<FormLabel>
+									{t('contact.form.first_name')}
+								</FormLabel>
 								<FormControl>
 									<Input
 										type='text'
@@ -96,7 +100,9 @@ const ContactForm: React.FunctionComponent<
 						disabled={form.formState.isSubmitting}
 						render={({ field }) => (
 							<FormItem className='w-full'>
-								<FormLabel>Last Name</FormLabel>
+								<FormLabel>
+									{t('contact.form.last_name')}
+								</FormLabel>
 								<FormControl>
 									<Input
 										type='text'
@@ -116,7 +122,7 @@ const ContactForm: React.FunctionComponent<
 					disabled={form.formState.isSubmitting}
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Email</FormLabel>
+							<FormLabel>{t('contact.form.email')}</FormLabel>
 							<FormControl>
 								<Input
 									type='email'
@@ -126,7 +132,7 @@ const ContactForm: React.FunctionComponent<
 								/>
 							</FormControl>
 							<FormDescription>
-								I won&apos;t share your email with anyone else.
+								{t('contact.form.email_information')}
 							</FormDescription>
 							<FormMessage />
 						</FormItem>
@@ -138,11 +144,13 @@ const ContactForm: React.FunctionComponent<
 					disabled={form.formState.isSubmitting}
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Message</FormLabel>
+							<FormLabel>{t('contact.form.message')}</FormLabel>
 							<FormControl>
 								<Textarea
 									className='resize-none'
-									placeholder='Tell me something...'
+									placeholder={t(
+										'contact.form.message_placeholder',
+									)}
 									maxLength={144}
 									{...field}
 								/>
@@ -163,12 +171,12 @@ const ContactForm: React.FunctionComponent<
 						{form.formState.isSubmitting ? (
 							<Fragment>
 								<Loader2 className='mr-2 h-4 w-4 animate-spin' />
-								Sending...
+								{t('contact.form.sending_button')}
 							</Fragment>
 						) : (
 							<Fragment>
 								<Send className='mr-2 h-4 w-4' />
-								Send
+								{t('contact.form.send_button')}
 							</Fragment>
 						)}
 					</Button>

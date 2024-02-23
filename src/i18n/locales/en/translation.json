@@ -1,0 +1,41 @@
+{
+	"translation": {
+		"header": {
+			"title": "Hi! I'm <span>Sérgio Félix</span>, <br/>Software Engineer.",
+			"description": "Passionate problem solver and code enthusiast, dedicated to developing and designing innovative solutions with precision and creativity.",
+			"contact_button": "Get in touch",
+			"resume_button": "Resume"
+		},
+		"about": {
+			"title": "About me",
+			"word": "BORING",
+			"paragraph_1": "Hello, I'm Sérgio Félix, and I'm thrilled to be part of the web development community. My passion for crafting exceptional digital experiences and solutions drives my work and motivates me to constantly improve and expand my skills.",
+			"paragraph_2": "I first discovered my interest in web development in 2020 when I enrolled in the Higher Professional Technical Course in Development for Web and Mobile Devices. This experience opened my eyes to the vast and ever-evolving world of web development, and I was eager to explore and learn more beyond the basics of PHP, MySQL, and Bootstrap.",
+			"paragraph_3": "Currently, I am pursuing a degree in Computer Science and Engineering and have aspirations to continue my education with a Master's degree in Computer Engineering. While I am dedicated to my studies, I also value the importance of hands-on experience and continuously work on personal projects to enhance my abilities.",
+			"paragraph_4": "I am a driven and flexible individual, and I strive to balance my academic pursuits with opportunities to put my skills into practice. If you're looking for a talented software engineer who is dedicated to creating remarkable digital solutions, look no further. Let's work together to bring your vision to life!"
+		},
+		"experience": {
+			"title": "Work Experience",
+			"description": "I have had the opportunity to work with a variety of clients and companies, and I am proud to have contributed to the success of each project. Here are some of the highlights of my professional experience."
+		},
+		"projects": {
+			"title": "Projects",
+			"description": "I am passionate about creating innovative and user-friendly digital solutions. Here are some of the projects I have worked on.",
+			"show_more_button": "Show more"
+		},
+		"contact": {
+			"title": "Let's work together on your next idea.",
+			"description": "I'm always happy to hear about exciting opportunities, join in interesting conversations, and build valuable connections. Let's connect!",
+			"form": {
+				"first_name": "First Name",
+				"last_name": "Last Name",
+				"email": "Email",
+				"email_information": "I won't share your email with anyone else.",
+				"message": "Message",
+				"message_placeholder": "Tell me something...",
+				"send_button": "Send",
+				"sending_button": "Sending..."
+			}
+		}
+	}
+}

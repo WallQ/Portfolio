@@ -31,13 +31,19 @@ import {
 import { useTheme } from '@/components/theme-provider';
 
 import UnitedKingdomFlag from '@/assets/icons/united kingdom.svg';
-import SpainFlag from '@/assets/icons/spain.svg';
 import PortugalFlag from '@/assets/icons/portugal.svg';
+import { useTranslation } from 'react-i18next';
 
 type NavbarProps = {};
 
 const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 	const { theme, setTheme } = useTheme();
+	const { i18n } = useTranslation();
+
+	const handleLanguageChange = (language: string) => {
+		i18n.changeLanguage(language);
+		localStorage.setItem('lang', language);
+	};
 
 	return (
 		<header className='sticky top-0 z-50 border-b border-border/50 bg-background/70 py-6 backdrop-blur-lg backdrop-filter'>
@@ -200,29 +206,39 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 										</DropdownMenuSubTrigger>
 										<DropdownMenuPortal>
 											<DropdownMenuSubContent>
-												<DropdownMenuItem className='flex cursor-pointer items-center justify-start gap-2'>
+												<DropdownMenuItem
+													className='flex cursor-pointer items-center justify-start gap-2'
+													onClick={() =>
+														handleLanguageChange(
+															'en',
+														)
+													}>
 													<img
 														src={UnitedKingdomFlag}
 														alt='United Kingdom Flag'
 														className='h-4 w-4 rounded-full'
 													/>
 													<span>English</span>
+													{i18n.language === 'en' && (
+														<Check className='h-4 w-4' />
+													)}
 												</DropdownMenuItem>
-												<DropdownMenuItem className='flex cursor-pointer items-center justify-start gap-2'>
-													<img
-														src={SpainFlag}
-														alt='Spain Flag'
-														className='h-4 w-4 rounded-full'
-													/>
-													<span>Español</span>
-												</DropdownMenuItem>
-												<DropdownMenuItem className='flex cursor-pointer items-center justify-start gap-2'>
+												<DropdownMenuItem
+													className='flex cursor-pointer items-center justify-start gap-2'
+													onClick={() =>
+														handleLanguageChange(
+															'pt',
+														)
+													}>
 													<img
 														src={PortugalFlag}
 														alt='Portugal Flag'
 														className='h-4 w-4 rounded-full'
 													/>
 													<span>Português</span>
+													{i18n.language === 'pt' && (
+														<Check className='h-4 w-4' />
+													)}
 												</DropdownMenuItem>
 											</DropdownMenuSubContent>
 										</DropdownMenuPortal>
