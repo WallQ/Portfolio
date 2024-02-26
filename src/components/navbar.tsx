@@ -216,6 +216,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 													<img
 														src={UnitedKingdomFlag}
 														alt='United Kingdom Flag'
+														loading='lazy'
 														className='h-4 w-4 rounded-full'
 													/>
 													<span>English</span>
@@ -233,6 +234,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 													<img
 														src={PortugalFlag}
 														alt='Portugal Flag'
+														loading='lazy'
 														className='h-4 w-4 rounded-full'
 													/>
 													<span>Português</span>

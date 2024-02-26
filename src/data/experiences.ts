@@ -49,41 +49,6 @@ export const experiences: Experiences = {
 			endDate: 'Apr 2018',
 		},
 	],
-	es: [
-		{
-			title: 'Desarrollador Front-End',
-			type: 'Internado',
-			description:
-				'Diseñado y construido con el ecosistema React la web corporativa de la empresa.',
-			companyUrl: 'https://bdcadigital.com',
-			companyImage: 'assets/images/companies/BasicamenteDigital.jpg',
-			companyName: 'Basicamente Digital',
-			startDate: 'Mar 2022',
-			endDate: 'Aug 2022',
-		},
-		{
-			title: 'Desarrollador de Software',
-			type: 'Internado',
-			description:
-				'Desarrollé un Ransomware e hice un estudio de caso para mi examen de aptitud profesional.',
-			companyUrl: 'https://risema.pt',
-			companyImage: 'assets/images/companies/Risema.jpg',
-			companyName: 'Risema',
-			startDate: 'Feb 2019',
-			endDate: 'Apr 2019',
-		},
-		{
-			title: 'Técnico Informático',
-			type: 'Internado',
-			description:
-				'Mantenimiento y construcción de computadoras para clientes personales o empresas afiliadas.',
-			companyUrl: 'https://risema.pt',
-			companyImage: 'assets/images/companies/Risema.jpg',
-			companyName: 'Risema',
-			startDate: 'Feb 2018',
-			endDate: 'Apr 2018',
-		},
-	],
 	pt: [
 		{
 			title: 'Desenvolvedor Front-End',

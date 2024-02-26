@@ -31,9 +31,9 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 					<div className='flex flex-wrap gap-2'>
 						{tags.map((tag, index) => (
 							<Badge
+								key={`${tag}-${index}`}
 								variant='secondary'
-								className='rounded-md py-1'
-								key={`${tag}-${index}`}>
+								className='rounded-md py-1 text-primary'>
 								{tag}
 							</Badge>
 						))}

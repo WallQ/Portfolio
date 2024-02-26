@@ -18,7 +18,7 @@ import {
 	experiences,
 } from '@/data/experiences';
 import CopyToClipboard from '@/components/copy-to-clipboard';
-import { ProjectProps, projects } from '@/data/projects';
+import { Project, Projects, projects } from '@/data/projects';
 import ProjectCard from '@/components/project-card';
 import { Trans, useTranslation } from 'react-i18next';
 
@@ -61,10 +61,10 @@ const Homepage = () => {
 					</div>
 				</div>
 				<img
-					className='order-1 h-64 w-64 rounded-full bg-primary object-cover object-top sm:order-2 sm:col-span-4'
 					src='assets/images/portrait.png'
-					alt='test'
+					alt='Portrait'
 					loading='eager'
+					className='order-1 h-64 w-64 rounded-full bg-primary object-cover object-top sm:order-2 sm:col-span-4'
 				/>
 			</section>
 			<section id='about' className='flex flex-col gap-y-8 pb-16'>
@@ -128,9 +128,9 @@ const Homepage = () => {
 				<p className='text-pretty leading-7 text-muted-foreground'>
 					{t('projects.description')}
 				</p>
-				{projects
+				{(projects as Projects)[i18n.language]
 					.slice(0, visibleProjects)
-					.map((project: ProjectProps, index: number) => (
+					.map((project: Project, index: number) => (
 						<Fragment key={`${project.title}-${index}`}>
 							<ProjectCard
 								id={project.id}
@@ -142,7 +142,7 @@ const Homepage = () => {
 							<Separator />
 						</Fragment>
 					))}
-				{visibleProjects < projects.length && (
+				{visibleProjects < projects[i18n.language].length && (
 					<Button
 						variant='secondary'
 						className='mt-8 max-w-fit self-center'

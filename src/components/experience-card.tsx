@@ -28,7 +28,7 @@ const ExperienceCard: React.FunctionComponent<ExperienceCardProps> = ({
 					<span className='text-lg font-medium tracking-tight'>
 						{title}, {type}
 					</span>
-					<p className='text-pretty text-sm leading-7 text-muted-foreground'>
+					<p className='text-pretty text-sm leading-7 text-muted-foreground line-clamp-2'>
 						{description}
 					</p>
 					<div className='flex flex-wrap justify-between gap-4 text-sm'>
