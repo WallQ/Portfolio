@@ -1,3 +1,5 @@
+import PortugalFlag from '@/assets/icons/portugal.svg';
+import UnitedKingdomFlag from '@/assets/icons/united kingdom.svg';
 import { useTheme } from '@/components/theme-provider';
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
@@ -29,14 +31,9 @@ import {
 	Sun,
 	SunMoon,
 } from 'lucide-react';
-
-import PortugalFlag from '@/assets/icons/portugal.svg';
-import UnitedKingdomFlag from '@/assets/icons/united kingdom.svg';
 import { useTranslation } from 'react-i18next';
 
-type NavbarProps = {};
-
-const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
+const Navbar: React.FunctionComponent = (): React.ReactNode => {
 	const { theme, setTheme } = useTheme();
 	const { i18n } = useTranslation();
 
@@ -60,37 +57,60 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 					</span>
 				</Link>
 				<div className='flex items-center justify-between gap-4'>
-					{/* <nav>
+					<nav>
 						<ul className='flex'>
 							<li>
-								<a
-									href='#home'
+								<Link
+									to='/'
+									hash='home'
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
 									Home.
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href='#about'
+								<Link
+									to='/'
+									hash='about'
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
 									About.
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href='#experience'
+								<Link
+									to='/'
+									hash='experiences'
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
 									Experience.
-								</a>
+								</Link>
+							</li>
+							<li>
+								<Link
+									to='/'
+									hash='projects'
+									className={`${buttonVariants({
+										variant: 'link',
+									})} text-secondary-foreground`}>
+									Projects.
+								</Link>
+							</li>
+							<li>
+								<Link
+									to='/'
+									hash='contact'
+									className={`${buttonVariants({
+										variant: 'link',
+									})} text-secondary-foreground`}>
+									Contact.
+								</Link>
 							</li>
 						</ul>
-					</nav> */}
+					</nav>
 					<div className='flex'>
 						<a
 							href='https://www.linkedin.com/in/sergiofelixdev'

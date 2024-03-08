@@ -1,5 +1,11 @@
 {
 	"translation": {
+		"navbar": {
+			"about": "About",
+			"experience": "Experience",
+			"projects": "Projects",
+			"contact": "Contact"
+		},
 		"header": {
 			"title": "Hi! I'm <span>Sérgio Félix</span>, <br/>Software Engineer.",
 			"description": "Passionate problem solver and code enthusiast, dedicated to developing and designing innovative solutions with precision and creativity.",
