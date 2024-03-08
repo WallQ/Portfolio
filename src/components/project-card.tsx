@@ -41,7 +41,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 					<h3 className='text-2xl font-medium tracking-tight'>
 						{title}
 					</h3>
-					<p className='text-pretty text-center leading-7 text-muted-foreground sm:text-start'>
+					<p className='line-clamp-4 text-pretty text-center leading-7 text-muted-foreground sm:text-start'>
 						{description}
 					</p>
 				</div>

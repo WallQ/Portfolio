@@ -1,13 +1,4 @@
-import {
-	Check,
-	Contrast,
-	Languages,
-	Moon,
-	Settings,
-	Sun,
-	SunMoon,
-} from 'lucide-react';
-import { Link } from '@tanstack/react-router';
+import { useTheme } from '@/components/theme-provider';
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
 	DropdownMenu,
@@ -28,10 +19,19 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { useTheme } from '@/components/theme-provider';
+import { Link } from '@tanstack/react-router';
+import {
+	Check,
+	Contrast,
+	Languages,
+	Moon,
+	Settings,
+	Sun,
+	SunMoon,
+} from 'lucide-react';
 
-import UnitedKingdomFlag from '@/assets/icons/united kingdom.svg';
 import PortugalFlag from '@/assets/icons/portugal.svg';
+import UnitedKingdomFlag from '@/assets/icons/united kingdom.svg';
 import { useTranslation } from 'react-i18next';
 
 type NavbarProps = {};
@@ -151,7 +151,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 								<DropdownMenuSeparator />
 								<DropdownMenuGroup>
 									<DropdownMenuSub>
-										<DropdownMenuSubTrigger className='flex cursor-pointer items-center justify-start gap-2'>
+										<DropdownMenuSubTrigger className='flex items-center justify-start gap-x-2'>
 											<Contrast className='h-4 w-4' />
 											<span>Appearance</span>
 										</DropdownMenuSubTrigger>
@@ -162,7 +162,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 													onClick={() =>
 														setTheme('light')
 													}>
-													<div className='flex gap-2'>
+													<div className='flex gap-x-2'>
 														<Sun className='h-4 w-4' />
 														<span>Light</span>
 													</div>
@@ -175,7 +175,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 													onClick={() =>
 														setTheme('dark')
 													}>
-													<div className='flex gap-2'>
+													<div className='flex gap-x-2'>
 														<Moon className='h-4 w-4' />
 														<span>Dark</span>
 													</div>
@@ -188,7 +188,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 													onClick={() =>
 														setTheme('system')
 													}>
-													<div className='flex gap-2'>
+													<div className='flex gap-x-2'>
 														<SunMoon className='h-4 w-4' />
 														<span>System</span>
 													</div>
@@ -200,14 +200,14 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 										</DropdownMenuPortal>
 									</DropdownMenuSub>
 									<DropdownMenuSub>
-										<DropdownMenuSubTrigger className='flex cursor-pointer items-center justify-start gap-2'>
+										<DropdownMenuSubTrigger className='flex items-center justify-start gap-x-2'>
 											<Languages className='h-4 w-4' />
 											<span>Language</span>
 										</DropdownMenuSubTrigger>
 										<DropdownMenuPortal>
 											<DropdownMenuSubContent>
 												<DropdownMenuItem
-													className='flex cursor-pointer items-center justify-start gap-2'
+													className='flex cursor-pointer items-center justify-start gap-x-2'
 													onClick={() =>
 														handleLanguageChange(
 															'en',
@@ -225,7 +225,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 													)}
 												</DropdownMenuItem>
 												<DropdownMenuItem
-													className='flex cursor-pointer items-center justify-start gap-2'
+													className='flex cursor-pointer items-center justify-start gap-x-2'
 													onClick={() =>
 														handleLanguageChange(
 															'pt',

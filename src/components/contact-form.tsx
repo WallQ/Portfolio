@@ -1,12 +1,8 @@
+import emailjs from '@emailjs/browser';
 import { Loader2, Send } from 'lucide-react';
 import { Fragment } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import emailjs from '@emailjs/browser';
 
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { Contact, ContactSchema } from '@/validators/contact';
-import { useToast } from '@/components/ui/use-toast';
-import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '@/components/ui/button';
 import {
 	Form,
@@ -19,6 +15,10 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/components/ui/use-toast';
+import { Contact, ContactSchema } from '@/validators/contact';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 type ContactFormProps = {};

@@ -5,6 +5,17 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { ExternalLink } from 'lucide-react';
 
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from '@/components/ui/carousel';
+import CopyToClipboard from '@/components/copy-to-clipboard';
+import ContactForm from '@/components/contact-form';
+import { useTranslation } from 'react-i18next';
+
 export const Route = createFileRoute('/projects/$projectId')({
 	loader: ({ params }) => {
 		const { projectId } = params;
@@ -20,8 +31,10 @@ export const Route = createFileRoute('/projects/$projectId')({
 
 function PostComponent() {
 	const project = Route.useLoaderData();
+	const { t } = useTranslation();
+
 	return (
-		<section className='flex flex-col gap-y-8 pb-16'>
+		<div className='flex flex-col gap-y-8'>
 			<div className='flex flex-wrap gap-2'>
 				{project.tags.map((tag, index) => (
 					<Badge
@@ -107,6 +120,42 @@ function PostComponent() {
 				</div>
 			</div>
 			<Separator />
-		</section>
+			<Carousel>
+				<CarouselContent>
+					{project.images.map((image, index) => (
+						<CarouselItem
+							key={index}
+							className='h-[768px] overflow-y-auto'>
+							<img
+								src={image.src}
+								alt={image.title}
+								loading='lazy'
+								className='h-auto w-full'
+							/>
+						</CarouselItem>
+					))}
+				</CarouselContent>
+				<CarouselPrevious />
+				<CarouselNext />
+			</Carousel>
+			<section id='contact' className='flex flex-col gap-y-8 pt-16'>
+				<Separator />
+				<div className='grid grid-cols-1 gap-y-16 sm:grid-cols-10 sm:gap-x-16'>
+					<div className='col-span-5 flex flex-col gap-y-4'>
+						<h2 className='text-3xl font-semibold tracking-tight'>
+							{t('contact.title')}
+						</h2>
+						<p className='text-pretty leading-7 text-muted-foreground'>
+							{t('contact.description')}
+						</p>
+						<CopyToClipboard text='sergiofelixdev@gmail.com' />
+					</div>
+					<div className='col-span-5 flex flex-col gap-y-4'>
+						<ContactForm />
+					</div>
+				</div>
+				<Separator />
+			</section>
+		</div>
 	);
 }
