@@ -31,9 +31,9 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 					<div className='flex flex-wrap gap-2'>
 						{tags.map((tag, index) => (
 							<Badge
+								key={`${tag}-${index}`}
 								variant='secondary'
-								className='rounded-md py-1'
-								key={`${tag}-${index}`}>
+								className='rounded-md py-1 text-primary'>
 								{tag}
 							</Badge>
 						))}
@@ -41,7 +41,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 					<h3 className='text-2xl font-medium tracking-tight'>
 						{title}
 					</h3>
-					<p className='text-pretty text-center leading-7 text-muted-foreground sm:text-start'>
+					<p className='line-clamp-4 text-pretty text-center leading-7 text-muted-foreground sm:text-start'>
 						{description}
 					</p>
 				</div>

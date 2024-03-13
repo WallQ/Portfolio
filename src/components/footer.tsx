@@ -7,7 +7,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({}): React.ReactNode => {
 				<small className='text-xs text-muted-foreground'>
 					Copyright &copy; {new Date().getFullYear()} Sérgio Félix
 				</small>
-				<img src='favicon.svg' alt='Logo' className='h-6 w-6' />
+				<img src='/favicon.svg' alt='Logo' loading='lazy' className='h-6 w-6' />
 			</div>
 		</footer>
 	);

@@ -1,13 +1,6 @@
-import {
-	Check,
-	Contrast,
-	Languages,
-	Moon,
-	Settings,
-	Sun,
-	SunMoon,
-} from 'lucide-react';
-import { Link } from '@tanstack/react-router';
+import PortugalFlag from '@/assets/icons/portugal.svg';
+import UnitedKingdomFlag from '@/assets/icons/united kingdom.svg';
+import { useTheme } from '@/components/theme-provider';
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
 	DropdownMenu,
@@ -28,16 +21,26 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { useTheme } from '@/components/theme-provider';
+import { Link } from '@tanstack/react-router';
+import {
+	Check,
+	Contrast,
+	Languages,
+	Moon,
+	Settings,
+	Sun,
+	SunMoon,
+} from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-import UnitedKingdomFlag from '@/assets/icons/united kingdom.svg';
-import SpainFlag from '@/assets/icons/spain.svg';
-import PortugalFlag from '@/assets/icons/portugal.svg';
-
-type NavbarProps = {};
-
-const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
+const Navbar: React.FunctionComponent = (): React.ReactNode => {
 	const { theme, setTheme } = useTheme();
+	const { i18n } = useTranslation();
+
+	const handleLanguageChange = (language: string) => {
+		i18n.changeLanguage(language);
+		localStorage.setItem('lang', language);
+	};
 
 	return (
 		<header className='sticky top-0 z-50 border-b border-border/50 bg-background/70 py-6 backdrop-blur-lg backdrop-filter'>
@@ -54,37 +57,60 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 					</span>
 				</Link>
 				<div className='flex items-center justify-between gap-4'>
-					{/* <nav>
+					<nav>
 						<ul className='flex'>
 							<li>
-								<a
-									href='#home'
+								<Link
+									to='/'
+									hash='home'
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
 									Home.
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href='#about'
+								<Link
+									to='/'
+									hash='about'
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
 									About.
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href='#experience'
+								<Link
+									to='/'
+									hash='experiences'
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
 									Experience.
-								</a>
+								</Link>
+							</li>
+							<li>
+								<Link
+									to='/'
+									hash='projects'
+									className={`${buttonVariants({
+										variant: 'link',
+									})} text-secondary-foreground`}>
+									Projects.
+								</Link>
+							</li>
+							<li>
+								<Link
+									to='/'
+									hash='contact'
+									className={`${buttonVariants({
+										variant: 'link',
+									})} text-secondary-foreground`}>
+									Contact.
+								</Link>
 							</li>
 						</ul>
-					</nav> */}
+					</nav>
 					<div className='flex'>
 						<a
 							href='https://www.linkedin.com/in/sergiofelixdev'
@@ -145,7 +171,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 								<DropdownMenuSeparator />
 								<DropdownMenuGroup>
 									<DropdownMenuSub>
-										<DropdownMenuSubTrigger className='flex cursor-pointer items-center justify-start gap-2'>
+										<DropdownMenuSubTrigger className='flex items-center justify-start gap-x-2'>
 											<Contrast className='h-4 w-4' />
 											<span>Appearance</span>
 										</DropdownMenuSubTrigger>
@@ -156,7 +182,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 													onClick={() =>
 														setTheme('light')
 													}>
-													<div className='flex gap-2'>
+													<div className='flex gap-x-2'>
 														<Sun className='h-4 w-4' />
 														<span>Light</span>
 													</div>
@@ -169,7 +195,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 													onClick={() =>
 														setTheme('dark')
 													}>
-													<div className='flex gap-2'>
+													<div className='flex gap-x-2'>
 														<Moon className='h-4 w-4' />
 														<span>Dark</span>
 													</div>
@@ -182,7 +208,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 													onClick={() =>
 														setTheme('system')
 													}>
-													<div className='flex gap-2'>
+													<div className='flex gap-x-2'>
 														<SunMoon className='h-4 w-4' />
 														<span>System</span>
 													</div>
@@ -194,35 +220,47 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({}): React.ReactNode => {
 										</DropdownMenuPortal>
 									</DropdownMenuSub>
 									<DropdownMenuSub>
-										<DropdownMenuSubTrigger className='flex cursor-pointer items-center justify-start gap-2'>
+										<DropdownMenuSubTrigger className='flex items-center justify-start gap-x-2'>
 											<Languages className='h-4 w-4' />
 											<span>Language</span>
 										</DropdownMenuSubTrigger>
 										<DropdownMenuPortal>
 											<DropdownMenuSubContent>
-												<DropdownMenuItem className='flex cursor-pointer items-center justify-start gap-2'>
+												<DropdownMenuItem
+													className='flex cursor-pointer items-center justify-start gap-x-2'
+													onClick={() =>
+														handleLanguageChange(
+															'en',
+														)
+													}>
 													<img
 														src={UnitedKingdomFlag}
 														alt='United Kingdom Flag'
+														loading='lazy'
 														className='h-4 w-4 rounded-full'
 													/>
 													<span>English</span>
+													{i18n.language === 'en' && (
+														<Check className='h-4 w-4' />
+													)}
 												</DropdownMenuItem>
-												<DropdownMenuItem className='flex cursor-pointer items-center justify-start gap-2'>
-													<img
-														src={SpainFlag}
-														alt='Spain Flag'
-														className='h-4 w-4 rounded-full'
-													/>
-													<span>Español</span>
-												</DropdownMenuItem>
-												<DropdownMenuItem className='flex cursor-pointer items-center justify-start gap-2'>
+												<DropdownMenuItem
+													className='flex cursor-pointer items-center justify-start gap-x-2'
+													onClick={() =>
+														handleLanguageChange(
+															'pt',
+														)
+													}>
 													<img
 														src={PortugalFlag}
 														alt='Portugal Flag'
+														loading='lazy'
 														className='h-4 w-4 rounded-full'
 													/>
 													<span>Português</span>
+													{i18n.language === 'pt' && (
+														<Check className='h-4 w-4' />
+													)}
 												</DropdownMenuItem>
 											</DropdownMenuSubContent>
 										</DropdownMenuPortal>
