@@ -3,6 +3,8 @@ import {
 	Carousel,
 	CarouselContent,
 	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
 } from '@/components/ui/carousel';
 import {
 	experiences,
@@ -43,6 +45,8 @@ const Experiences: React.FunctionComponent = (): React.ReactNode => {
 						),
 					)}
 				</CarouselContent>
+				<CarouselPrevious />
+				<CarouselNext />
 			</Carousel>
 		</section>
 	);
