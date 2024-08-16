@@ -28,7 +28,7 @@ export const experiences: Experiences = {
 			title: 'Computer Technician',
 			type: 'Internship',
 			description:
-				'Maintained and built computers for personal clients or affiliated companies.',
+				'Maintained and assembled computers for personal clients or affiliated companies.',
 			companyUrl: 'https://risema.pt',
 			companyImage: '/assets/images/companies/Risema.jpg',
 			companyName: 'Risema',
@@ -41,7 +41,7 @@ export const experiences: Experiences = {
 			title: 'Desenvolvedor Front-End',
 			type: 'Estágio',
 			description:
-				'Desenhei e construí com ecossistema React o website corporativo da empresa.',
+				'Desenhei e construí com o ecossistema React o website corporativo da empresa.',
 			companyUrl: 'https://bdcadigital.com',
 			companyImage: '/assets/images/companies/BasicamenteDigital.jpg',
 			companyName: 'Basicamente Digital',
@@ -52,7 +52,7 @@ export const experiences: Experiences = {
 			title: 'Desenvolvedor de Software',
 			type: 'Estágio',
 			description:
-				'Desenvolvi um Ransomware e fiz um estudo de caso para meu exame de aptidão profissional.',
+				'Desenvolvi um Ransomware e fiz um caso de estudo para o meu exame de aptidão profissional.',
 			companyUrl: 'https://risema.pt',
 			companyImage: '/assets/images/companies/Risema.jpg',
 			companyName: 'Risema',
@@ -63,7 +63,7 @@ export const experiences: Experiences = {
 			title: 'Técnico Informático',
 			type: 'Estágio',
 			description:
-				'Manuteni e construí computadores para clientes pessoais ou empresas afiliadas.',
+				'Manuteni e montei computadores para clientes pessoais ou empresas afiliadas.',
 			companyUrl: 'https://risema.pt',
 			companyImage: '/assets/images/companies/Risema.jpg',
 			companyName: 'Risema',

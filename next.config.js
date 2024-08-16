@@ -12,6 +12,12 @@ const config = {
 				protocol: 'https',
 				hostname: '**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'mirrors.creativecommons.org',
+				port: '',
+				pathname: '/presskit/icons/**',
+			},
 		],
 	},
 };
