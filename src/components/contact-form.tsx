@@ -1,7 +1,12 @@
-import emailjs from '@emailjs/browser';
-import { Loader2, Send } from 'lucide-react';
+'use client';
+
 import { Fragment } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { api } from '@/trpc/react';
+import { ContactSchema, type Contact } from '@/validators/contact';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Loader2, Send } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useForm, type SubmitHandler } from 'react-hook-form';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -16,18 +21,27 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
-import { Contact, ContactSchema } from '@/validators/contact';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
 
-type ContactFormProps = {};
-
-const ContactForm: React.FunctionComponent<
-	ContactFormProps
-> = ({}): React.ReactNode => {
-	const { t } = useTranslation();
+const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 	const { toast } = useToast();
+	const t = useTranslations('contact-form');
+
+	const contact = api.contact.sendContact.useMutation({
+		onSuccess: () => {
+			toast({
+				description: 'Your contact request has been sent successfully!',
+			});
+		},
+		onError: (error) => {
+			toast({
+				variant: 'destructive',
+				description: error.message,
+			});
+		},
+		onSettled: () => {
+			form.reset();
+		},
+	});
 
 	const form = useForm<Contact>({
 		resolver: zodResolver(ContactSchema),
@@ -39,31 +53,13 @@ const ContactForm: React.FunctionComponent<
 		},
 	});
 
-	const onSubmit: SubmitHandler<Contact> = (data) => {
-		emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-		emailjs
-			.send(
-				import.meta.env.VITE_EMAILJS_SERVICE_ID,
-				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-				{
-					to_email: 'sergiofelixdev@gmail.com',
-					subject: `${data.firstName} ${data.lastName} - ${data.email}`,
-					message: data.message,
-				},
-			)
-			.then((response) => {
-				console.log('SUCCESS!', response.status, response.text);
-				toast({
-					description: 'Email sent successfully!',
-				});
-			})
-			.catch((error) => {
-				console.error('FAILED...', error);
-				toast({
-					variant: 'destructive',
-					description: 'An error occurred while sending the email.',
-				});
-			});
+	const onSubmit: SubmitHandler<Contact> = async ({
+		firstName,
+		lastName,
+		email,
+		message,
+	}: Contact) => {
+		await contact.mutateAsync({ firstName, lastName, email, message });
 	};
 
 	return (
@@ -79,9 +75,7 @@ const ContactForm: React.FunctionComponent<
 						disabled={form.formState.isSubmitting}
 						render={({ field }) => (
 							<FormItem className='w-full'>
-								<FormLabel>
-									{t('contact.form.first_name')}
-								</FormLabel>
+								<FormLabel>{t('first_name')}</FormLabel>
 								<FormControl>
 									<Input
 										type='text'
@@ -100,9 +94,7 @@ const ContactForm: React.FunctionComponent<
 						disabled={form.formState.isSubmitting}
 						render={({ field }) => (
 							<FormItem className='w-full'>
-								<FormLabel>
-									{t('contact.form.last_name')}
-								</FormLabel>
+								<FormLabel>{t('last_name')}</FormLabel>
 								<FormControl>
 									<Input
 										type='text'
@@ -122,7 +114,7 @@ const ContactForm: React.FunctionComponent<
 					disabled={form.formState.isSubmitting}
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>{t('contact.form.email')}</FormLabel>
+							<FormLabel>{t('email')}</FormLabel>
 							<FormControl>
 								<Input
 									type='email'
@@ -132,7 +124,7 @@ const ContactForm: React.FunctionComponent<
 								/>
 							</FormControl>
 							<FormDescription>
-								{t('contact.form.email_information')}
+								{t('email_information')}
 							</FormDescription>
 							<FormMessage />
 						</FormItem>
@@ -144,13 +136,11 @@ const ContactForm: React.FunctionComponent<
 					disabled={form.formState.isSubmitting}
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>{t('contact.form.message')}</FormLabel>
+							<FormLabel>{t('message')}</FormLabel>
 							<FormControl>
 								<Textarea
 									className='resize-none'
-									placeholder={t(
-										'contact.form.message_placeholder',
-									)}
+									placeholder={t('message_placeholder')}
 									maxLength={144}
 									{...field}
 								/>
@@ -159,24 +149,21 @@ const ContactForm: React.FunctionComponent<
 						</FormItem>
 					)}
 				/>
-				<ReCAPTCHA
-					sitekey={import.meta.env.VITE_RECAPTCHA_KEY ?? ''}
-					className='flex justify-end'
-				/>
 				<div className='flex justify-end'>
 					<Button
 						type='submit'
 						disabled={form.formState.isSubmitting}
-						className='max-w-min'>
+						className='max-w-min'
+						aria-label='Contact'>
 						{form.formState.isSubmitting ? (
 							<Fragment>
-								<Loader2 className='mr-2 h-4 w-4 animate-spin' />
-								{t('contact.form.sending_button')}
+								<Loader2 className='mr-2 size-4 animate-spin' />
+								{t('sending_button')}
 							</Fragment>
 						) : (
 							<Fragment>
-								<Send className='mr-2 h-4 w-4' />
-								{t('contact.form.send_button')}
+								<Send className='mr-2 size-4' />
+								{t('send_button')}
 							</Fragment>
 						)}
 					</Button>

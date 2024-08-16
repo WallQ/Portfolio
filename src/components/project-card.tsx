@@ -1,7 +1,11 @@
-import { Badge } from '@/components/ui/badge';
-import { Link } from '@tanstack/react-router';
-import { buttonVariants } from '@/components/ui/button';
+import Image from 'next/image';
+import Link from 'next/link';
+import { APP_ROUTES } from '@/routes/app';
 import { MoveRight } from 'lucide-react';
+
+import { Badge } from '@/components/ui/badge';
+import { buttonVariants } from '@/components/ui/button';
+import Typography from '@/components/typography';
 
 type ProjectCardProps = {
 	id: string;
@@ -20,14 +24,16 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 }): React.ReactNode => {
 	return (
 		<div className='grid grid-cols-1 gap-y-8 sm:grid-cols-10 sm:gap-x-16'>
-			<img
+			<Image
 				src={thumbnail}
 				alt={title}
 				loading='lazy'
-				className='col-span-4 h-64 w-full rounded-md object-cover object-center'
+				width={512}
+				height={288}
+				className='col-span-4 aspect-[16/9] h-full w-full rounded-md object-cover object-center'
 			/>
 			<div className='col-span-6 flex flex-col justify-between gap-y-4'>
-				<div className='flex flex-col items-start gap-4'>
+				<div className='flex flex-col items-start gap-y-4'>
 					<div className='flex flex-wrap gap-2'>
 						{tags.map((tag, index) => (
 							<Badge
@@ -38,21 +44,20 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 							</Badge>
 						))}
 					</div>
-					<h3 className='text-2xl font-medium tracking-tight'>
-						{title}
-					</h3>
-					<p className='line-clamp-4 text-pretty text-center leading-7 text-muted-foreground sm:text-start'>
+					<Typography variant='h3'>{title}</Typography>
+					<Typography
+						variant='p'
+						className='line-clamp-4'>
 						{description}
-					</p>
+					</Typography>
 				</div>
 				<Link
-					to='/projects/$projectId'
-					params={{ projectId: id }}
+					href={APP_ROUTES.PROJECT(id)}
 					className={`${buttonVariants({
 						variant: 'outline',
 					})} max-w-fit`}>
-					See more
-					<MoveRight className='ml-2 h-4 w-4' />
+					View details
+					<MoveRight className='ml-2 size-4' />
 				</Link>
 			</div>
 		</div>

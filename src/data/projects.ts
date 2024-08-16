@@ -1,35 +1,4 @@
-export type Images = {
-	title: string;
-	src: string;
-};
-
-export type Technologies = {
-	name: string;
-	logo: string;
-};
-
-export type Tools = {
-	name: string;
-	logo: string;
-};
-
-export type Project = {
-	id: string;
-	title: string;
-	description: string;
-	url: string;
-	thumbnail: string;
-	images: Images[];
-	tags: string[];
-	role: string;
-	type: string;
-	technologies: Technologies[];
-	tools: Tools[];
-};
-
-export type Projects = {
-	[key: string]: Project[];
-};
+import { type Projects } from '@/types/projects';
 
 export const projects: Projects = {
 	en: [
@@ -42,35 +11,35 @@ export const projects: Projects = {
 			thumbnail: 'https://picsum.photos/1024/768',
 			images: [
 				{
-					title: 'Pulse Connect - Homepage',
+					title: 'Homepage',
 					src: '/assets/images/projects/pulse-connect/homepage.png',
 				},
 				{
-					title: 'Pulse Connect - Sign Up',
+					title: 'Sign Up',
 					src: '/assets/images/projects/pulse-connect/sign-up.png',
 				},
 				{
-					title: 'Pulse Connect - Sign In',
+					title: 'Sign In',
 					src: '/assets/images/projects/pulse-connect/sign-in.png',
 				},
 				{
-					title: 'Pulse Connect - Profile',
+					title: 'Profile',
 					src: '/assets/images/projects/pulse-connect/profile.png',
 				},
 				{
-					title: 'Pulse Connect - Chat',
+					title: 'Chat',
 					src: '/assets/images/projects/pulse-connect/chat.png',
 				},
 				{
-					title: 'Pulse Connect - Connections',
+					title: 'Connections',
 					src: '/assets/images/projects/pulse-connect/connections.png',
 				},
 				{
-					title: 'Pulse Connect - Notifications',
+					title: 'Notifications',
 					src: '/assets/images/projects/pulse-connect/notifications.png',
 				},
 				{
-					title: 'Pulse Connect - Settings',
+					title: 'Settings',
 					src: '/assets/images/projects/pulse-connect/settings.png',
 				},
 			],

@@ -1,6 +1,10 @@
-import PortugalFlag from '@/assets/icons/portugal.svg';
-import UnitedKingdomFlag from '@/assets/icons/united kingdom.svg';
-import { useTheme } from '@/components/theme-provider';
+import Link from 'next/link';
+import { languages } from '@/data/languages';
+import { themes } from '@/data/themes';
+import { APP_ROUTES } from '@/routes/app';
+import { Contrast, Languages, Menu, Settings } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
 	DropdownMenu,
@@ -21,38 +25,23 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { Link } from '@tanstack/react-router';
-import {
-	Check,
-	Contrast,
-	Languages,
-	Menu,
-	Moon,
-	Settings,
-	Sun,
-	SunMoon,
-} from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import Icons from '@/components/icons';
+import LanguageSwitcher from '@/components/language-switcher';
+import ThemeSwitcher from '@/components/theme-switcher';
 
 const Navbar: React.FunctionComponent = (): React.ReactNode => {
-	const { theme, setTheme } = useTheme();
-	const { i18n } = useTranslation();
-
-	const handleLanguageChange = (language: string) => {
-		i18n.changeLanguage(language);
-		localStorage.setItem('lang', language);
-	};
+	const t = useTranslations('navbar');
 
 	return (
 		<header className='sticky top-0 z-50 border-b border-border/50 bg-background/70 py-6 backdrop-blur-lg backdrop-filter'>
-			<div className='mx-auto flex max-w-7xl justify-between px-4 sm:px-6 lg:px-8'>
+			<div className='mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8'>
 				<Link
-					to='/'
+					href={APP_ROUTES.HOME}
 					className='inline-flex items-center font-bold text-primary'>
 					<span className='font-bold text-secondary-foreground'>
 						&#123;
 					</span>
-					&nbsp;Sérgio Félix&nbsp;
+					&nbsp; Sérgio Félix&nbsp;
 					<span className='font-bold text-secondary-foreground'>
 						&#125;
 					</span>
@@ -62,8 +51,7 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 						<ul className='flex'>
 							<li>
 								<Link
-									to='/'
-									hash='home'
+									href={`${APP_ROUTES.HOME}/#home`}
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
@@ -72,42 +60,38 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 							</li>
 							<li>
 								<Link
-									to='/'
-									hash='about'
+									href={`${APP_ROUTES.HOME}/#about`}
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
-									About.
+									{t('about')}.
 								</Link>
 							</li>
 							<li>
 								<Link
-									to='/'
-									hash='experiences'
+									href={`${APP_ROUTES.HOME}/#experience`}
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
-									Experiences.
+									{t('experience')}.
 								</Link>
 							</li>
 							<li>
 								<Link
-									to='/'
-									hash='projects'
+									href={`${APP_ROUTES.HOME}/#projects`}
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
-									Projects.
+									{t('projects')}.
 								</Link>
 							</li>
 							<li>
 								<Link
-									to='/'
-									hash='contact'
+									href={`${APP_ROUTES.HOME}/#contact`}
 									className={`${buttonVariants({
 										variant: 'link',
 									})} text-secondary-foreground`}>
-									Contact.
+									{t('contact')}.
 								</Link>
 							</li>
 						</ul>
@@ -115,50 +99,37 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 					<div className='flex'>
 						<a
 							href='https://www.linkedin.com/in/sergiofelixdev'
-							rel='noreferrer'
+							rel='noopener noreferrer'
 							target='_blank'
 							className={buttonVariants({
 								variant: 'ghost',
 								size: 'sm',
 							})}>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='16'
-								height='16'
-								viewBox='0 0 24 24'>
-								<path
-									d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z'
-									fill='#0077B5'
-								/>
-							</svg>
+							<Icons.LinkedIn className='size-4 fill-[#0A66C2]' />
 						</a>
 						<a
 							href='https://github.com/WallQ'
-							rel='noreferrer'
+							rel='noopener noreferrer'
 							target='_blank'
 							className={buttonVariants({
 								variant: 'ghost',
 								size: 'sm',
 							})}>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='16'
-								height='16'
-								viewBox='0 0 24 24'>
-								<path
-									d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'
-									fill='#24292f '
-									className='dark:fill-white'
-								/>
-							</svg>
+							<Icons.GitHub className='size-4 fill-[#181717]' />
 						</a>
 						<DropdownMenu>
 							<TooltipProvider>
 								<Tooltip>
 									<TooltipTrigger asChild>
 										<DropdownMenuTrigger asChild>
-											<Button variant='ghost' size='sm'>
-												<Settings className='h-4 w-4' />
+											<Button
+												variant='ghost'
+												size='sm'
+												aria-label='Open Settings Menu'>
+												<span className='sr-only'>
+													Open Settings Menu
+												</span>
+												<Settings className='size-4' />
 											</Button>
 										</DropdownMenuTrigger>
 									</TooltipTrigger>
@@ -167,102 +138,51 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 									</TooltipContent>
 								</Tooltip>
 							</TooltipProvider>
-							<DropdownMenuContent className='max-w-fit'>
+							<DropdownMenuContent>
 								<DropdownMenuLabel>Settings</DropdownMenuLabel>
 								<DropdownMenuSeparator />
 								<DropdownMenuGroup>
 									<DropdownMenuSub>
-										<DropdownMenuSubTrigger className='flex items-center justify-start gap-x-2'>
-											<Contrast className='h-4 w-4' />
+										<DropdownMenuSubTrigger className='flex items-center justify-between gap-x-2'>
+											<Contrast className='size-4' />
 											<span>Appearance</span>
 										</DropdownMenuSubTrigger>
 										<DropdownMenuPortal>
 											<DropdownMenuSubContent>
-												<DropdownMenuItem
-													className='flex cursor-pointer items-center justify-between'
-													onClick={() =>
-														setTheme('light')
-													}>
-													<div className='flex gap-x-2'>
-														<Sun className='h-4 w-4' />
-														<span>Light</span>
-													</div>
-													{theme === 'light' && (
-														<Check className='h-4 w-4' />
-													)}
-												</DropdownMenuItem>
-												<DropdownMenuItem
-													className='flex cursor-pointer items-center justify-between'
-													onClick={() =>
-														setTheme('dark')
-													}>
-													<div className='flex gap-x-2'>
-														<Moon className='h-4 w-4' />
-														<span>Dark</span>
-													</div>
-													{theme === 'dark' && (
-														<Check className='h-4 w-4' />
-													)}
-												</DropdownMenuItem>
-												<DropdownMenuItem
-													className='flex cursor-pointer items-center justify-between'
-													onClick={() =>
-														setTheme('system')
-													}>
-													<div className='flex gap-x-2'>
-														<SunMoon className='h-4 w-4' />
-														<span>System</span>
-													</div>
-													{theme === 'system' && (
-														<Check className='h-4 w-4' />
-													)}
-												</DropdownMenuItem>
+												{themes.map((theme) => (
+													<DropdownMenuItem
+														key={theme.code}>
+														<ThemeSwitcher
+															themeType={
+																theme.code
+															}
+															title={theme.name}
+															icon={theme.icon}
+														/>
+													</DropdownMenuItem>
+												))}
 											</DropdownMenuSubContent>
 										</DropdownMenuPortal>
 									</DropdownMenuSub>
 									<DropdownMenuSub>
-										<DropdownMenuSubTrigger className='flex items-center justify-start gap-x-2'>
-											<Languages className='h-4 w-4' />
+										<DropdownMenuSubTrigger className='flex items-center justify-between gap-x-2'>
+											<Languages className='size-4' />
 											<span>Language</span>
 										</DropdownMenuSubTrigger>
 										<DropdownMenuPortal>
 											<DropdownMenuSubContent>
-												<DropdownMenuItem
-													className='flex cursor-pointer items-center justify-start gap-x-2'
-													onClick={() =>
-														handleLanguageChange(
-															'en',
-														)
-													}>
-													<img
-														src={UnitedKingdomFlag}
-														alt='United Kingdom Flag'
-														loading='lazy'
-														className='h-4 w-4 rounded-full'
-													/>
-													<span>English</span>
-													{i18n.language === 'en' && (
-														<Check className='h-4 w-4' />
-													)}
-												</DropdownMenuItem>
-												<DropdownMenuItem
-													className='flex cursor-pointer items-center justify-start gap-x-2'
-													onClick={() =>
-														handleLanguageChange(
-															'pt',
-														)
-													}>
-													<img
-														src={PortugalFlag}
-														alt='Portugal Flag'
-														loading='lazy'
-														className='h-4 w-4 rounded-full'
-													/>
-													<span>Português</span>
-													{i18n.language === 'pt' && (
-														<Check className='h-4 w-4' />
-													)}
-												</DropdownMenuItem>
+												{languages.map((language) => (
+													<DropdownMenuItem
+														key={language.code}>
+														<LanguageSwitcher
+															lang={language.code}
+															title={
+																language.name
+															}
+															icon={language.icon}
+														/>
+													</DropdownMenuItem>
+												))}
 											</DropdownMenuSubContent>
 										</DropdownMenuPortal>
 									</DropdownMenuSub>
@@ -277,8 +197,11 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 							<Tooltip>
 								<TooltipTrigger asChild>
 									<DropdownMenuTrigger asChild>
-										<Button variant='ghost' size='sm'>
-											<Menu className='h-4 w-4' />
+										<Button
+											variant='ghost'
+											size='sm'
+											aria-label='Open Menu'>
+											<Menu className='size-4' />
 										</Button>
 									</DropdownMenuTrigger>
 								</TooltipTrigger>
@@ -287,43 +210,41 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 								</TooltipContent>
 							</Tooltip>
 						</TooltipProvider>
-						<DropdownMenuContent className='max-w-fit'>
+						<DropdownMenuContent>
 							<DropdownMenuLabel>Menu</DropdownMenuLabel>
 							<DropdownMenuSeparator />
 							<DropdownMenuGroup>
 								<DropdownMenuItem>
-									<Link to='/' hash='home' className='w-full'>
+									<Link
+										href={`${APP_ROUTES.HOME}/#home`}
+										className='w-full'>
 										Home
 									</Link>
 								</DropdownMenuItem>
 								<DropdownMenuItem>
 									<Link
-										to='/'
-										hash='about'
+										href={`${APP_ROUTES.HOME}/#about`}
 										className='w-full'>
 										About
 									</Link>
 								</DropdownMenuItem>
 								<DropdownMenuItem>
 									<Link
-										to='/'
-										hash='experiences'
+										href={`${APP_ROUTES.HOME}/#experience`}
 										className='w-full'>
-										Experiences
+										Experience
 									</Link>
 								</DropdownMenuItem>
 								<DropdownMenuItem>
 									<Link
-										to='/'
-										hash='projects'
+										href={`${APP_ROUTES.HOME}/#projects`}
 										className='w-full'>
 										Projects
 									</Link>
 								</DropdownMenuItem>
 								<DropdownMenuItem>
 									<Link
-										to='/'
-										hash='contact'
+										href={`${APP_ROUTES.HOME}/#contact`}
 										className='w-full'>
 										Contact
 									</Link>
@@ -334,39 +255,20 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 								<DropdownMenuItem>
 									<a
 										href='https://www.linkedin.com/in/sergiofelixdev'
-										rel='noreferrer'
+										rel='noopener noreferrer'
 										target='_blank'
-										className='flex w-full cursor-pointer items-center justify-start gap-x-2'>
-										<svg
-											xmlns='http://www.w3.org/2000/svg'
-											width='16'
-											height='16'
-											viewBox='0 0 24 24'>
-											<path
-												d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z'
-												fill='#0077B5'
-											/>
-										</svg>
+										className='inline-flex w-full cursor-pointer items-center'>
+										<Icons.LinkedIn className='size-4 mr-2 fill-[#0A66C2]' />
 										LinkedIn
 									</a>
 								</DropdownMenuItem>
 								<DropdownMenuItem>
 									<a
 										href='https://github.com/WallQ'
-										rel='noreferrer'
+										rel='noopener noreferrer'
 										target='_blank'
-										className='flex w-full cursor-pointer items-center justify-start gap-x-2'>
-										<svg
-											xmlns='http://www.w3.org/2000/svg'
-											width='16'
-											height='16'
-											viewBox='0 0 24 24'>
-											<path
-												d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'
-												fill='#24292f '
-												className='dark:fill-white'
-											/>
-										</svg>
+										className='inline-flex w-full cursor-pointer items-center'>
+										<Icons.GitHub className='size-4 mr-2 fill-[#181717]' />
 										GitHub
 									</a>
 								</DropdownMenuItem>
@@ -374,93 +276,42 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 							<DropdownMenuSeparator />
 							<DropdownMenuGroup>
 								<DropdownMenuSub>
-									<DropdownMenuSubTrigger className='flex items-center justify-start gap-x-2'>
-										<Contrast className='h-4 w-4' />
+									<DropdownMenuSubTrigger className='flex items-center justify-between gap-x-2'>
+										<Contrast className='size-4' />
 										<span>Appearance</span>
 									</DropdownMenuSubTrigger>
 									<DropdownMenuPortal>
 										<DropdownMenuSubContent>
-											<DropdownMenuItem
-												className='flex cursor-pointer items-center justify-between'
-												onClick={() =>
-													setTheme('light')
-												}>
-												<div className='flex gap-x-2'>
-													<Sun className='h-4 w-4' />
-													<span>Light</span>
-												</div>
-												{theme === 'light' && (
-													<Check className='h-4 w-4' />
-												)}
-											</DropdownMenuItem>
-											<DropdownMenuItem
-												className='flex cursor-pointer items-center justify-between'
-												onClick={() =>
-													setTheme('dark')
-												}>
-												<div className='flex gap-x-2'>
-													<Moon className='h-4 w-4' />
-													<span>Dark</span>
-												</div>
-												{theme === 'dark' && (
-													<Check className='h-4 w-4' />
-												)}
-											</DropdownMenuItem>
-											<DropdownMenuItem
-												className='flex cursor-pointer items-center justify-between'
-												onClick={() =>
-													setTheme('system')
-												}>
-												<div className='flex gap-x-2'>
-													<SunMoon className='h-4 w-4' />
-													<span>System</span>
-												</div>
-												{theme === 'system' && (
-													<Check className='h-4 w-4' />
-												)}
-											</DropdownMenuItem>
+											{themes.map((theme) => (
+												<DropdownMenuItem
+													key={theme.code}>
+													<ThemeSwitcher
+														themeType={theme.code}
+														title={theme.name}
+														icon={theme.icon}
+													/>
+												</DropdownMenuItem>
+											))}
 										</DropdownMenuSubContent>
 									</DropdownMenuPortal>
 								</DropdownMenuSub>
 								<DropdownMenuSub>
-									<DropdownMenuSubTrigger className='flex items-center justify-start gap-x-2'>
-										<Languages className='h-4 w-4' />
+									<DropdownMenuSubTrigger className='flex items-center justify-between gap-x-2'>
+										<Languages className='size-4' />
 										<span>Language</span>
 									</DropdownMenuSubTrigger>
 									<DropdownMenuPortal>
 										<DropdownMenuSubContent>
-											<DropdownMenuItem
-												className='flex cursor-pointer items-center justify-start gap-x-2'
-												onClick={() =>
-													handleLanguageChange('en')
-												}>
-												<img
-													src={UnitedKingdomFlag}
-													alt='United Kingdom Flag'
-													loading='lazy'
-													className='h-4 w-4 rounded-full'
-												/>
-												<span>English</span>
-												{i18n.language === 'en' && (
-													<Check className='h-4 w-4' />
-												)}
-											</DropdownMenuItem>
-											<DropdownMenuItem
-												className='flex cursor-pointer items-center justify-start gap-x-2'
-												onClick={() =>
-													handleLanguageChange('pt')
-												}>
-												<img
-													src={PortugalFlag}
-													alt='Portugal Flag'
-													loading='lazy'
-													className='h-4 w-4 rounded-full'
-												/>
-												<span>Português</span>
-												{i18n.language === 'pt' && (
-													<Check className='h-4 w-4' />
-												)}
-											</DropdownMenuItem>
+											{languages.map((language) => (
+												<DropdownMenuItem
+													key={language.code}>
+													<LanguageSwitcher
+														lang={language.code}
+														title={language.name}
+														icon={language.icon}
+													/>
+												</DropdownMenuItem>
+											))}
 										</DropdownMenuSubContent>
 									</DropdownMenuPortal>
 								</DropdownMenuSub>

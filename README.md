@@ -2,32 +2,47 @@
 
 ## Description
 
-This is a [Vite App](https://vitejs.dev/) project bootstrapped with [`pnpm create vite@latest portfolio --template react-ts`](https://vitejs.dev/guide/).
+This portfolio showcases my journey as a Software Engineer, featuring personal, academic, and professional projects with details, my work experience, a way to learn a bit about myself, and multiple ways to connect with me.
 
 ## Technologies
-[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="64" height="64" />](https://www.typescriptlang.org/)
-[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="64" height="64" />](https://reactjs.org/)
-[<img src="https://vitejs.dev/logo.svg" alt="Vite.js" width="64" height="64" />](https://vitejs.dev/)
-[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" width="64" height="64" />](https://tailwindcss.com/)
+
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" width="64" height="64" />](https://www.typescriptlang.org/)
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React.js" width="64" height="64" />](https://reactjs.org/)
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js" width="64" height="64" />](https://nextjs.org/)
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trpc/trpc-original.svg" alt="tRPC" width="64" height="64" />](https://trpc.io/)
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" width="64" height="64" />](https://tailwindcss.com/)
 
 ## Getting Started
 
-First, install the dependencies:
+To get started with Portfolio application on your local machine, follow these steps:
+
+<sup>Taking in consideration Node.js v20+, PnPM is already installed.</sup>
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+2. Install the required dependencies:
 
 ```bash
 pnpm install
 ```
 
-Then run the development server:
+3. Set up the environment variables:
+
+```bash
+cp .env.example .env
+```
+
+4. Run the application:
+
 ```bash
 pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Deploy on GitHub Pages
-
-The easiest way to deploy your Vite app is to use the [GitHub Pages](https://pages.github.com/).
+The application should now be perfectly running locally on http://localhost:3000.
 
 ## License
 

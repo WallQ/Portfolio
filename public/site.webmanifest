@@ -1,6 +1,7 @@
 {
 	"name": "Sérgio Félix - Portfolio",
 	"short_name": "Sérgio Félix",
+	"description": "The personal website of Sérgio Félix.",
 	"icons": [
 		{
 			"src": "/android-chrome-36x36.png",
@@ -48,7 +49,24 @@
 			"type": "image/png"
 		}
 	],
-	"theme_color": "#ffffff",
+	"screenshots": [
+		{
+			"src": "/screenshot-wide.png",
+			"sizes": "1440x900",
+			"type": "image/png",
+			"form_factor": "wide",
+			"label": "Portfolio"
+		},
+		{
+			"src": "/screenshot-narrow.png",
+			"sizes": "2796x1290",
+			"type": "image/png",
+			"form_factor": "narrow",
+			"label": "Portfolio"
+		}
+	],
+	"id": "/",
+	"theme_color": "#2563eb",
 	"background_color": "#ffffff",
 	"scope": "/",
 	"start_url": "/",
