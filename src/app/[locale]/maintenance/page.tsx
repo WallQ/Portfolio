@@ -1,6 +1,17 @@
+import { unstable_setRequestLocale } from 'next-intl/server';
+
+import { type Locale } from '@/lib/locales';
 import Typography from '@/components/typography';
 
-export default function MaintenancePage() {
+type MaintenancePageProps = {
+	params: {
+		locale: Locale;
+	};
+};
+
+export default function MaintenancePage({ params }: MaintenancePageProps) {
+	unstable_setRequestLocale(params.locale);
+
 	return (
 		<main>
 			<Typography variant='h1'>

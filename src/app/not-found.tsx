@@ -6,7 +6,15 @@ import { getBaseUrl } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import Typography from '@/components/typography';
 
+// type NotFoundPageProps = {
+// 	params: {
+// 		locale: Locale;
+// 	};
+// };
+
 export default function NotFoundPage() {
+	// unstable_setRequestLocale(params.locale);
+
 	return (
 		<div className='flex flex-col items-center justify-center gap-8 text-center'>
 			<Frown className='size-56' />

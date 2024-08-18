@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl';
 
+import ExperiencesCarousel from '@/components/experiences-carousel';
 import Reveal from '@/components/reveal';
 import Typography from '@/components/typography';
-import ExperiencesCarousel from '@/components/experiences-carousel';
 
 const Experiences: React.FunctionComponent = (): React.ReactNode => {
 	const t = useTranslations('homepage');

@@ -5,6 +5,7 @@ import { APP_ROUTES } from '@/routes/app';
 import Contact from '@/sections/contact';
 import { ExternalLink } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { type Locale } from '@/lib/locales';
 import { Badge } from '@/components/ui/badge';
@@ -15,13 +16,26 @@ import Typography from '@/components/typography';
 
 type ProjectPageProps = {
 	params: {
+		locale: Locale;
 		id: string;
 	};
 };
 
+export const generateMetadata = ({ params }: ProjectPageProps) => {
+	const title = projects.en?.find(
+		(project) => project.id === params.id,
+	)?.title;
+
+	return {
+		title: title ?? 'Project XYWZ',
+	};
+};
+
 export default function ProjectPage({ params }: ProjectPageProps) {
+	unstable_setRequestLocale(params.locale);
+
 	const locale = useLocale() as Locale;
-	const t = useTranslations('homepage');
+	const t = useTranslations('project');
 
 	if (!params.id) return redirect(APP_ROUTES.HOME);
 
@@ -71,7 +85,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 						<div className='flex gap-x-4'>
 							<div className='flex flex-col gap-y-2'>
 								<span className='text-muted-foreground'>
-									Type
+									{t('type')}
 								</span>
 								<span className='font-semibold'>
 									{project.type}
@@ -79,7 +93,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 							</div>
 							<div className='flex flex-col gap-y-2'>
 								<span className='text-muted-foreground'>
-									Role
+									{t('role')}
 								</span>
 								<span className='font-semibold'>
 									{project.role}
@@ -88,7 +102,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 						</div>
 						<div className='flex flex-col gap-y-2'>
 							<span className='text-muted-foreground'>
-								Languages / Frameworks
+								{t('technologies')}
 							</span>
 							<div className='flex flex-wrap gap-2'>
 								{project.technologies.map((tech, index) => (
@@ -110,7 +124,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 							</div>
 						</div>
 						<div className='flex flex-col gap-y-2'>
-							<span className='text-muted-foreground'>Tools</span>
+							<span className='text-muted-foreground'>
+								{t('tools')}
+							</span>
 							<div className='flex flex-wrap gap-2'>
 								{project.tools.map((tools, index) => (
 									<Badge

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -20,6 +21,7 @@ const CopyToClipboard: React.FunctionComponent<CopyToClipboardProps> = ({
 	text,
 }): React.ReactNode => {
 	const { toast } = useToast();
+	const t = useTranslations('contact-form');
 	const [isCopying, setIsCopying] = useState(false);
 
 	const handleCopyToClipboard = () => {
@@ -28,15 +30,14 @@ const CopyToClipboard: React.FunctionComponent<CopyToClipboardProps> = ({
 			.writeText(text)
 			.then(() => {
 				toast({
-					description: 'Email successfully copied to your clipboard.',
+					description: t('copy_email_message'),
 				});
 				setTimeout(() => setIsCopying(false), 2500);
 			})
 			.catch(() => {
 				toast({
 					variant: 'destructive',
-					description:
-						'An error occurred while copying to your clipboard.',
+					description: t('copy_email_error_message'),
 				});
 				setIsCopying(false);
 			});

@@ -5,10 +5,10 @@ import { TRPCReactProvider } from '@/trpc/react';
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 
 import { config } from '@/config/app';
-import { type Locale } from '@/lib/locales';
+import { locales, type Locale } from '@/lib/locales';
 import { Toaster } from '@/components/ui/toaster';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
@@ -134,8 +134,6 @@ export const metadata: Metadata = {
 		},
 	},
 	applicationName: 'portfolio',
-	colorScheme: 'light',
-	themeColor: '#2563eb',
 };
 
 export const viewport: Viewport = {
@@ -153,10 +151,15 @@ type RootLayoutProps = {
 	};
 };
 
+export function generateStaticParams() {
+	return locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({
 	children,
 	params,
 }: RootLayoutProps) {
+	unstable_setRequestLocale(params.locale);
 	const messages = await getMessages();
 
 	return (

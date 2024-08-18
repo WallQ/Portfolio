@@ -3,7 +3,7 @@
 import { Fragment } from 'react';
 import { experiences } from '@/data/experiences';
 import Autoplay from 'embla-carousel-autoplay';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { type Locale } from '@/lib/locales';
 import {
@@ -16,6 +16,7 @@ import Typography from '@/components/typography';
 
 const ExperiencesCarousel: React.FunctionComponent = (): React.ReactNode => {
 	const locale = useLocale() as Locale;
+	const t = useTranslations('homepage');
 
 	return (
 		<Carousel
@@ -30,7 +31,7 @@ const ExperiencesCarousel: React.FunctionComponent = (): React.ReactNode => {
 			<CarouselContent>
 				{!experiences[locale]?.length ? (
 					<Typography variant='p'>
-						No experiences to showcase.
+						{t('experience.empty_experience')}
 					</Typography>
 				) : (
 					<Fragment>

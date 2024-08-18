@@ -29,13 +29,19 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 	const contact = api.contact.sendContact.useMutation({
 		onSuccess: () => {
 			toast({
-				description: 'Your contact request has been sent successfully!',
+				description: t('success_message'),
 			});
 		},
 		onError: (error) => {
+			if (error.message === 'ratelimit')
+				return toast({
+					variant: 'destructive',
+					description: t('error_message_rate_limit'),
+				});
+
 			toast({
 				variant: 'destructive',
-				description: error.message,
+				description: t('error_message'),
 			});
 		},
 		onSettled: () => {

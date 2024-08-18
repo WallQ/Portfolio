@@ -1,41 +1,66 @@
 {
-	"translation": {
+	"navbar": {
+		"home": "Início",
+		"about": "Sobre",
+		"experience": "Experiência",
+		"projects": "Projetos",
+		"contact": "Contacto"
+	},
+	"footer": {
+		"creator": "Feito com ❤️ e ☕ por "
+	},
+	"contact-form": {
+		"first_name": "Primeiro Nome",
+		"last_name": "Último Nome",
+		"email": "E-mail",
+		"email_information": "Não irei partilhar o seu e-mail com mais ninguém.",
+		"message": "Mensagem",
+		"message_placeholder": "Diga-me algo...",
+		"send_button": "Enviar",
+		"sending_button": "Enviando...",
+		"success_message": "A sua mensagem foi enviada com sucesso! 🚀",
+		"error_message": "Ocorreu um erro ao enviar a sua mensagem. Por favor, tente mais tarde. 😢",
+		"error_message_rate_limit": "Atingiu o limite de mensagens que podem ser enviadas. Por favor, tente mais tarde. 😢",
+		"copy_email_message": "E-mail copiado com sucesso para a sua área de transferência.",
+		"copy_email_error_message": "Ocorreu um erro ao copiar o e-mail para a sua área de transferência. Por favor, tente mais tarde."
+	},
+	"homepage": {
 		"header": {
-			"title": "Olá! Sou o <span>Sérgio Félix</span>, <br/>Engenheiro de Software.",
-			"description": "Apaixonado por resolver problemas e entusiasta de código, dedicado a desenvolver e desenhar soluções inovadoras com precisão e criatividade.",
+			"title": "Olá! Sou o <span>Sérgio Félix</span>, <br></br>Engenheiro de Software.",
+			"description": "Apaixonado por resolver problemas e entusiasta de código, dedicado a desenhar e desenvolver soluções inovadoras com precisão e criatividade.",
 			"contact_button": "Entrar em contato",
 			"resume_button": "Currículo"
 		},
 		"about": {
 			"title": "Sobre mim",
 			"word": "CHATO",
-			"paragraph_1": "Olá, eu sou o Sérgio Félix e estou feliz em fazer parte da comunidade de desenvolvimento web. Minha paixão por criar experiências e soluções digitais excepcionais impulsiona o meu trabalho e me motiva a melhorar e ampliar constantemente as minhas habilidades.",
-			"paragraph_2": "Descobri o meu interesse em desenvolvimento web em 2020 quando me inscrevi no Curso Técnico Superior em Desenvolvimento para Web e Dispositivos Móveis. Essa experiência abriu os meus olhos para o vasto e em constante evolução mundo do desenvolvimento web e estava ansioso para explorar e aprender mais além das bases de PHP, MySQL e Bootstrap.",
-			"paragraph_3": "Atualmente, estou a estudar Ciência da Computação e Engenharia e tenho aspirações de continuar minha educação com um Mestrado em Engenharia de Computação. Embora eu esteja dedicado aos meus estudos, também valorizo a importância da experiência prática e continuamente trabalho em projetos pessoais para aprimorar as minhas habilidades.",
-			"paragraph_4": "Sou uma pessoa determinada e flexível, e busco equilibrar meus objetivos acadêmicos com oportunidades de colocar minhas habilidades em prática. Se você está procurando um engenheiro de software talentoso e dedicado a criar soluções digitais notáveis, não procure mais. Vamos trabalhar juntos para tornar sua visão realidade!"
+			"paragraph_1": "Olá! 👋 Sou o Sérgio Félix, um engenheiro de software júnior com a capacidade de transformar código em experiências digitais criativas ✨. Sempre tive um fascínio por computadores, mas foi só em 2017, quando iniciei o Curso Profissional em Gestão e Programação de Sistemas Informáticos, é que mergulhei pela primeira vez no mundo da programação.",
+			"paragraph_2": "Gostei bastante, mas só em 2020, ao iniciar o Curso Técnico Superior Profissional em Desenvolvimento para a Web e Dispositivos Móveis, é que tive aquele 'click'. 😮 Foi como abrir um baú de tesouro cheio de novas coisas bacanas para além de PHP, MySQL e Bootstrap — apenas para perceber há toda uma galáxia de tecnologia por aí! 🌌",
+			"paragraph_3": "Neste momento, estou a terminar a minha Licenciatura em Engenharia Informática e Computação e a ponderar fazer um Mestrado em Engenharia Informática (talvez 🙃) no futuro. Estou sempre à procura de novas formas de aplicar as minhas competências de programação e dar vida a ideias, seja através de projetos académicos, pessoais ou profissionais.",
+			"paragraph_4": "Sou movido pela curiosidade e pelo amor a aprendizagem, o que me mantém sempre a mexer e a adquirir novas competências. Quer seja na minha zona de conforto a criar uma aplicação web elegante, ou no meu pesadelo a resolver um bug complicado 💀, estou sempre focado em entregar soluções de alta qualidade que façam a diferença.",
+			"paragraph_5": "Portanto, se precisas de um engenheiro de software apaixonado e versátil, pronto para mergulhar em projetos interessantes, vamos conectar-nos! Estou ansioso para ajudar a transformar a sua visão em realidade. 😎"
 		},
 		"experience": {
 			"title": "Experiência de Trabalho",
-			"description": "Tive a oportunidade de trabalhar com diversos clientes e empresas e tenho orgulho de ter contribuído para o sucesso de cada projeto. Aqui estão alguns dos destaques da minha experiência profissional."
+			"description": "Tive a oportunidade de trabalhar com diversos clientes e empresas e tenho orgulho de ter contribuído para o sucesso de cada projeto. Aqui estão alguns dos destaques da minha experiência profissional.",
+			"empty_experience": "Nenhuma experiência de trabalho para mostrar."
 		},
 		"projects": {
 			"title": "Projetos",
-			"description": "Sou apaixonado por criar soluções digitais inovadoras e fáceis de usar. Aqui estão alguns dos projetos em que trabalhei.",
-			"show_more_button": "Mostrar mais"
+			"description": "Explore uma variedade de projetos públicos, pessoais, académicos e profissionais que destacam as minhas capacidades e criatividade. Cada projeto reflete a minha capacidade de enfrentar desafios do mundo real e de entregar soluções impactantes, utilizando diversas tecnologias. Eis alguns dos projetos em que trabalhei:",
+			"view_details_button": "Ver detalhes",
+			"show_more_button": "Mostrar mais",
+			"empty_projects": "Nenhum projeto para mostrar."
 		},
 		"contact": {
 			"title": "Vamos trabalhar juntos na sua próxima ideia.",
-			"description": "Fico sempre feliz em ouvir sobre oportunidades interessantes, participar de conversas interessantes e construir conexões valiosas. Vamos nos conectar!",
-			"form": {
-				"first_name": "Primeiro nome",
-				"last_name": "Sobrenome",
-				"email": "E-mail",
-				"email_information": "Não compartilharei o seu e-mail com mais ninguém.",
-				"message": "Mensagem",
-				"message_placeholder": "Conte-me algo...",
-				"send_button": "Enviar",
-				"sending_button": "Enviando..."
-			}
+			"description": "Fico sempre feliz por ouvir sobre oportunidades interessantes, participar em conversas interessantes e construir ligações valiosas, por isso vamos conectar-nos!"
 		}
+	},
+	"project": {
+		"type": "Tipo",
+		"role": "Cargo",
+		"technologies": "Linguagens / Frameworks",
+		"tools": "Ferramentas"
 	}
 }

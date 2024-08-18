@@ -23,6 +23,8 @@ export type Project = {
 	tags: string[];
 	role: string;
 	type: string;
+	startDate: string;
+	endDate: string;
 	technologies: Technologies[];
 	tools: Tools[];
 };

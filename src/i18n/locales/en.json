@@ -1,14 +1,33 @@
 {
 	"navbar": {
+		"home": "Home",
 		"about": "About",
 		"experience": "Experience",
 		"projects": "Projects",
 		"contact": "Contact"
 	},
+	"footer": {
+		"creator": "Made with ❤️ and ☕ by "
+	},
+	"contact-form": {
+		"first_name": "First Name",
+		"last_name": "Last Name",
+		"email": "Email",
+		"email_information": "I will not share your email with anyone else.",
+		"message": "Message",
+		"message_placeholder": "Tell me something...",
+		"send_button": "Send",
+		"sending_button": "Sending...",
+		"success_message": "Your message has been sent successfully! 🚀",
+		"error_message": "An error occurred while sending your message. Please try again later. 😢",
+		"error_message_rate_limit": "You have reached the limit of messages that can be sent. Please try again later. 😢",
+		"copy_email_message": "Email successfully copied to your clipboard.",
+		"copy_email_error_message": "An error occurred while copying the email to your clipboard. Please try again later."
+	},
 	"homepage": {
 		"header": {
 			"title": "Hi! I'm <span>Sérgio Félix</span>, <br></br>Software Engineer.",
-			"description": "Passionate problem solver and code enthusiast, dedicated to developing and designing innovative solutions with precision and creativity.",
+			"description": "Passionate problem solver and code enthusiast, dedicated to designing and developing innovative solutions with precision and creativity.",
 			"contact_button": "Get in touch",
 			"resume_button": "Resume"
 		},
@@ -18,31 +37,30 @@
 			"paragraph_1": "Hey there! 👋 I'm Sérgio Félix, a junior software engineer with the ability to turn code into creative digital experiences ✨. I've always had a fascination with computers, but it wasn't until 2017, when I started a Professional Course in Management and Programming of Computer Systems, that I first dipped my toes into the world of programming.",
 			"paragraph_2": "I enjoyed it, but it wasn't until 2020, when I dove into the Higher Professional Technical Course in Development for Web and Mobile Devices, that everything clicked. 😮 It was like opening a treasure chest full of new cool stuff rather than PHP, MySQL, and Bootstrap — only to realize there's a whole galaxy of tech out there! 🌌",
 			"paragraph_3": "Right now, I'm deep into finishing my Bachelor's degree in Computer Science and Engineering and eyeing a Master's in Computer Engineering (maybe 🙃) in the future. I'm always on the lookout for new ways to flex my coding muscles and bring ideas to life whether through academic, personal, or professional projects.",
-			"paragraph_4": "I'm driven by curiosity and a love for learning, which keeps me tinkering and picking up new skills. Whether it's in my sweet spot building a sleek web application or in my nightmare solving a tricky bug 💀, I'm all about delivering top-notch solutions that make an impact. ",
+			"paragraph_4": "I'm driven by curiosity and a love for learning, which keeps me tinkering and picking up new skills. Whether it's in my sweet spot building a sleek web application or in my nightmare solving a tricky bug 💀, I'm all about delivering top-notch solutions that make an impact.",
 			"paragraph_5": "So, if you're in need of a passionate and versatile software engineer who's ready to dive into exciting projects, let's connect! I'm eager to help turn your vision into reality. 😎"
 		},
 		"experience": {
 			"title": "Work Experience",
-			"description": "I have had the opportunity to work with several companies, and I am proud to have contributed to the success of each project. Over the course of my career, I've gained valuable experience through various roles and internships, which have been instrumental in developing my technical abilities and problem-solving skills. Here are some of the highlights of my professional experience:"
+			"description": "I have had the opportunity to work with several companies, and I am proud to have contributed to the success of each project. Over the course of my career, I've gained valuable experience through various roles and internships, which have been instrumental in developing my technical abilities and problem-solving skills. Here are some of the highlights of my professional experience:",
+			"empty_experience": "No work experience to showcase."
 		},
 		"projects": {
 			"title": "Projects",
 			"description": "Explore a range of public, personal, academic, and professional projects that highlight my skills and creativity. Each project reflects my ability to tackle real-world challenges and deliver impactful solutions using various technologies. Here are some of the projects I have worked on:",
-			"show_more_button": "Show more"
+			"view_details_button": "View details",
+			"show_more_button": "Show more",
+			"empty_projects": "No project to showcase."
 		},
 		"contact": {
 			"title": "Let's work together on your next idea.",
 			"description": "I'm always happy to hear about exciting opportunities, join in interesting conversations, and build valuable connections, so let's connect!"
 		}
 	},
-	"contact-form": {
-		"first_name": "First Name",
-		"last_name": "Last Name",
-		"email": "Email",
-		"email_information": "I won't share your email with anyone else.",
-		"message": "Message",
-		"message_placeholder": "Tell me something...",
-		"send_button": "Send",
-		"sending_button": "Sending..."
+	"project": {
+		"type": "Type",
+		"role": "Role",
+		"technologies": "Languages / Frameworks",
+		"tools": "Tools"
 	}
 }

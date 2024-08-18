@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
@@ -22,30 +22,21 @@ const ScrollToTop: React.FunctionComponent = (): React.ReactNode => {
 
 	useEffect(() => {
 		window.addEventListener('scroll', toggleVisibility);
-		return () => {
-			window.removeEventListener('scroll', toggleVisibility);
-		};
+		return () => window.removeEventListener('scroll', toggleVisibility);
 	}, []);
 
-	const isBrowser = () => typeof window !== 'undefined';
-
-	const scrollToTop = () => {
-		if (!isBrowser()) return;
+	const scrollToTop = useCallback(() => {
+		if (typeof window === 'undefined') return;
 		window.scrollTo({
 			top: 0,
 			behavior: 'smooth',
 		});
-	};
+	}, []);
 
 	return (
 		<TooltipProvider>
 			<Tooltip>
-				<TooltipTrigger
-					asChild
-					className={cn({
-						'cursor-default': !isVisible,
-						'cursor-pointer': isVisible,
-					})}>
+				<TooltipTrigger asChild>
 					<Button
 						onClick={scrollToTop}
 						variant='ghost'
@@ -62,13 +53,7 @@ const ScrollToTop: React.FunctionComponent = (): React.ReactNode => {
 						<ArrowUp className='size-4' />
 					</Button>
 				</TooltipTrigger>
-				<TooltipContent
-					className={cn('cursor-default', {
-						'opacity-0': !isVisible,
-						'opacity-100': isVisible,
-					})}>
-					Scroll to top
-				</TooltipContent>
+				<TooltipContent>Scroll to top</TooltipContent>
 			</Tooltip>
 		</TooltipProvider>
 	);

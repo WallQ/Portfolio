@@ -1,7 +1,9 @@
+import { memo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { APP_ROUTES } from '@/routes/app';
 import { MoveRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
@@ -15,53 +17,57 @@ type ProjectCardProps = {
 	tags: string[];
 };
 
-const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
-	id,
-	title,
-	description,
-	thumbnail,
-	tags,
-}): React.ReactNode => {
-	return (
-		<div className='grid grid-cols-1 gap-y-8 sm:grid-cols-10 sm:gap-x-16'>
-			<Image
-				src={thumbnail}
-				alt={title}
-				loading='lazy'
-				width={512}
-				height={288}
-				className='col-span-4 aspect-[16/9] h-full w-full rounded-md object-cover object-center'
-			/>
-			<div className='col-span-6 flex flex-col justify-between gap-y-4'>
-				<div className='flex flex-col items-start gap-y-4'>
-					<div className='flex flex-wrap gap-2'>
-						{tags.map((tag, index) => (
-							<Badge
-								key={`${tag}-${index}`}
-								variant='secondary'
-								className='rounded-md py-1 text-primary'>
-								{tag}
-							</Badge>
-						))}
-					</div>
-					<Typography variant='h3'>{title}</Typography>
-					<Typography
-						variant='p'
-						className='line-clamp-4'>
-						{description}
-					</Typography>
-				</div>
+const ProjectCard: React.FunctionComponent<ProjectCardProps> = memo(
+	({ id, title, description, thumbnail, tags }) => {
+		const t = useTranslations('homepage');
+
+		return (
+			<div className='grid grid-cols-1 gap-y-8 sm:grid-cols-10 sm:gap-x-16'>
 				<Link
 					href={APP_ROUTES.PROJECT(id)}
-					className={`${buttonVariants({
-						variant: 'outline',
-					})} max-w-fit`}>
-					View details
-					<MoveRight className='ml-2 size-4' />
+					className='col-span-4'>
+					<Image
+						src={thumbnail}
+						alt={title}
+						loading='lazy'
+						width={512}
+						height={288}
+						className='aspect-[16/9] h-full w-full rounded-md object-cover object-center'
+					/>
 				</Link>
+				<div className='col-span-6 flex flex-col justify-between gap-y-4'>
+					<div className='flex flex-col items-start gap-y-4'>
+						<div className='flex flex-wrap gap-2'>
+							{tags.map((tag, index) => (
+								<Badge
+									key={`${tag}-${index}`}
+									variant='secondary'
+									className='rounded-md py-1 text-primary'>
+									{tag}
+								</Badge>
+							))}
+						</div>
+						<Typography variant='h3'>{title}</Typography>
+						<Typography
+							variant='p'
+							className='line-clamp-4'>
+							{description}
+						</Typography>
+					</div>
+					<Link
+						href={APP_ROUTES.PROJECT(id)}
+						className={`${buttonVariants({
+							variant: 'outline',
+						})} max-w-fit`}>
+						{t('projects.view_details_button')}
+						<MoveRight className='ml-2 size-4' />
+					</Link>
+				</div>
 			</div>
-		</div>
-	);
-};
+		);
+	},
+);
+
+ProjectCard.displayName = 'ProjectCard';
 
 export default ProjectCard;

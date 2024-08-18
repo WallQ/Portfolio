@@ -19,8 +19,7 @@ export const contactRouter = createTRPCRouter({
 			if (!success)
 				throw new TRPCError({
 					code: 'TOO_MANY_REQUESTS',
-					message:
-						'Too many requests from this IP, please try again later.',
+					message: 'ratelimit',
 					cause: 'ratelimit',
 				});
 
