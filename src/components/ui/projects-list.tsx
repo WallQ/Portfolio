@@ -10,6 +10,8 @@ import { Separator } from '@/components/ui/separator';
 import ProjectCard from '@/components/project-card';
 import Typography from '@/components/typography';
 
+import Reveal from '../reveal';
+
 const ProjectsList: React.FunctionComponent = (): React.ReactNode => {
 	const locale = useLocale() as Locale;
 	const t = useTranslations('homepage');
@@ -26,7 +28,10 @@ const ProjectsList: React.FunctionComponent = (): React.ReactNode => {
 					{projects[locale]
 						.slice(0, visibleProjects)
 						.map((project) => (
-							<Fragment key={project.id}>
+							<Reveal
+								y={-25}
+								innerClassName='flex flex-col gap-y-8'
+								key={project.id}>
 								<ProjectCard
 									id={project.id}
 									title={project.title}
@@ -35,7 +40,7 @@ const ProjectsList: React.FunctionComponent = (): React.ReactNode => {
 									tags={project.tags}
 								/>
 								<Separator />
-							</Fragment>
+							</Reveal>
 						))}
 					{visibleProjects < projects[locale].length && (
 						<Button

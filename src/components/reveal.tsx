@@ -13,6 +13,9 @@ type RevealProps = {
 	direction?: 'horizontal' | 'vertical';
 	right?: boolean;
 	className?: string;
+	innerClassName?: string;
+	y?: number;
+	x?: number;
 };
 
 const Reveal: React.FunctionComponent<RevealProps> = ({
@@ -23,6 +26,9 @@ const Reveal: React.FunctionComponent<RevealProps> = ({
 	direction = 'vertical',
 	right = false,
 	className,
+	innerClassName,
+	y,
+	x,
 }): React.ReactNode => {
 	const targetRef = useRef<HTMLDivElement>(null);
 	const isInView = useInView(targetRef, { once: true });
@@ -46,14 +52,14 @@ const Reveal: React.FunctionComponent<RevealProps> = ({
 						y:
 							movement && direction === 'vertical'
 								? right
-									? 50
-									: -50
+									? (y ?? 50)
+									: (y ?? -50)
 								: 0,
 						x:
 							movement && direction === 'horizontal'
 								? right
-									? 50
-									: -50
+									? (x ?? 50)
+									: (x ?? -50)
 								: 0,
 						filter: blur ? 'blur(10px)' : 'blur(0px)',
 					},
@@ -66,7 +72,8 @@ const Reveal: React.FunctionComponent<RevealProps> = ({
 					},
 				}}
 				initial='hidden'
-				animate={mainControls}>
+				animate={mainControls}
+				className={cn(`${innerClassName}`)}>
 				{children}
 			</motion.div>
 		</div>
