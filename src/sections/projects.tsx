@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-import ProjectsList from '@/components/ui/projects-list';
+import ProjectsList from '@/components/projects-list';
 import Reveal from '@/components/reveal';
 import Typography from '@/components/typography';
 
