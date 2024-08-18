@@ -1,4 +1,3 @@
-// import MillionLint from '@million/lint';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 await import('./src/env.js');
@@ -19,7 +18,3 @@ const config = {
 };
 
 export default withNextIntl(config);
-
-// export default MillionLint.next({
-// 	rsc: true,
-// })(withNextIntl(config));
