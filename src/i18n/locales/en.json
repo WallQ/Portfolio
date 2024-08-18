@@ -1,5 +1,6 @@
 {
 	"navbar": {
+		"home": "Home",
 		"about": "About",
 		"experience": "Experience",
 		"projects": "Projects",
@@ -41,16 +42,25 @@
 		},
 		"experience": {
 			"title": "Work Experience",
-			"description": "I have had the opportunity to work with several companies, and I am proud to have contributed to the success of each project. Over the course of my career, I've gained valuable experience through various roles and internships, which have been instrumental in developing my technical abilities and problem-solving skills. Here are some of the highlights of my professional experience:"
+			"description": "I have had the opportunity to work with several companies, and I am proud to have contributed to the success of each project. Over the course of my career, I've gained valuable experience through various roles and internships, which have been instrumental in developing my technical abilities and problem-solving skills. Here are some of the highlights of my professional experience:",
+			"empty_experience": "No work experience to showcase."
 		},
 		"projects": {
 			"title": "Projects",
 			"description": "Explore a range of public, personal, academic, and professional projects that highlight my skills and creativity. Each project reflects my ability to tackle real-world challenges and deliver impactful solutions using various technologies. Here are some of the projects I have worked on:",
-			"show_more_button": "Show more"
+			"view_details_button": "View details",
+			"show_more_button": "Show more",
+			"empty_projects": "No project to showcase."
 		},
 		"contact": {
 			"title": "Let's work together on your next idea.",
 			"description": "I'm always happy to hear about exciting opportunities, join in interesting conversations, and build valuable connections, so let's connect!"
 		}
+	},
+	"project": {
+		"type": "Type",
+		"role": "Role",
+		"technologies": "Languages / Frameworks",
+		"tools": "Tools"
 	}
 }

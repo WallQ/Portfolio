@@ -1,5 +1,6 @@
 {
 	"navbar": {
+		"home": "Início",
 		"about": "Sobre",
 		"experience": "Experiência",
 		"projects": "Projetos",
@@ -41,16 +42,25 @@
 		},
 		"experience": {
 			"title": "Experiência de Trabalho",
-			"description": "Tive a oportunidade de trabalhar com diversos clientes e empresas e tenho orgulho de ter contribuído para o sucesso de cada projeto. Aqui estão alguns dos destaques da minha experiência profissional."
+			"description": "Tive a oportunidade de trabalhar com diversos clientes e empresas e tenho orgulho de ter contribuído para o sucesso de cada projeto. Aqui estão alguns dos destaques da minha experiência profissional.",
+			"empty_experience": "Nenhuma experiência de trabalho para mostrar."
 		},
 		"projects": {
 			"title": "Projetos",
 			"description": "Explore uma variedade de projetos públicos, pessoais, académicos e profissionais que destacam as minhas capacidades e criatividade. Cada projeto reflete a minha capacidade de enfrentar desafios do mundo real e de entregar soluções impactantes, utilizando diversas tecnologias. Eis alguns dos projetos em que trabalhei:",
-			"show_more_button": "Mostrar mais"
+			"view_details_button": "Ver detalhes",
+			"show_more_button": "Mostrar mais",
+			"empty_projects": "Nenhum projeto para mostrar."
 		},
 		"contact": {
 			"title": "Vamos trabalhar juntos na sua próxima ideia.",
 			"description": "Fico sempre feliz por ouvir sobre oportunidades interessantes, participar em conversas interessantes e construir ligações valiosas, por isso vamos conectar-nos!"
 		}
+	},
+	"project": {
+		"type": "Tipo",
+		"role": "Cargo",
+		"technologies": "Linguagens / Frameworks",
+		"tools": "Ferramentas"
 	}
 }

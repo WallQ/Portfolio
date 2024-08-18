@@ -2,50 +2,169 @@ import { type Projects } from '@/types/projects';
 
 export const projects: Projects = {
 	en: [
+		// 	id: 'ai_project',
+		// 	title: 'Artificial Intelligence',
+		// 	description:
+		// 		'An AI model developed to predict if a message/email is spam/phishing/malicious (binary classification), using Random Forest, SVM, and Logistic Regression algorithms. The project includes a graphical interface built in Next.js, allowing authenticated user input and tracking of inputs and evaluations, with an API created using Flask.',
+		// 	url: 'https://github.com/WallQ/IA',
+		// 	thumbnail: 'link_to_ai_project_thumbnail.png',
+		// 	images: [
+		// 		{
+		// 			title: 'Model Overview',
+		// 			src: 'link_to_ai_project_overview.png',
+		// 		},
+		// 		{
+		// 			title: 'Prediction Interface',
+		// 			src: 'link_to_ai_project_interface.png',
+		// 		},
+		// 	],
+		// 	tags: ['AI', 'Machine Learning', 'Python', 'Next.js'],
+		// 	role: 'Solution Architect & Developer',
+		// 	type: 'Academic Project',
+		// 	technologies: [
+		// 		{ name: 'Python', logo: 'link_to_python_logo.png' },
+		// 		{ name: 'scikit-learn', logo: 'link_to_scikit_learn_logo.png' },
+		// 	],
+		// 	tools: [
+		// 		{ name: 'Flask', logo: 'link_to_flask_logo.png' },
+		// 		{ name: 'Next.js', logo: 'link_to_nextjs_logo.png' },
+		// 	],
+		// },
+		{
+			id: 'sio',
+			title: 'Organizational Information Systems',
+			description:
+				'A Decision Support System (DSS) application developed in Next.js (T3 Stack) with OAuth2.0 authentication, file upload, and data parsing from SAFT (.xml) files. The data undergoes normalization (UNF, 1NF, 2NF, 3NF), validation, transformation, loading into a relational database (1st ETL), then is made a denormalization for performance, some queries, and aggregations to generate the surrogate keys and the respective values to store in the Star Schema database (2nd ETL). This way, the system (business application) provides users with a dashboard for decision-making on stock, sales, etc.',
+			url: 'https://github.com/WallQ/SIO',
+			thumbnail: '/assets/images/projects/sio/preview.webp',
+			images: [
+				{
+					title: 'Homepage',
+					src: '/assets/images/projects/sio/homepage.webp',
+				},
+				{
+					title: 'Dashboard',
+					src: '/assets/images/projects/sio/dashboard.webp',
+				},
+			],
+			tags: ['T3 Stack', 'ETL', 'Data warehouse', 'Star Schema', 'DSS'],
+			role: 'Solution Designer & Full-stack Developer',
+			type: 'Academic Project',
+			startDate: 'Apr 2024',
+			endDate: 'Jul 2024',
+			technologies: [
+				{
+					name: 'TypeScript',
+					logo: '/assets/icons/technologies/typescript.svg',
+				},
+				{
+					name: 'Next.js',
+					logo: '/assets/icons/technologies/nextjs.svg',
+				},
+				{
+					name: 'tRPC',
+					logo: '/assets/icons/technologies/trpc.svg',
+				},
+				{
+					name: 'Drizzle ORM',
+					logo: '/assets/icons/technologies/drizzleorm.svg',
+				},
+				{
+					name: 'PostgreSQL',
+					logo: '/assets/icons/technologies/postgresql.svg',
+				},
+				{
+					name: 'NextAuth.js',
+					logo: '/assets/icons/technologies/nextauthjs.svg',
+				},
+				{
+					name: 'Zustand',
+					logo: '/assets/icons/technologies/zustand.svg',
+				},
+				{
+					name: 'Zod',
+					logo: '/assets/icons/technologies/zod.svg',
+				},
+				{
+					name: 'Tailwind CSS',
+					logo: '/assets/icons/technologies/tailwindcss.svg',
+				},
+				{
+					name: 'Framer Motion',
+					logo: '/assets/icons/technologies/framermotion.svg',
+				},
+			],
+			tools: [
+				{
+					name: 'Docker',
+					logo: '/assets/icons/technologies/docker.svg',
+				},
+				{ name: 'Figma', logo: '/assets/icons/technologies/figma.svg' },
+				{
+					name: 'Visual Studio Code',
+					logo: '/assets/icons/technologies/vscode.svg',
+				},
+				{ name: 'Git', logo: '/assets/icons/technologies/git.svg' },
+				{
+					name: 'Vercel',
+					logo: '/assets/icons/technologies/vercel.svg',
+				},
+			],
+		},
+		{
+			id: 'sd',
+			title: 'Distributed Systems',
+			description:
+				'A Client/Server CLI multithreading chat application developed using sockets with UDP and TCP communication protocols, modeled after a military hierarchy. It supports one-to-one, one-to-many, and many-to-many communication.',
+			url: 'https://github.com/WallQ/SD',
+			thumbnail: '/assets/images/projects/sd/preview.webp',
+			images: [
+				{
+					title: 'CLI Chat',
+					src: '/assets/images/projects/sd/homepage.webp',
+				},
+			],
+			tags: ['Sockets', 'Multithreading', 'UDP', 'TCP'],
+			role: 'Application Developer',
+			type: 'Academic Project',
+			startDate: 'Dec 2023',
+			endDate: 'Jan 2024',
+			technologies: [
+				{
+					name: 'Java',
+					logo: '/assets/icons/technologies/java.svg',
+				},
+				{
+					name: 'Maven',
+					logo: '/assets/icons/technologies/maven.svg',
+				},
+			],
+			tools: [
+				{
+					name: 'IntelliJ IDEA',
+					logo: '/assets/icons/technologies/intellij.svg',
+				},
+				{ name: 'Git', logo: '/assets/icons/technologies/git.svg' },
+			],
+		},
 		{
 			id: 'pulse-connect',
 			title: 'Pulse Connect',
 			description:
-				'Pulse Connect is a platform for seamless and discreet connections. This application empowers users to forge meaningful connections with others while preserving their privacy, real-time chat, and external contacts imported from existing sources, all this while ensuring a unique twist to the traditional social networking experience.',
+				'A social networking application enabling the import of contacts/friends from existing platforms (e.g., Facebook, Twitter, Instagram), user connections similar to Tinder, real-time messaging, notification system, OAuth2.0 and token-based (JWT) authentication, among other generic functionalities.',
 			url: 'https://github.com/WallQ/Pulse-Connect',
-			thumbnail: 'https://picsum.photos/1024/768',
+			thumbnail: '/assets/images/projects/pulse-connect/preview.webp',
 			images: [
 				{
 					title: 'Homepage',
-					src: '/assets/images/projects/pulse-connect/homepage.png',
-				},
-				{
-					title: 'Sign Up',
-					src: '/assets/images/projects/pulse-connect/sign-up.png',
-				},
-				{
-					title: 'Sign In',
-					src: '/assets/images/projects/pulse-connect/sign-in.png',
-				},
-				{
-					title: 'Profile',
-					src: '/assets/images/projects/pulse-connect/profile.png',
-				},
-				{
-					title: 'Chat',
-					src: '/assets/images/projects/pulse-connect/chat.png',
-				},
-				{
-					title: 'Connections',
-					src: '/assets/images/projects/pulse-connect/connections.png',
-				},
-				{
-					title: 'Notifications',
-					src: '/assets/images/projects/pulse-connect/notifications.png',
-				},
-				{
-					title: 'Settings',
-					src: '/assets/images/projects/pulse-connect/settings.png',
+					src: '/assets/images/projects/pulse-connect/homepage.webp',
 				},
 			],
-			tags: ['UI/UX', 'Web Development', 'DevOps'],
-			role: 'Web Developer & UI Designer',
-			type: 'Academic',
+			tags: ['Web Development', 'DevOps', 'Web Sockets', 'UI/UX'],
+			role: 'Front-end Developer',
+			type: 'Academic Project',
+			startDate: 'Oct 2023',
+			endDate: 'Jan 2024',
 			technologies: [
 				{ name: 'C#', logo: '/assets/icons/technologies/csharp.svg' },
 				{
@@ -90,6 +209,72 @@ export const projects: Projects = {
 					name: 'Vercel',
 					logo: '/assets/icons/technologies/vercel.svg',
 				},
+			],
+		},
+		{
+			id: 'pwa',
+			title: 'PWA Booking',
+			description:
+				'A hotel booking and management application similar to Booking developed with the MERN stack, featuring hotel browsing, room offers, reservations, payments (Stripe), token-based (JWT) authentication, and role-based access control (RBAC).',
+			url: 'https://github.com/WallQ/PWA',
+			thumbnail: '/assets/images/projects/pwa-booking/preview.webp',
+			images: [
+				{
+					title: 'Homepage',
+					src: '/assets/images/projects/pwa-booking/homepage.webp',
+				},
+			],
+			tags: [
+				'MERN Stack',
+				'Authentication',
+				'Payment Processing',
+				'Booking',
+			],
+			role: 'Full-stack Developer',
+			type: 'Academic Project',
+			startDate: 'Nov 2021',
+			endDate: 'Jan 2022',
+			technologies: [
+				{
+					name: 'MongoDB',
+					logo: '/assets/icons/technologies/mongodb.svg',
+				},
+				{
+					name: 'Express.js',
+					logo: '/assets/icons/technologies/expressjs.svg',
+				},
+				{
+					name: 'React.js',
+					logo: '/assets/icons/technologies/reactjs.svg',
+				},
+				{
+					name: 'Node.js',
+					logo: '/assets/icons/technologies/nodejs.svg',
+				},
+				{
+					name: 'React Router',
+					logo: '/assets/icons/technologies/reactrouter.svg',
+				},
+				{
+					name: 'Axios',
+					logo: '/assets/icons/technologies/axios.svg',
+				},
+				{
+					name: 'Tailwind CSS',
+					logo: '/assets/icons/technologies/tailwindcss.svg',
+				},
+				{
+					name: 'Jest',
+					logo: '/assets/icons/technologies/jest.svg',
+				},
+			],
+			tools: [
+				{ name: 'Figma', logo: '/assets/icons/technologies/figma.svg' },
+				{
+					name: 'Visual Studio Code',
+					logo: '/assets/icons/technologies/vscode.svg',
+				},
+				{ name: 'Git', logo: '/assets/icons/technologies/git.svg' },
 			],
 		},
 	],

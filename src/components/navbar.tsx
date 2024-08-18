@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { languages } from '@/data/languages';
+import { navLinks } from '@/data/nav-links';
 import { themes } from '@/data/themes';
 import { APP_ROUTES } from '@/routes/app';
 import { Contrast, Languages, Menu, Settings } from 'lucide-react';
@@ -49,51 +50,17 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 				<div className='hidden items-center justify-between md:flex'>
 					<nav>
 						<ul className='flex'>
-							<li>
-								<Link
-									href={`${APP_ROUTES.HOME}/#home`}
-									className={`${buttonVariants({
-										variant: 'link',
-									})} text-secondary-foreground`}>
-									Home.
-								</Link>
-							</li>
-							<li>
-								<Link
-									href={`${APP_ROUTES.HOME}/#about`}
-									className={`${buttonVariants({
-										variant: 'link',
-									})} text-secondary-foreground`}>
-									{t('about')}.
-								</Link>
-							</li>
-							<li>
-								<Link
-									href={`${APP_ROUTES.HOME}/#experience`}
-									className={`${buttonVariants({
-										variant: 'link',
-									})} text-secondary-foreground`}>
-									{t('experience')}.
-								</Link>
-							</li>
-							<li>
-								<Link
-									href={`${APP_ROUTES.HOME}/#projects`}
-									className={`${buttonVariants({
-										variant: 'link',
-									})} text-secondary-foreground`}>
-									{t('projects')}.
-								</Link>
-							</li>
-							<li>
-								<Link
-									href={`${APP_ROUTES.HOME}/#contact`}
-									className={`${buttonVariants({
-										variant: 'link',
-									})} text-secondary-foreground`}>
-									{t('contact')}.
-								</Link>
-							</li>
+							{navLinks.map((link) => (
+								<li key={link.code}>
+									<Link
+										href={`${APP_ROUTES.HOME}/${link.href}`}
+										className={`${buttonVariants({
+											variant: 'link',
+										})} text-secondary-foreground`}>
+										{t(link.code)}
+									</Link>
+								</li>
+							))}
 						</ul>
 					</nav>
 					<div className='flex'>

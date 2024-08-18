@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { APP_ROUTES } from '@/routes/app';
 import { MoveRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
@@ -22,16 +23,22 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 	thumbnail,
 	tags,
 }): React.ReactNode => {
+	const t = useTranslations('homepage');
+
 	return (
 		<div className='grid grid-cols-1 gap-y-8 sm:grid-cols-10 sm:gap-x-16'>
-			<Image
-				src={thumbnail}
-				alt={title}
-				loading='lazy'
-				width={512}
-				height={288}
-				className='col-span-4 aspect-[16/9] h-full w-full rounded-md object-cover object-center'
-			/>
+			<Link
+				href={APP_ROUTES.PROJECT(id)}
+				className='col-span-4'>
+				<Image
+					src={thumbnail}
+					alt={title}
+					loading='lazy'
+					width={512}
+					height={288}
+					className='aspect-[16/9] h-full w-full rounded-md object-cover object-center'
+				/>
+			</Link>
 			<div className='col-span-6 flex flex-col justify-between gap-y-4'>
 				<div className='flex flex-col items-start gap-y-4'>
 					<div className='flex flex-wrap gap-2'>
@@ -56,7 +63,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 					className={`${buttonVariants({
 						variant: 'outline',
 					})} max-w-fit`}>
-					View details
+					{t('projects.view_details_button')}
 					<MoveRight className='ml-2 size-4' />
 				</Link>
 			</div>
