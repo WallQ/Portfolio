@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useState } from 'react';
+import { Fragment, useCallback, useState } from 'react';
 import { projects } from '@/data/projects';
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -16,6 +16,10 @@ const ProjectsList: React.FunctionComponent = (): React.ReactNode => {
 	const locale = useLocale() as Locale;
 	const t = useTranslations('homepage');
 	const [visibleProjects, setVisibleProjects] = useState<number>(3);
+
+	const handleShowMoreClick = useCallback(() => {
+		setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 3);
+	}, []);
 
 	return (
 		<Fragment>
@@ -46,12 +50,7 @@ const ProjectsList: React.FunctionComponent = (): React.ReactNode => {
 						<Button
 							variant='secondary'
 							className='mt-8 max-w-fit self-center'
-							onClick={() =>
-								setVisibleProjects(
-									(prevVisibleProjects) =>
-										prevVisibleProjects + 3,
-								)
-							}
+							onClick={handleShowMoreClick}
 							aria-label='Show More'>
 							{t('projects.show_more_button')}
 						</Button>

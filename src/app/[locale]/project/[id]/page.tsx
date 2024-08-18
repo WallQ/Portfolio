@@ -5,6 +5,7 @@ import { APP_ROUTES } from '@/routes/app';
 import Contact from '@/sections/contact';
 import { ExternalLink } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { type Locale } from '@/lib/locales';
 import { Badge } from '@/components/ui/badge';
@@ -12,6 +13,13 @@ import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import Reveal from '@/components/reveal';
 import Typography from '@/components/typography';
+
+type ProjectPageProps = {
+	params: {
+		locale: Locale;
+		id: string;
+	};
+};
 
 export const generateMetadata = ({ params }: ProjectPageProps) => {
 	const title = projects.en?.find(
@@ -23,13 +31,9 @@ export const generateMetadata = ({ params }: ProjectPageProps) => {
 	};
 };
 
-type ProjectPageProps = {
-	params: {
-		id: string;
-	};
-};
-
 export default function ProjectPage({ params }: ProjectPageProps) {
+	unstable_setRequestLocale(params.locale);
+
 	const locale = useLocale() as Locale;
 	const t = useTranslations('project');
 

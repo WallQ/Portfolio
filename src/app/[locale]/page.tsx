@@ -4,8 +4,19 @@ import Contact from '@/sections/contact';
 import Experiences from '@/sections/experiences';
 import Hero from '@/sections/hero';
 import Projects from '@/sections/projects';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function HomePage() {
+import { type Locale } from '@/lib/locales';
+
+type HomePageProps = {
+	params: {
+		locale: Locale;
+	};
+};
+
+export default function HomePage({ params }: HomePageProps) {
+	unstable_setRequestLocale(params.locale);
+
 	return (
 		<Fragment>
 			<Hero />
