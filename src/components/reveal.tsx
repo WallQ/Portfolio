@@ -7,28 +7,28 @@ import { cn } from '@/lib/utils';
 
 type RevealProps = {
 	children: React.ReactNode;
-	opacity?: boolean;
-	movement?: boolean;
-	blur?: boolean;
-	direction?: 'horizontal' | 'vertical';
-	right?: boolean;
-	className?: string;
-	innerClassName?: string;
 	y?: number;
 	x?: number;
+	movement?: boolean;
+	direction?: 'horizontal' | 'vertical';
+	right?: boolean;
+	opacity?: boolean;
+	blur?: boolean;
+	className?: string;
+	innerClassName?: string;
 };
 
 const Reveal: React.FunctionComponent<RevealProps> = ({
 	children,
-	opacity = true,
-	movement = true,
-	blur = false,
-	direction = 'vertical',
-	right = false,
-	className,
-	innerClassName,
 	y,
 	x,
+	movement = true,
+	direction = 'vertical',
+	right = false,
+	opacity = true,
+	blur = false,
+	className,
+	innerClassName,
 }): React.ReactNode => {
 	const targetRef = useRef<HTMLDivElement>(null);
 	const isInView = useInView(targetRef, { once: true });
