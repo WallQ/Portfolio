@@ -46,7 +46,7 @@ export const experiences: Experiences = {
 			companyImage: '/assets/images/companies/BasicamenteDigital.jpg',
 			companyName: 'Basicamente Digital',
 			startDate: 'Mar 2022',
-			endDate: 'Aug 2022',
+			endDate: 'Ago 2022',
 		},
 		{
 			title: 'Desenvolvedor de Software',
@@ -56,8 +56,8 @@ export const experiences: Experiences = {
 			companyUrl: 'https://risema.pt',
 			companyImage: '/assets/images/companies/Risema.jpg',
 			companyName: 'Risema',
-			startDate: 'Feb 2019',
-			endDate: 'Apr 2019',
+			startDate: 'Fev 2019',
+			endDate: 'Abr 2019',
 		},
 		{
 			title: 'Técnico Informático',
@@ -67,8 +67,8 @@ export const experiences: Experiences = {
 			companyUrl: 'https://risema.pt',
 			companyImage: '/assets/images/companies/Risema.jpg',
 			companyName: 'Risema',
-			startDate: 'Feb 2018',
-			endDate: 'Apr 2018',
+			startDate: 'Fev 2018',
+			endDate: 'Abr 2018',
 		},
 	],
 };
