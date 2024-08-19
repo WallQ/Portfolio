@@ -29,7 +29,7 @@ const ExperienceCard: React.FunctionComponent<ExperienceCardProps> = ({
 			href={companyUrl}
 			rel='noopener noreferrer'
 			target='_blank'>
-			<Card className='transition-all duration-150 ease-linear hover:border-muted hover:bg-muted/10'>
+			<Card className='h-full transition-all duration-150 ease-linear hover:border-muted hover:bg-muted/10'>
 				<CardContent className='flex flex-col gap-y-4 p-6'>
 					<Typography variant='h5'>
 						{title}, {type}
