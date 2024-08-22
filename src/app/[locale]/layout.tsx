@@ -172,7 +172,7 @@ export default async function RootLayout({
 					<TRPCReactProvider>
 						<ThemeProvider
 							attribute='class'
-							defaultTheme='dark'
+							defaultTheme='system'
 							disableTransitionOnChange>
 							<Navbar />
 							<div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
