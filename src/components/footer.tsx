@@ -10,7 +10,7 @@ const Footer: React.FunctionComponent = (): React.ReactNode => {
 	return (
 		<footer className='border-t border-border/50 py-6'>
 			<div className='mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8'>
-				<small className='text-xs text-muted-foreground'>
+				<small className='text-sm text-muted-foreground'>
 					{t('creator')}
 					<a
 						href='https://github.com/WallQ/Portfolio'
