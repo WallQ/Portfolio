@@ -1,7 +1,7 @@
+import Image from 'next/image';
 import { ExternalLink, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { buttonVariants } from '@/components/ui/button';
 import Reveal from '@/components/reveal';
 import Typography from '@/components/typography';
@@ -57,15 +57,16 @@ const Hero: React.FunctionComponent = (): React.ReactNode => {
 				<Reveal
 					direction='horizontal'
 					right={true}>
-					<Avatar className='h-64 w-64 rounded-full bg-primary'>
-						<AvatarImage
-							src='assets/images/portrait.webp'
+					<div className='h-64 w-64 rounded-full bg-primary overflow-hidden'>
+						<Image
+							src='/assets/images/portrait.webp'
 							alt='Portrait'
 							loading='eager'
+							width={384}
+							height={384}
 							className='object-cover object-top'
 						/>
-						<AvatarFallback>SF</AvatarFallback>
-					</Avatar>
+					</div>
 				</Reveal>
 			</div>
 		</section>

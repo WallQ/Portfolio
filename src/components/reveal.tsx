@@ -27,7 +27,7 @@ const Reveal: React.FunctionComponent<RevealProps> = ({
 	right = false,
 	opacity = true,
 	blur = false,
-	className,
+	className = '',
 	innerClassName,
 }): React.ReactNode => {
 	const targetRef = useRef<HTMLDivElement>(null);
