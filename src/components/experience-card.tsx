@@ -31,7 +31,9 @@ const ExperienceCard: React.FunctionComponent<ExperienceCardProps> = ({
 			target='_blank'>
 			<Card className='h-full transition-all duration-150 ease-linear hover:border-muted hover:bg-muted/10'>
 				<CardContent className='flex flex-col gap-y-4 p-6'>
-					<Typography variant='h5'>
+					<Typography
+						variant='h3'
+						className='text-lg font-medium'>
 						{title}, {type}
 					</Typography>
 					<Typography
