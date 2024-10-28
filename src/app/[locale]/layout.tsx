@@ -1,11 +1,19 @@
+
+
+
 import '@/styles/globals.css';
+
+
 
 import { type Metadata, type Viewport } from 'next';
 import { TRPCReactProvider } from '@/trpc/react';
+import { Analytics } from "@vercel/analytics/react";
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+
+
 
 import { config } from '@/config/app';
 import { locales, type Locale } from '@/lib/locales';
@@ -14,6 +22,10 @@ import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import ScrollToTop from '@/components/scroll-to-top';
 import ThemeProvider from '@/components/theme-provider';
+
+
+
+
 
 export const metadata: Metadata = {
 	authors: [
@@ -183,6 +195,7 @@ export default async function RootLayout({
 							<ScrollToTop />
 							<Toaster />
 							<Footer />
+							<Analytics />
 						</ThemeProvider>
 					</TRPCReactProvider>
 				</NextIntlClientProvider>

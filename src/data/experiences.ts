@@ -6,7 +6,7 @@ export const experiences: Experiences = {
 			title: 'Front-End Developer',
 			type: 'Internship',
 			description:
-				"Designed and built with React ecosystem the company's corporate website.",
+				'Redesigned and developed the company website using the React ecosystem.',
 			companyUrl: 'https://bdcadigital.com',
 			companyImage: '/assets/images/companies/BasicamenteDigital.webp',
 			companyName: 'Basicamente Digital',
@@ -14,10 +14,10 @@ export const experiences: Experiences = {
 			endDate: 'Aug 2022',
 		},
 		{
-			title: 'Software Developer',
+			title: 'Network Technician',
 			type: 'Internship',
 			description:
-				'Developed a Ransomware and did a case study for my professional aptitude exam.',
+				'Assisted in maintaining the network architecture of affiliated companies and did a case study by developing a ransomware.',
 			companyUrl: 'https://risema.pt',
 			companyImage: '/assets/images/companies/Risema.webp',
 			companyName: 'Risema',
@@ -28,7 +28,7 @@ export const experiences: Experiences = {
 			title: 'Computer Technician',
 			type: 'Internship',
 			description:
-				'Maintained and assembled computers for personal clients or affiliated companies.',
+				'Assembled and maintained computers for clients and affiliated companies.',
 			companyUrl: 'https://risema.pt',
 			companyImage: '/assets/images/companies/Risema.webp',
 			companyName: 'Risema',
@@ -41,7 +41,7 @@ export const experiences: Experiences = {
 			title: 'Desenvolvedor Front-End',
 			type: 'Estágio',
 			description:
-				'Desenhei e construí com o ecossistema React o website corporativo da empresa.',
+				'Redesenhei e desenvolvi o website da empresa utilizando o ecossistema React.',
 			companyUrl: 'https://bdcadigital.com',
 			companyImage: '/assets/images/companies/BasicamenteDigital.webp',
 			companyName: 'Basicamente Digital',
@@ -52,7 +52,7 @@ export const experiences: Experiences = {
 			title: 'Desenvolvedor de Software',
 			type: 'Estágio',
 			description:
-				'Desenvolvi um Ransomware e fiz um caso de estudo para o meu exame de aptidão profissional.',
+				'Auxiliei na manutenção da arquitetura de rede de empresas afiliadas e fiz um caso de estudo desenvolvendo um ransomware.',
 			companyUrl: 'https://risema.pt',
 			companyImage: '/assets/images/companies/Risema.webp',
 			companyName: 'Risema',
@@ -63,7 +63,7 @@ export const experiences: Experiences = {
 			title: 'Técnico Informático',
 			type: 'Estágio',
 			description:
-				'Manuteni e montei computadores para clientes pessoais ou empresas afiliadas.',
+				'Montei e manuteni computadores para clientes e empresas afiliadas.',
 			companyUrl: 'https://risema.pt',
 			companyImage: '/assets/images/companies/Risema.webp',
 			companyName: 'Risema',

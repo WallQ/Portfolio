@@ -27,34 +27,34 @@
 	"homepage": {
 		"header": {
 			"title": "Olá! Sou o <span>Sérgio Félix</span>, <br></br>Engenheiro de Software.",
-			"description": "Apaixonado por resolver problemas e entusiasta de código, dedicado a desenhar e desenvolver soluções inovadoras com precisão e criatividade.",
+			"description": "Há meia década a desenhar e desenvolver soluções inovadoras com precisão e criatividade diretamente de Portugal.",
 			"contact_button": "Entrar em contato",
 			"resume_button": "Currículo"
 		},
 		"about": {
 			"title": "Sobre mim",
 			"word": "CHATO",
-			"paragraph_1": "Olá! 👋 Sou o Sérgio Félix, um engenheiro de software júnior com a capacidade de transformar código em experiências digitais criativas ✨. Sempre tive um fascínio por computadores, mas foi só em 2017, quando iniciei o Curso Profissional em Gestão e Programação de Sistemas Informáticos, é que mergulhei pela primeira vez no mundo da programação.",
+			"paragraph_1": "Olá! 👋 Sou o Sérgio Félix, um engenheiro de software júnior que gosta de construir experiências digitais criativas ✨. Sempre tive um fascínio por computadores, mas foi só em 2017, quando iniciei o Curso Profissional em Gestão e Programação de Sistemas Informáticos, é que mergulhei pela primeira vez no mundo da programação.",
 			"paragraph_2": "Gostei bastante, mas só em 2020, ao iniciar o Curso Técnico Superior Profissional em Desenvolvimento para a Web e Dispositivos Móveis, é que tive aquele 'click'. 😮 Foi como abrir um baú de tesouro cheio de novas coisas bacanas para além de PHP, MySQL e Bootstrap — apenas para perceber há toda uma galáxia de tecnologia por aí! 🌌",
-			"paragraph_3": "Neste momento, estou a terminar a minha Licenciatura em Engenharia Informática e Computação e a ponderar fazer um Mestrado em Engenharia Informática (talvez 🙃) no futuro. Estou sempre à procura de novas formas de aplicar as minhas competências de programação e dar vida a ideias, seja através de projetos académicos, pessoais ou profissionais.",
-			"paragraph_4": "Sou movido pela curiosidade e pelo amor a aprendizagem, o que me mantém sempre a mexer e a adquirir novas competências. Quer seja na minha zona de conforto a criar uma aplicação web elegante, ou no meu pesadelo a resolver um bug complicado 💀, estou sempre focado em entregar soluções de alta qualidade que façam a diferença.",
-			"paragraph_5": "Portanto, se precisas de um engenheiro de software apaixonado e versátil, pronto para mergulhar em projetos interessantes, vamos conectar-nos! Estou ansioso para ajudar a transformar a sua visão em realidade. 😎"
+			"paragraph_3": "Neste momento, estou a concluir a minha Licenciatura em Ciência da Computação e Engenharia e a considerar fazer um Mestrado em Ciência da Computação e Engenharia (talvez 🙃) no futuro. Estou sempre à procura de novas formas de aplicar as minhas competências de programação e dar vida a ideias, seja através de projetos académicos, pessoais ou profissionais.",
+			"paragraph_4": "Adquiro continuamente novas competências e fico curioso para resolver novos desafios. Quer seja na minha zona de conforto a criar uma aplicação web elegante, ou no meu pesadelo a resolver um bug complicado 💀, estou sempre focado em entregar soluções de alta qualidade que façam a diferença.",
+			"paragraph_5": "Portanto, se precisas de um engenheiro de software adaptável e pronto para novos projetos, vamos conectar-nos! Estou ansioso para ajudar a transformar a tua ideia em realidade. 😎"
 		},
 		"experience": {
 			"title": "Experiência de Trabalho",
-			"description": "Tive a oportunidade de trabalhar com diversos clientes e empresas e tenho orgulho de ter contribuído para o sucesso de cada projeto. Aqui estão alguns dos destaques da minha experiência profissional.",
+			"description": "Trabalhei com diversos clientes e empresas, contribuindo para o sucesso de cada projeto. Eis alguns dos destaques da minha experiência profissional:",
 			"empty_experience": "Nenhuma experiência de trabalho para mostrar."
 		},
 		"projects": {
 			"title": "Projetos",
-			"description": "Explore uma variedade de projetos públicos, pessoais, académicos e profissionais que destacam as minhas capacidades e criatividade. Cada projeto reflete a minha capacidade de enfrentar desafios do mundo real e de entregar soluções impactantes, utilizando diversas tecnologias. Eis alguns dos projetos em que trabalhei:",
+			"description": "Explora uma variedade de projetos públicos, sendo eles pessoais, académicos e profissionais que destacam as minhas capacidades de resolução de problemas e apresentam soluções em diversas tecnologias. Eis alguns dos projetos em que trabalhei:",
 			"view_details_button": "Ver detalhes",
 			"show_more_button": "Mostrar mais",
 			"empty_projects": "Nenhum projeto para mostrar."
 		},
 		"contact": {
-			"title": "Vamos trabalhar juntos na sua próxima ideia.",
-			"description": "Fico sempre feliz por ouvir sobre oportunidades interessantes, participar em conversas interessantes e construir ligações valiosas, por isso vamos conectar-nos!"
+			"title": "Vamos trabalhar juntos na tua próxima ideia.",
+			"description": "Fico sempre feliz por ouvir sobre oportunidades interessantes, participar em conversas interessantes e construir conexões valiosas, por isso vamos conectar-nos!"
 		}
 	},
 	"project": {
