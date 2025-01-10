@@ -2,39 +2,11 @@ import { type Projects } from '@/types/projects';
 
 export const projects: Projects = {
 	en: [
-		// 	id: 'ai_project',
-		// 	title: 'Artificial Intelligence',
-		// 	description:
-		// 		'An AI model developed to predict if a message/email is spam/phishing/malicious (binary classification), using Random Forest, SVM, and Logistic Regression algorithms. The project includes a graphical interface built in Next.js, allowing authenticated user input and tracking of inputs and evaluations, with an API created using Flask.',
-		// 	url: 'https://github.com/WallQ/IA',
-		// 	thumbnail: 'link_to_ai_project_thumbnail.png',
-		// 	images: [
-		// 		{
-		// 			title: 'Model Overview',
-		// 			src: 'link_to_ai_project_overview.png',
-		// 		},
-		// 		{
-		// 			title: 'Prediction Interface',
-		// 			src: 'link_to_ai_project_interface.png',
-		// 		},
-		// 	],
-		// 	tags: ['AI', 'Machine Learning', 'Python', 'Next.js'],
-		// 	role: 'Solution Architect & Developer',
-		// 	type: 'Academic Project',
-		// 	technologies: [
-		// 		{ name: 'Python', logo: 'link_to_python_logo.png' },
-		// 		{ name: 'scikit-learn', logo: 'link_to_scikit_learn_logo.png' },
-		// 	],
-		// 	tools: [
-		// 		{ name: 'Flask', logo: 'link_to_flask_logo.png' },
-		// 		{ name: 'Next.js', logo: 'link_to_nextjs_logo.png' },
-		// 	],
-		// },
 		{
 			id: 'sio',
 			title: 'Organizational Information Systems',
 			description:
-				'A Decision Support System (DSS) application developed in Next.js (T3 Stack) with OAuth2.0 authentication, file upload, and data parsing from SAFT (.xml) files. The data undergoes normalization (UNF, 1NF, 2NF, 3NF), validation, transformation, loading into a relational database (1st ETL), then is made a denormalization for performance, some queries, and aggregations to generate the surrogate keys and the respective values to store in the Star Schema database (2nd ETL). This way, the system (business application) provides users with a dashboard for decision-making on stock, sales, etc.',
+				'A Decision Support System (DSS) application developed in Next.js (T3 Stack) with OAuth2.0 authentication, data parsing from SAFT (.xml) files, and file upload. The data undergoes normalization (3NF), validation, transformation, loading into a relational database (1st ETL), then is made a denormalization for performance, some queries, and aggregations to generate the surrogate keys and the respective values to store in the star schema database (2nd ETL). This way, the application provides users with a dashboard for decision-making on stock, sales, etc.',
 			url: 'https://github.com/WallQ/SIO',
 			thumbnail: '/assets/images/projects/sio/preview.webp',
 			images: [
@@ -151,7 +123,7 @@ export const projects: Projects = {
 			id: 'pulse-connect',
 			title: 'Pulse Connect',
 			description:
-				'A social networking application enabling the import of contacts/friends from existing platforms (e.g., Facebook, Twitter, Instagram), user connections similar to Tinder, real-time messaging, notification system, OAuth2.0 and token-based (JWT) authentication, among other generic functionalities.',
+				'Social networking application enabling the import of contacts/friends from existing platforms (e.g., Facebook, Twitter, Instagram), user connections like Tinder, real-time messaging, notification system, OAuth2.0 and JWT authentication, among other generic functionalities.',
 			url: 'https://github.com/WallQ/Pulse-Connect',
 			thumbnail: '/assets/images/projects/pulse-connect/preview.webp',
 			images: [
@@ -215,7 +187,7 @@ export const projects: Projects = {
 			id: 'pwa',
 			title: 'PWA Booking',
 			description:
-				'A hotel booking and management application similar to Booking developed with the MERN stack, featuring hotel browsing, room offers, reservations, payments (Stripe), token-based (JWT) authentication, and role-based access control (RBAC).',
+				'A hotel booking and management application similar to Booking developed with the MERN stack, featuring hotel browsing, room offers, reservations, payments (Stripe), token-based authentication (JWT), and role-based access control (RBAC).',
 			url: 'https://github.com/WallQ/PWA',
 			thumbnail: '/assets/images/projects/pwa-booking/preview.webp',
 			images: [
@@ -283,7 +255,7 @@ export const projects: Projects = {
 			id: 'sio',
 			title: 'Organizational Information Systems',
 			description:
-				'Uma aplicação Sistema de Suporte à Decisão (DSS) desenvolvida em Next.js (T3 Stack) com autenticação OAuth2.0, upload de ficheiros e análise de dados de ficheiros SAFT (.xml). Os dados passam por normalização (UNF, 1NF, 2NF, 3NF), validação, transformação, carregamento em base de dados relacional (1º ETL), depois é feita uma desnormalização para desempenho, algumas consultas e agregações para gerar as chaves substitutas e os respectivos valores a guardar na base de dados Star Schema (2º ETL). Desta forma, o sistema (aplicação de negócio) disponibiliza aos utilizadores uma dashboard para a tomada de decisões sobre stock, vendas, etc.',
+				'Uma aplicação de Sistema de Suporte à Decisão (DSS) desenvolvida em Next.js (T3 Stack) com autenticação OAuth2.0, upload de ficheiros e análise de dados de ficheiros SAFT (.xml). Os dados passam por normalização (3NF), validação, transformação, carregamento numa base de dados relacional (1º ETL), depois é feita uma desnormalização para desempenho, algumas consultas e agregações para gerar as surrogate keys e os respectivos valores a guardar na base de dados Star Schema (2º ETL). Desta forma, a aplicação disponibiliza aos utilizadores uma dashboard para a tomada de decisões sobre stock, vendas, etc...',
 			url: 'https://github.com/WallQ/SIO',
 			thumbnail: '/assets/images/projects/sio/preview.webp',
 			images: [
@@ -400,7 +372,7 @@ export const projects: Projects = {
 			id: 'pulse-connect',
 			title: 'Pulse Connect',
 			description:
-				'Uma aplicação de rede social que permite a importação de contactos/amigos de plataformas existentes (por exemplo, Facebook, Twitter, Instagram), conexões entre utilizadores semelhantes ao Tinder, mensagens em tempo real, sistema de notificações, OAuth2.0 e autenticação baseada em token (JWT), entre outras funcionalidades genéricas.',
+				'Aplicação de rede social que permite a importação de contactos/amigos de plataformas existentes (por exemplo, Facebook, Twitter, Instagram), conexões entre utilizadores como o Tinder, mensagens em tempo real, sistema de notificações, OAuth2.0 e autenticação baseada em token (JWT), entre outras funcionalidades genéricas.',
 			url: 'https://github.com/WallQ/Pulse-Connect',
 			thumbnail: '/assets/images/projects/pulse-connect/preview.webp',
 			images: [
