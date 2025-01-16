@@ -41,7 +41,7 @@ const Hero: React.FunctionComponent = (): React.ReactNode => {
 								<Send className='ml-2 size-4' />
 							</a>
 							<a
-								href='docs/Sérgio Félix - Resume'
+								href='docs/Sérgio Félix - Resume.pdf'
 								target='_blank'
 								className={buttonVariants({
 									variant: 'outline',
