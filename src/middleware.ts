@@ -8,7 +8,7 @@ const nextIntlMiddleware = createMiddleware({
 	locales,
 	defaultLocale: 'en' satisfies Locale,
 	localePrefix: 'never',
-	
+	localeDetection: false,
 });
 
 export default async function middleware(
