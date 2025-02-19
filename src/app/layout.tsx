@@ -1,31 +1,20 @@
-
-
-
 import '@/styles/globals.css';
 
-
-
 import { type Metadata, type Viewport } from 'next';
-import { TRPCReactProvider } from '@/trpc/react';
-import { Analytics } from "@vercel/analytics/react";
+import { TooltipProvider } from '@radix-ui/react-tooltip';
+import { Analytics } from '@vercel/analytics/react';
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
-
-
+import { getLocale, getMessages } from 'next-intl/server';
 
 import { config } from '@/config/app';
-import { locales, type Locale } from '@/lib/locales';
-import { Toaster } from '@/components/ui/toaster';
+import { Toaster } from '@/components/ui/sonner';
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
+import { ReactScan } from '@/components/react-scan';
 import ScrollToTop from '@/components/scroll-to-top';
 import ThemeProvider from '@/components/theme-provider';
-
-
-
-
 
 export const metadata: Metadata = {
 	authors: [
@@ -157,35 +146,27 @@ export const viewport: Viewport = {
 };
 
 type RootLayoutProps = {
-	children: Readonly<React.ReactNode>;
-	params: {
-		locale: Locale;
-	};
+	children: React.ReactNode;
 };
 
-export function generateStaticParams() {
-	return locales.map((locale) => ({ locale }));
-}
-
-export default async function RootLayout({
-	children,
-	params,
-}: RootLayoutProps) {
-	unstable_setRequestLocale(params.locale);
+export default async function RootLayout({ children }: RootLayoutProps) {
+	const locale = await getLocale();
 	const messages = await getMessages();
 
 	return (
 		<html
-			lang={params.locale}
 			suppressHydrationWarning
+			lang={locale}
 			className={`${GeistSans.variable} ${GeistMono.variable}`}>
+			<ReactScan />
 			<body>
 				<NextIntlClientProvider messages={messages}>
-					<TRPCReactProvider>
-						<ThemeProvider
-							attribute='class'
-							defaultTheme='system'
-							disableTransitionOnChange>
+					<ThemeProvider
+						attribute='class'
+						enableSystem
+						defaultTheme='system'
+						disableTransitionOnChange>
+						<TooltipProvider>
 							<Navbar />
 							<div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
 								<main className='mx-auto flex max-w-6xl flex-col py-16 sm:py-32'>
@@ -195,10 +176,10 @@ export default async function RootLayout({
 							<ScrollToTop />
 							<Toaster />
 							<Footer />
-							<Analytics />
-						</ThemeProvider>
-					</TRPCReactProvider>
+						</TooltipProvider>
+					</ThemeProvider>
 				</NextIntlClientProvider>
+				<Analytics />
 			</body>
 		</html>
 	);

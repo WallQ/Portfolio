@@ -1,9 +1,8 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
+import { useCallback, useEffect, useState } from 'react';
 
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
 	Tooltip,
@@ -11,6 +10,7 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { cn } from '@/lib/utils';
 
 const ScrollToTop: React.FunctionComponent = (): React.ReactNode => {
 	const [isVisible, setIsVisible] = useState<boolean>(false);

@@ -2,26 +2,26 @@ import Image from 'next/image';
 import { notFound, redirect } from 'next/navigation';
 import { projects } from '@/data/projects';
 import { APP_ROUTES } from '@/routes/app';
-import Contact from '@/sections/contact';
 import { ExternalLink } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
 
-import { type Locale } from '@/lib/locales';
+import { type Locale } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import Reveal from '@/components/reveal';
+import Contact from '@/components/sections/contact';
 import Typography from '@/components/typography';
 
 type ProjectPageProps = {
 	params: {
-		locale: Locale;
 		id: string;
 	};
 };
 
-export const generateMetadata = ({ params }: ProjectPageProps) => {
+export const generateMetadata = async ({ params }: ProjectPageProps) => {
+	if (!params?.id) return { title: 'Project XYWZ' };
+
 	const title = projects.en?.find(
 		(project) => project.id === params.id,
 	)?.title;
@@ -32,8 +32,6 @@ export const generateMetadata = ({ params }: ProjectPageProps) => {
 };
 
 export default function ProjectPage({ params }: ProjectPageProps) {
-	unstable_setRequestLocale(params.locale);
-
 	const locale = useLocale() as Locale;
 	const t = useTranslations('project');
 
@@ -164,7 +162,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 											<Image
 												src={image.src}
 												alt={image.title}
-												className='aspect-[16/9] w-full h-auto object-cover object-center'
+												className='aspect-16/9 w-full h-auto object-cover object-center'
 												width={704}
 												height={396}
 											/>

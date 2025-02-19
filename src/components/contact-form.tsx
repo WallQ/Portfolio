@@ -1,13 +1,14 @@
 'use client';
 
-import { Fragment } from 'react';
-import { api } from '@/trpc/react';
 import { ContactSchema, type Contact } from '@/validators/contact';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+
+import { Fragment } from 'react';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 
+import { sendContact } from '@/actions/actions';
 import { Button } from '@/components/ui/button';
 import {
 	Form,
@@ -20,34 +21,10 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/components/ui/use-toast';
+import { toast } from 'sonner';
 
 const ContactForm: React.FunctionComponent = (): React.ReactNode => {
-	const { toast } = useToast();
 	const t = useTranslations('contact-form');
-
-	const contact = api.contact.sendContact.useMutation({
-		onSuccess: () => {
-			toast({
-				description: t('success_message'),
-			});
-		},
-		onError: (error) => {
-			if (error.message === 'ratelimit')
-				return toast({
-					variant: 'destructive',
-					description: t('error_message_rate_limit'),
-				});
-
-			toast({
-				variant: 'destructive',
-				description: t('error_message'),
-			});
-		},
-		onSettled: () => {
-			form.reset();
-		},
-	});
 
 	const form = useForm<Contact>({
 		resolver: zodResolver(ContactSchema),
@@ -59,13 +36,16 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 		},
 	});
 
-	const onSubmit: SubmitHandler<Contact> = async ({
-		firstName,
-		lastName,
-		email,
-		message,
-	}: Contact) => {
-		await contact.mutateAsync({ firstName, lastName, email, message });
+	const onSubmit: SubmitHandler<Contact> = async (values: Contact) => {
+		await sendContact(values).then((response) => {
+			toast(t('success_message')); 
+		}).catch((error) => {
+			if (error.message === 'rate_limit_exceeded')
+				return toast(t('error_message_rate_limit'));
+			toast(t('error_message'));
+		}).finally(() => {
+			form.reset();
+		});
 	};
 
 	return (
@@ -78,7 +58,6 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 					<FormField
 						control={form.control}
 						name='firstName'
-						disabled={form.formState.isSubmitting}
 						render={({ field }) => (
 							<FormItem className='w-full'>
 								<FormLabel>{t('first_name')}</FormLabel>
@@ -87,6 +66,7 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 										type='text'
 										placeholder='Sérgio'
 										autoComplete='given-name'
+										disabled={form.formState.isSubmitting}
 										{...field}
 									/>
 								</FormControl>
@@ -97,7 +77,6 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 					<FormField
 						control={form.control}
 						name='lastName'
-						disabled={form.formState.isSubmitting}
 						render={({ field }) => (
 							<FormItem className='w-full'>
 								<FormLabel>{t('last_name')}</FormLabel>
@@ -106,6 +85,7 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 										type='text'
 										placeholder='Félix'
 										autoComplete='family-name'
+										disabled={form.formState.isSubmitting}
 										{...field}
 									/>
 								</FormControl>
@@ -117,7 +97,6 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 				<FormField
 					control={form.control}
 					name='email'
-					disabled={form.formState.isSubmitting}
 					render={({ field }) => (
 						<FormItem>
 							<FormLabel>{t('email')}</FormLabel>
@@ -126,6 +105,7 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 									type='email'
 									placeholder='sergiofelixdev@gmail.com'
 									autoComplete='email'
+									disabled={form.formState.isSubmitting}
 									{...field}
 								/>
 							</FormControl>
@@ -139,7 +119,6 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 				<FormField
 					control={form.control}
 					name='message'
-					disabled={form.formState.isSubmitting}
 					render={({ field }) => (
 						<FormItem>
 							<FormLabel>{t('message')}</FormLabel>
@@ -148,6 +127,7 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 									className='resize-none'
 									placeholder={t('message_placeholder')}
 									maxLength={144}
+									disabled={form.formState.isSubmitting}
 									{...field}
 								/>
 							</FormControl>
@@ -159,7 +139,7 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 					<Button
 						type='submit'
 						disabled={form.formState.isSubmitting}
-						className='max-w-min'
+						className='max-w-min cursor-pointer'
 						aria-label='Contact'>
 						{form.formState.isSubmitting ? (
 							<Fragment>

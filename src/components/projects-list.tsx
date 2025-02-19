@@ -1,14 +1,14 @@
 'use client';
 
-import { Fragment, useCallback, useState } from 'react';
 import { projects } from '@/data/projects';
 import { useLocale, useTranslations } from 'next-intl';
+import { Fragment, useCallback, useState } from 'react';
 
-import { type Locale } from '@/lib/locales';
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
 import ProjectCard from '@/components/project-card';
 import Typography from '@/components/typography';
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import { type Locale } from '@/lib/utils';
 
 import Reveal from './reveal';
 
@@ -49,7 +49,7 @@ const ProjectsList: React.FunctionComponent = (): React.ReactNode => {
 					{visibleProjects < projects[locale].length && (
 						<Button
 							variant='secondary'
-							className='mt-8 max-w-fit self-center'
+							className='mt-8 max-w-fit self-center cursor-pointer'
 							onClick={handleShowMoreClick}
 							aria-label='Show More'>
 							{t('projects.show_more_button')}

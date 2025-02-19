@@ -1,9 +1,9 @@
-import { forwardRef } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
+import { forwardRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
-export const typographyVariants = cva('text-xl', {
+const typographyVariants = cva('text-xl', {
 	variants: {
 		variant: {
 			h1: 'md:text-5xl text-3xl font-extrabold tracking-tight',
@@ -19,7 +19,7 @@ export const typographyVariants = cva('text-xl', {
 	},
 });
 
-export interface TypographyProps
+interface TypographyProps
 	extends React.HTMLAttributes<HTMLHeadingElement>,
 		VariantProps<typeof typographyVariants> {}
 
@@ -35,6 +35,5 @@ const Typography = forwardRef<HTMLHeadingElement, TypographyProps>(
 		);
 	},
 );
-Typography.displayName = 'Typography';
 
 export default Typography;

@@ -1,10 +1,10 @@
-import Image from 'next/image';
 import { ExternalLink, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
-import { buttonVariants } from '@/components/ui/button';
 import Reveal from '@/components/reveal';
 import Typography from '@/components/typography';
+import { buttonVariants } from '@/components/ui/button';
 
 const Hero: React.FunctionComponent = (): React.ReactNode => {
 	const t = useTranslations('homepage');
@@ -41,7 +41,7 @@ const Hero: React.FunctionComponent = (): React.ReactNode => {
 								<Send className='ml-2 size-4' />
 							</a>
 							<a
-								href='docs/Sérgio Félix - Resume.pdf'
+								href='docs/Sérgio Félix - Curriculum Vitae.pdf'
 								target='_blank'
 								className={buttonVariants({
 									variant: 'outline',

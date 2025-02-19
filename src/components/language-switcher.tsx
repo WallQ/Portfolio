@@ -1,12 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useTransition } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { setUserLocale } from '@/services/locale';
 import { Check } from 'lucide-react';
 import { useLocale } from 'next-intl';
 
-import { type Locale } from '@/lib/locales';
+import { type Locale } from '@/lib/utils';
 
 type LanguageSwitcherProps = {
 	lang: 'en' | 'pt';
@@ -19,12 +19,13 @@ const LanguageSwitcher: React.FunctionComponent<LanguageSwitcherProps> = ({
 	title,
 	icon,
 }) => {
+	const [_isPending, startTransition] = useTransition();
 	const locale = useLocale() as Locale;
-	const router = useRouter();
 
 	const handleLocaleChange = (newLocale: Locale): void => {
-		document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
-		router.refresh();
+		startTransition(() => {
+			setUserLocale(newLocale);
+		});
 	};
 
 	return (

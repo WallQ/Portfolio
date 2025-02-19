@@ -1,13 +1,13 @@
-import { memo } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { APP_ROUTES } from '@/routes/app';
 import { MoveRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import Link from 'next/link';
+import { memo } from 'react';
 
+import Typography from '@/components/typography';
 import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
-import Typography from '@/components/typography';
 
 type ProjectCardProps = {
 	id: string;
@@ -32,7 +32,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = memo(
 						loading='lazy'
 						width={512}
 						height={288}
-						className='aspect-[16/9] h-full w-full rounded-md object-cover object-center'
+						className='aspect-16/9 h-full w-full rounded-md object-cover object-center'
 					/>
 				</Link>
 				<div className='col-span-6 flex flex-col justify-between gap-y-4'>

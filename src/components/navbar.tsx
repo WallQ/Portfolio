@@ -23,7 +23,6 @@ import {
 import {
 	Tooltip,
 	TooltipContent,
-	TooltipProvider,
 	TooltipTrigger,
 } from '@/components/ui/tooltip';
 import Icons from '@/components/icons';
@@ -85,26 +84,25 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 							<Icons.GitHub className='size-4 fill-[#181717]' />
 						</a>
 						<DropdownMenu>
-							<TooltipProvider>
-								<Tooltip>
-									<TooltipTrigger asChild>
-										<DropdownMenuTrigger asChild>
-											<Button
-												variant='ghost'
-												size='sm'
-												aria-label='Open Settings Menu'>
-												<span className='sr-only'>
-													Open Settings Menu
-												</span>
-												<Settings className='size-4' />
-											</Button>
-										</DropdownMenuTrigger>
-									</TooltipTrigger>
-									<TooltipContent>
-										<p>Settings</p>
-									</TooltipContent>
-								</Tooltip>
-							</TooltipProvider>
+							<Tooltip>
+								<TooltipTrigger asChild>
+									<DropdownMenuTrigger asChild>
+										<Button
+											variant='ghost'
+											size='sm'
+											aria-label='Open Settings Menu'
+											className='cursor-pointer'>
+											<span className='sr-only'>
+												Open Settings Menu
+											</span>
+											<Settings className='size-4' />
+										</Button>
+									</DropdownMenuTrigger>
+								</TooltipTrigger>
+								<TooltipContent>
+									<p>Settings</p>
+								</TooltipContent>
+							</Tooltip>
 							<DropdownMenuContent>
 								<DropdownMenuLabel>Settings</DropdownMenuLabel>
 								<DropdownMenuSeparator />
@@ -160,23 +158,21 @@ const Navbar: React.FunctionComponent = (): React.ReactNode => {
 				</div>
 				<div className='flex md:hidden'>
 					<DropdownMenu>
-						<TooltipProvider>
-							<Tooltip>
-								<TooltipTrigger asChild>
-									<DropdownMenuTrigger asChild>
-										<Button
-											variant='ghost'
-											size='sm'
-											aria-label='Open Menu'>
-											<Menu className='size-4' />
-										</Button>
-									</DropdownMenuTrigger>
-								</TooltipTrigger>
-								<TooltipContent>
-									<p>Menu</p>
-								</TooltipContent>
-							</Tooltip>
-						</TooltipProvider>
+						<Tooltip>
+							<TooltipTrigger asChild>
+								<DropdownMenuTrigger asChild>
+									<Button
+										variant='ghost'
+										size='sm'
+										aria-label='Open Menu'>
+										<Menu className='size-4' />
+									</Button>
+								</DropdownMenuTrigger>
+							</TooltipTrigger>
+							<TooltipContent>
+								<p>Menu</p>
+							</TooltipContent>
+						</Tooltip>
 						<DropdownMenuContent>
 							<DropdownMenuLabel>Menu</DropdownMenuLabel>
 							<DropdownMenuSeparator />

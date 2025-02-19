@@ -11,15 +11,5 @@ export function getBaseUrl() {
 	return `http://localhost:${process.env.PORT ?? 3000}`;
 }
 
-export function getClientIp(ctx: { headers: Headers }): string {
-	return (
-		ctx.headers.get('cf-connecting-ip') ??
-		ctx.headers.get('x-forwarded-for') ??
-		ctx.headers.get('x-real-ip') ??
-		ctx.headers.get('forwarded') ??
-		ctx.headers.get('true-client-ip') ??
-		ctx.headers.get('x-cluster-client-ip') ??
-		ctx.headers.get('x-client-ip') ??
-		'127.0.0.1'
-	);
-}
+export const locales = ['en', 'pt'] as const;
+export type Locale = (typeof locales)[number];
