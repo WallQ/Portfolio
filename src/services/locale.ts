@@ -1,14 +1,14 @@
 'use server';
 
-import { Locale, defaultLocale } from '@/i18n/config';
 import { cookies } from 'next/headers';
+import { defaultLocale, Locale } from '@/i18n/config';
 
 const COOKIE_NAME = 'NEXT_LOCALE';
 
 export async function getUserLocale() {
-    return (await cookies()).get(COOKIE_NAME)?.value || defaultLocale;
+	return cookies().get(COOKIE_NAME)?.value || defaultLocale;
 }
 
 export async function setUserLocale(locale: Locale) {
-  (await cookies()).set(COOKIE_NAME, locale);
+	cookies().set(COOKIE_NAME, locale);
 }

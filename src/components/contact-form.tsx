@@ -66,7 +66,7 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 								<FormControl>
 									<Input
 										type='text'
-										placeholder='Sérgio'
+										placeholder='Foo'
 										autoComplete='given-name'
 										disabled={form.formState.isSubmitting}
 										{...field}
@@ -85,7 +85,7 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 								<FormControl>
 									<Input
 										type='text'
-										placeholder='Félix'
+										placeholder='Bar'
 										autoComplete='family-name'
 										disabled={form.formState.isSubmitting}
 										{...field}
@@ -105,7 +105,7 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 							<FormControl>
 								<Input
 									type='email'
-									placeholder='sergiofelixdev@gmail.com'
+									placeholder='foobar@acme.com'
 									autoComplete='email'
 									disabled={form.formState.isSubmitting}
 									{...field}
