@@ -1,14 +1,14 @@
 'use client';
 
+import { Fragment, useCallback, useState } from 'react';
 import { projects } from '@/data/projects';
 import { useLocale, useTranslations } from 'next-intl';
-import { Fragment, useCallback, useState } from 'react';
 
-import ProjectCard from '@/components/project-card';
-import Typography from '@/components/typography';
+import { type Locale } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { type Locale } from '@/lib/utils';
+import ProjectCard from '@/components/project-card';
+import Typography from '@/components/typography';
 
 import Reveal from './reveal';
 

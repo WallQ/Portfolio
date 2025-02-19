@@ -1,14 +1,14 @@
 'use client';
 
+import { Fragment } from 'react';
+import { sendContact } from '@/actions/actions';
 import { ContactSchema, type Contact } from '@/validators/contact';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-
-import { Fragment } from 'react';
 import { useForm, type SubmitHandler } from 'react-hook-form';
+import { toast } from 'sonner';
 
-import { sendContact } from '@/actions/actions';
 import { Button } from '@/components/ui/button';
 import {
 	Form,
@@ -21,7 +21,6 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { toast } from 'sonner';
 
 const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 	const t = useTranslations('contact-form');
@@ -37,15 +36,18 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 	});
 
 	const onSubmit: SubmitHandler<Contact> = async (values: Contact) => {
-		await sendContact(values).then((response) => {
-			toast(t('success_message')); 
-		}).catch((error) => {
-			if (error.message === 'rate_limit_exceeded')
-				return toast(t('error_message_rate_limit'));
-			toast(t('error_message'));
-		}).finally(() => {
-			form.reset();
-		});
+		await sendContact(values)
+			.then((response) => {
+				toast(t('success_message'));
+			})
+			.catch((error) => {
+				if (error.message === 'rate_limit_exceeded')
+					return toast(t('error_message_rate_limit'));
+				toast(t('error_message'));
+			})
+			.finally(() => {
+				form.reset();
+			});
 	};
 
 	return (
@@ -148,8 +150,8 @@ const ContactForm: React.FunctionComponent = (): React.ReactNode => {
 							</Fragment>
 						) : (
 							<Fragment>
-								<Send className='mr-2 size-4' />
 								{t('send_button')}
+								<Send className='size-4' />
 							</Fragment>
 						)}
 					</Button>

@@ -1,10 +1,10 @@
+import Image from 'next/image';
 import { ExternalLink, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 
+import { buttonVariants } from '@/components/ui/button';
 import Reveal from '@/components/reveal';
 import Typography from '@/components/typography';
-import { buttonVariants } from '@/components/ui/button';
 
 const Hero: React.FunctionComponent = (): React.ReactNode => {
 	const t = useTranslations('homepage');
@@ -38,7 +38,7 @@ const Hero: React.FunctionComponent = (): React.ReactNode => {
 									variant: 'default',
 								})}>
 								{t('header.contact_button')}
-								<Send className='ml-2 size-4' />
+								<Send className='size-4' />
 							</a>
 							<a
 								href='docs/Sérgio Félix - Curriculum Vitae.pdf'
@@ -47,7 +47,7 @@ const Hero: React.FunctionComponent = (): React.ReactNode => {
 									variant: 'outline',
 								})}>
 								{t('header.resume_button')}
-								<ExternalLink className='ml-2 size-4' />
+								<ExternalLink className='size-4' />
 							</a>
 						</div>
 					</div>

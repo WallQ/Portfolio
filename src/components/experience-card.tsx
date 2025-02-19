@@ -6,7 +6,7 @@ import Typography from '@/components/typography';
 type ExperienceCardProps = {
 	title: string;
 	type: string;
-	description: string;
+	description: string[];
 	companyUrl: string;
 	companyImage: string;
 	companyName: string;
@@ -30,17 +30,21 @@ const ExperienceCard: React.FunctionComponent<ExperienceCardProps> = ({
 			rel='noopener noreferrer'
 			target='_blank'>
 			<Card className='h-full transition-all duration-150 ease-linear hover:border-muted hover:bg-muted/10'>
-				<CardContent className='flex flex-col gap-y-4 p-6'>
+				<CardContent className='flex flex-col gap-y-4 p-6 h-full'>
 					<Typography
 						variant='h3'
 						className='text-lg font-medium'>
 						{title}, {type}
 					</Typography>
-					<Typography
-						variant='p'
-						className='line-clamp-2 text-sm'>
-						{description}
-					</Typography>
+					<ul className='flex-grow flex flex-col gap-y-2'>
+						{description.map((description, index) => (
+							<li
+								key={`${index}-description`}
+								className='text-sm text-muted-foreground text-justify'>
+								{description}
+							</li>
+						))}
+					</ul>
 					<div className='flex flex-wrap justify-between gap-4 text-sm'>
 						<div className='flex items-center gap-x-2'>
 							<Image

@@ -1,7 +1,7 @@
 export type Experience = {
 	title: string;
 	type: string;
-	description: string;
+	description: string[];
 	companyUrl: string;
 	companyImage: string;
 	companyName: string;

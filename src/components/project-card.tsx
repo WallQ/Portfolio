@@ -1,13 +1,13 @@
+import { memo } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { APP_ROUTES } from '@/routes/app';
 import { MoveRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import Link from 'next/link';
-import { memo } from 'react';
 
-import Typography from '@/components/typography';
 import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
+import Typography from '@/components/typography';
 
 type ProjectCardProps = {
 	id: string;
@@ -60,7 +60,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = memo(
 							variant: 'outline',
 						})} max-w-fit`}>
 						{t('projects.view_details_button')}
-						<MoveRight className='ml-2 size-4' />
+						<MoveRight className='size-4' />
 					</Link>
 				</div>
 			</div>
