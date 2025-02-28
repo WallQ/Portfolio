@@ -1,8 +1,9 @@
 'use client';
 
-import { ArrowUp } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
+import { ArrowUp } from 'lucide-react';
 
+import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
 	Tooltip,
@@ -10,7 +11,6 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { cn } from '@/lib/utils';
 
 const ScrollToTop: React.FunctionComponent = (): React.ReactNode => {
 	const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -42,7 +42,7 @@ const ScrollToTop: React.FunctionComponent = (): React.ReactNode => {
 						variant='ghost'
 						size='icon'
 						className={cn(
-							'fixed bottom-0 right-0 z-50 m-4 transition-opacity duration-300 ease-in-out',
+							'fixed bottom-0 right-0 z-50 m-4 transition-opacity cursor-pointer duration-300 ease-in-out',
 							{
 								'opacity-0': !isVisible,
 								'opacity-100': isVisible,

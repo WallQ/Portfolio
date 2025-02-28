@@ -1,6 +1,9 @@
 'use client';
 
-import { ThemeProvider as NextThemesProvider, ThemeProviderProps } from 'next-themes';
+import {
+	ThemeProvider as NextThemesProvider,
+	ThemeProviderProps,
+} from 'next-themes';
 
 const ThemeProvider: React.FunctionComponent<ThemeProviderProps> = ({
 	children,

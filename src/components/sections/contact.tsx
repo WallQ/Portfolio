@@ -1,9 +1,9 @@
 import { useTranslations } from 'next-intl';
 
+import { Separator } from '@/components/ui/separator';
 import ContactForm from '@/components/contact-form';
 import CopyToClipboard from '@/components/copy-to-clipboard';
 import Reveal from '@/components/reveal';
-import { Separator } from '@/components/ui/separator';
 
 const Contact: React.FunctionComponent = (): React.ReactNode => {
 	const t = useTranslations('homepage');

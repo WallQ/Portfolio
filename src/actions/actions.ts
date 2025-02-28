@@ -1,12 +1,12 @@
-'use server'
+'use server';
 
-import { env } from "@/env";
-import { ratelimit } from "@/lib/upstash";
-import { Contact } from "@/validators/contact";
-import { headers } from "next/headers";
+import { headers } from 'next/headers';
+import { env } from '@/env';
+import { Contact } from '@/validators/contact';
 import nodemailer from 'nodemailer';
-import Mail from "nodemailer/lib/mailer";
- 
+import Mail from 'nodemailer/lib/mailer';
+
+import { ratelimit } from '@/lib/upstash';
 
 export const sendContact = async ({
 	firstName,
@@ -15,12 +15,11 @@ export const sendContact = async ({
 	message,
 }: Contact) => {
 	const ip = (await headers()).get('x-forwarded-for') ?? '127.0.0.1';
-		
+
 	const { success } = await ratelimit.limit(ip);
 
-	if (!success) 
-		throw new Error('rate_limit_exceeded');
-			
+	if (!success) throw new Error('rate_limit_exceeded');
+
 	const transport = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
@@ -29,12 +28,12 @@ export const sendContact = async ({
 		},
 	});
 
-    const mailOptions: Mail.Options = {
+	const mailOptions: Mail.Options = {
 		from: env.NODEMAILER_EMAIL,
 		to: env.NODEMAILER_EMAIL,
 		subject: `Message from ${firstName} ${lastName} (${email})`,
 		text: message,
 	};
 
-    return await transport.sendMail(mailOptions);
-}
+	return await transport.sendMail(mailOptions);
+};

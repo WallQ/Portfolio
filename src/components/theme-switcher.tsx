@@ -1,8 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { Check } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import Image from 'next/image';
 
 type ThemeSwitcherProps = {
 	themeType: 'light' | 'dark' | 'system';

@@ -1,9 +1,9 @@
 import { useTranslations } from 'next-intl';
 
+import { Separator } from '@/components/ui/separator';
 import ProjectsList from '@/components/projects-list';
 import Reveal from '@/components/reveal';
 import Typography from '@/components/typography';
-import { Separator } from '@/components/ui/separator';
 
 const Projects: React.FunctionComponent = (): React.ReactNode => {
 	const t = useTranslations('homepage');

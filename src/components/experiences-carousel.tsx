@@ -1,18 +1,18 @@
 'use client';
 
+import { Fragment } from 'react';
 import { experiences } from '@/data/experiences';
 import Autoplay from 'embla-carousel-autoplay';
 import { useLocale, useTranslations } from 'next-intl';
-import { Fragment } from 'react';
 
-import ExperienceCard from '@/components/experience-card';
-import Typography from '@/components/typography';
+import { type Locale } from '@/lib/utils';
 import {
 	Carousel,
 	CarouselContent,
 	CarouselItem,
 } from '@/components/ui/carousel';
-import { type Locale } from '@/lib/utils';
+import ExperienceCard from '@/components/experience-card';
+import Typography from '@/components/typography';
 
 const ExperiencesCarousel: React.FunctionComponent = (): React.ReactNode => {
 	const locale = useLocale() as Locale;
